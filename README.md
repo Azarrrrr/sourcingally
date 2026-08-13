@@ -25,14 +25,20 @@ title: "Your localized article title"
 description: "A short description for the article card and SEO metadata."
 pubDate: 2026-08-20
 author: "Sourcing Ally"
+updatedDate: 2026-08-20
 lang: "en"
+category: "China sourcing"
+tags: [supplier sourcing, quality control]
+readingTime: "8 min read"
+translationKey: "your-article-key"
+featured: false
 draft: false
 ---
 
 Write the article here.
 ```
 
-The supported language codes are `en`, `es`, `pt`, `ru`, and `tr`. To publish a translated version, create a second Markdown file with the same article topic and set the appropriate `lang` value. The current content structure is designed for human-reviewed localization rather than automatic literal translation.
+The supported language codes are `en`, `es`, `pt`, `ru`, and `tr`. To publish a translated version, create a second Markdown file with the same `translationKey` and set the appropriate `lang` value. Keep the translation human-reviewed and give it its own localized title, description, slug, and wording. The site should not emit `hreflang` or present a translation as complete until it has been reviewed. The current content structure is designed for human-reviewed localization rather than automatic literal translation.
 
 When a new post is committed and pushed to the production branch, Cloudflare Pages rebuilds the site and publishes the update automatically.
 
@@ -70,7 +76,7 @@ The website currently uses only facts confirmed by the owner: the Sourcing Ally 
 
 ## Expanded website structure
 
-The current build includes **51 generated pages**: five localized homepages, localized blog indexes, one English blog article, service and product hubs, city and sourcing-school hubs, and detailed English pages for each service, product category, city, and guide. The first deep knowledge release is intentionally written in English so it can be reviewed for accuracy before human-quality localization is added for Spanish, Portuguese, Russian, and Turkish. Do not mass-translate the knowledge pages without review; that would create weak or duplicate SEO content.
+The current build includes **66 generated pages**: five localized homepages, localized blog indexes, one English blog article, service and product hubs, city and sourcing-school hubs, and detailed English pages for each service, product category, city, and guide. The first deep knowledge release is intentionally written in English so it can be reviewed for accuracy before human-quality localization is added for Spanish, Portuguese, Russian, and Turkish. Do not mass-translate the knowledge pages without review; that would create weak or duplicate SEO content.
 
 The main page families are:
 
@@ -91,4 +97,5 @@ The site also includes `robots.txt` and a generated `sitemap.xml` endpoint. Comp
 - `src/content/blog/`: Markdown content managed through GitHub.
 - `src/content.config.ts`: blog schema and language validation.
 - `src/layouts/Layout.astro`: shared metadata, navigation, language selector, and footer.
-- `public/images/azar-pamir.webp`: owner-provided portrait.
+- `src/pages/[lang]/privacy.astro`, `terms.astro`, `disclaimer.astro`: conservative policy pages for review before launch.
+- `public/images/azar-pamir-cutout-transparent.png`: isolated portrait asset for the redesigned hero and About section.
