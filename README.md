@@ -76,7 +76,7 @@ The website currently uses only facts confirmed by the owner: the Sourcing Ally 
 
 ## Expanded website structure
 
-The current build includes **129 generated pages**: five localized homepages, localized blog indexes, 12 new flagship English Journal guides, service and product hubs, city and sourcing-school hubs, the Sourcing Questions library, Buyer Paths, a China Route Map, a Service Matcher, Project Brief Builder, and detailed English pages for each service, product category, city, guide, buyer route, and question. The first deep knowledge release is intentionally written in English so it can be reviewed for accuracy before human-quality localization is added for Spanish, Portuguese, Russian, and Turkish. Do not mass-translate the knowledge pages without review; that would create weak or duplicate SEO content.
+The current build includes **213 generated pages**: five localized homepages, localized blog indexes, 12 new flagship English Journal guides, service and product hubs, city and sourcing-school hubs, the Sourcing Questions library, Buyer Paths, a China Route Map, a Service Matcher, Project Brief Builder, and detailed English pages for each service, product category, city, guide, buyer route, and question. The Project Brief Builder, Service Matcher, China Route Map, and Questions hub are localized across English, Spanish, Portuguese, Russian, and Turkish. The 15 Question answer routes are also generated in all languages; non-English long-form source fallback pages are clearly marked and use `noindex,follow` until reviewed translations are published. Do not mass-translate the remaining knowledge pages without review; that would create weak or duplicate SEO content.
 
 The main page families are:
 
@@ -110,7 +110,7 @@ The site also includes `robots.txt` and a generated `sitemap.xml` endpoint. Comp
 
 ## Current multilingual rollout
 
-The full homepage and shared navigation/footer are now localized in English, Spanish, Portuguese, Russian, and Turkish. The Buyer Paths hub is localized under each language prefix. Each deep Buyer Path URL is also generated for all five languages; until the full content has passed language review, a transparent notice identifies the English source material instead of claiming the detailed guide is fully localized.
+The full homepage and shared navigation/footer are now localized in English, Spanish, Portuguese, Russian, and Turkish. The Buyer Paths hub, Project Brief Builder, Service Matcher, China Route Map, and Sourcing Questions hub are also localized under each language prefix. Each deep Buyer Path and Question URL is generated for all five languages; until the full content has passed language review, a transparent notice identifies the English source material instead of claiming the detailed guide is fully localized. Interim non-English Question answer pages also use `noindex,follow` to avoid presenting an English source answer as localized search content.
 
 Use `docs/article-translation-template.md` when creating a translated Journal article. Keep the same `translationKey` as the English source, use a unique localized filename and slug, set the correct `lang`, and retain `draft: true` until a fluent reviewer has checked the final wording. Once pushed to `main`, Cloudflare Pages can rebuild the site automatically.
 

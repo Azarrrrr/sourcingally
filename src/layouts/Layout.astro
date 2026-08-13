@@ -6,9 +6,10 @@ interface Props {
   title: string;
   description: string;
   lang?: string;
+  noindex?: boolean;
 }
 
-const { title, description, lang = 'en' } = Astro.props;
+const { title, description, lang = 'en', noindex = false } = Astro.props;
 const languages = [
   ['en', 'English'],
   ['es', 'Español'],
@@ -45,6 +46,7 @@ const organizationJson = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Sourcing Ally" />
