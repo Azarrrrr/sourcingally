@@ -76,7 +76,7 @@ The website currently uses only facts confirmed by the owner: the Sourcing Ally 
 
 ## Expanded website structure
 
-The current build includes **66 generated pages**: five localized homepages, localized blog indexes, one English blog article, service and product hubs, city and sourcing-school hubs, and detailed English pages for each service, product category, city, and guide. The first deep knowledge release is intentionally written in English so it can be reviewed for accuracy before human-quality localization is added for Spanish, Portuguese, Russian, and Turkish. Do not mass-translate the knowledge pages without review; that would create weak or duplicate SEO content.
+The current build includes **129 generated pages**: five localized homepages, localized blog indexes, 12 new flagship English Journal guides, service and product hubs, city and sourcing-school hubs, the Sourcing Questions library, Buyer Paths, a China Route Map, a Service Matcher, Project Brief Builder, and detailed English pages for each service, product category, city, guide, buyer route, and question. The first deep knowledge release is intentionally written in English so it can be reviewed for accuracy before human-quality localization is added for Spanish, Portuguese, Russian, and Turkish. Do not mass-translate the knowledge pages without review; that would create weak or duplicate SEO content.
 
 The main page families are:
 
@@ -86,12 +86,19 @@ The main page families are:
 | Products | Toys, clothing and textiles, electronics, light furniture, lighting, packaging products, and home goods |
 | Cities | Shenzhen, Dongguan, Guangzhou, Foshan, Zhongshan, Huizhou, Yiwu, Ningbo, Shanghai, and Suzhou/Hangzhou |
 | Guides | Importing, fees, supplier verification, MOQ, quality control, shipping, holidays, culture, currency, and compliance |
+| Buyer Paths | First import, private label, marketplace selling, product development, China travel, and active-order recovery |
+| Interactive tools | Project Brief Builder, Service Matcher, China Route Map, and Sourcing Questions |
+| Journal | 12 flagship English guides plus a 196-title staged editorial roadmap in `sourcingally-premium-expansion-plan.md` |
 
 The site also includes `robots.txt` and a generated `sitemap.xml` endpoint. Compliance and legal topics include a notice that requirements vary by product, destination, importer, and current rules; they are educational pages, not legal or customs advice.
 
 ## Project structure
 
-- `src/pages/[lang]/index.astro`: localized homepages.
+- `src/pages/[lang]/index.astro`: localized homepages with the scroll-responsive Sourcing Atlas journey.
+- `src/pages/[lang]/paths/`: premium buyer-path hub and six detailed route pages.
+- `src/pages/[lang]/china-route.astro`: interactive China sourcing route map.
+- `src/pages/[lang]/service-matcher.astro`: browser-local sourcing service matcher.
+- `src/data/buyer-paths.ts`: buyer-path content model.
 - `src/pages/[lang]/blog/index.astro`: localized blog indexes.
 - `src/pages/[lang]/blog/[...slug].astro`: article pages.
 - `src/content/blog/`: Markdown content managed through GitHub.
