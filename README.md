@@ -106,3 +106,14 @@ The site also includes `robots.txt` and a generated `sitemap.xml` endpoint. Comp
 - `src/layouts/Layout.astro`: shared metadata, navigation, language selector, and footer.
 - `src/pages/[lang]/privacy.astro`, `terms.astro`, `disclaimer.astro`: conservative policy pages for review before launch.
 - `public/images/azar-pamir-cutout-transparent.png`: isolated portrait asset for the redesigned hero and About section.
+
+
+## Current multilingual rollout
+
+The full homepage and shared navigation/footer are now localized in English, Spanish, Portuguese, Russian, and Turkish. The Buyer Paths hub is localized under each language prefix. Each deep Buyer Path URL is also generated for all five languages; until the full content has passed language review, a transparent notice identifies the English source material instead of claiming the detailed guide is fully localized.
+
+Use `docs/article-translation-template.md` when creating a translated Journal article. Keep the same `translationKey` as the English source, use a unique localized filename and slug, set the correct `lang`, and retain `draft: true` until a fluent reviewer has checked the final wording. Once pushed to `main`, Cloudflare Pages can rebuild the site automatically.
+
+## Typography standard
+
+The shared typography layer includes a global readability correction for display headings, navigation, cards, and long-form content. New page templates should not use strongly negative letter spacing: compressed display type is harder to read on mobile screens and can perform poorly with longer Spanish, Portuguese, Russian, and Turkish copy.
