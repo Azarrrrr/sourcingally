@@ -1,119 +1,83 @@
 # Sourcing Ally
 
-Astro website for **Sourcing Ally**, a Shenzhen-based sourcing partner for international buyers importing from China.
+A multilingual Astro website for **Sourcing Ally**, a Shenzhen-based sourcing partner for international buyers importing from China.
 
 ## Local development
 
 ```bash
 npm install
 npm run dev
-```
-
-Open the local URL shown by Astro. The production build can be checked with:
-
-```bash
 npm run build
 ```
 
-## Add a blog post
+The production build creates the static `dist/` directory.
 
-Blog posts live in `src/content/blog/`. Create a Markdown file with frontmatter like this:
+## Publish a Journal article in six languages
+
+All Journal posts live in `src/content/blog/`. For one article, create one Markdown file for each reviewed language version in that same folder:
+
+| Language | Example file |
+|---|---|
+| English | `compare-suppliers.en.md` |
+| Spanish | `compare-suppliers.es.md` |
+| Portuguese | `compare-suppliers.pt.md` |
+| Russian | `compare-suppliers.ru.md` |
+| Turkish | `compare-suppliers.tr.md` |
+| French | `compare-suppliers.fr.md` |
+
+Every version of the same article must use the identical `translationKey`. For example, all six files above contain:
 
 ```md
 ---
-title: "Your localized article title"
-description: "A short description for the article card and SEO metadata."
-pubDate: 2026-08-20
+title: "A natural title in this language"
+description: "A clear, natural description in this language."
+pubDate: 2026-08-13
 author: "Sourcing Ally"
-updatedDate: 2026-08-20
-lang: "en"
-category: "China sourcing"
-tags: [supplier sourcing, quality control]
+lang: "ru"
+translationKey: "compare-suppliers"
+category: "Supplier research"
+tags: ["supplier sourcing", "China sourcing"]
 readingTime: "8 min read"
-translationKey: "your-article-key"
 featured: false
 draft: false
 ---
-
-Write the article here.
 ```
 
-The supported language codes are `en`, `es`, `pt`, `ru`, and `tr`. To publish a translated version, create a second Markdown file with the same `translationKey` and set the appropriate `lang` value. Keep the translation human-reviewed and give it its own localized title, description, slug, and wording. The site should not emit `hreflang` or present a translation as complete until it has been reviewed. The current content structure is designed for human-reviewed localization rather than automatic literal translation.
+Use `draft: true` until a fluent reviewer has checked the language. Keep titles, descriptions, headings, body text, and internal-link labels in the selected language. Do not invent client results, certifications, testimonials, warehouse claims, legal advice, or other unverified claims.
 
-When a new post is committed and pushed to the production branch, Cloudflare Pages rebuilds the site and publishes the update automatically.
-
-## GitHub setup
-
-Create an empty GitHub repository, then run these commands from this directory:
+The full author guide is at [`docs/multilingual-journal-publishing-guide.md`](docs/multilingual-journal-publishing-guide.md). Before publishing a large batch, run:
 
 ```bash
-git init
-git add .
-git commit -m "Build Sourcing Ally Astro website"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-git push -u origin main
+node scripts/validate-blog-translations.mjs
 ```
 
-Replace the repository URL with the one belonging to your GitHub account. Do not commit passwords, API keys, or private credentials.
+## Automatic deployment
 
-## Cloudflare Pages setup
-
-In Cloudflare, open **Workers & Pages**, choose **Create application**, select **Pages**, and choose **Import an existing Git repository**. Select the GitHub repository and configure the build as follows:
+This repository is connected to the existing **Cloudflare Pages** project for `sourcingally.com`.
 
 | Setting | Value |
 |---|---|
 | Production branch | `main` |
-| Framework preset | Astro, if offered |
 | Build command | `npm run build` |
 | Build output directory | `dist` |
+| Production deployment | Every commit to `main` |
+| Pull-request previews | Disabled initially |
 
-After the first deployment, add `sourcingally.com` as a custom domain in the Cloudflare Pages project. Because the domain is already controlled in Cloudflare, follow the DNS instructions Cloudflare shows for the project. Keep the DNS records Cloudflare provides and confirm that HTTPS is enabled.
+To publish a new article, use GitHub: open `src/content/blog/`, choose **Add file**, create or upload the Markdown file, and commit it directly to `main`. Cloudflare Pages then rebuilds and publishes the website automatically. No GitHub API key is needed for normal manual uploads.
 
-## Content and claims policy
+## Current platform
 
-The website currently uses only facts confirmed by the owner: the Sourcing Ally name, Shenzhen base, listed service capabilities, regional coverage, contact details, five-language site structure, a minimum 5% sourcing fee, and the exclusion of dangerous or military-related products. Do not add client counts, testimonials, years of experience, certifications, guarantees, warehouse claims, or performance statistics unless they are verified and approved for publication.
-
-## Expanded website structure
-
-The current build includes **213 generated pages**: five localized homepages, localized blog indexes, 12 new flagship English Journal guides, service and product hubs, city and sourcing-school hubs, the Sourcing Questions library, Buyer Paths, a China Route Map, a Service Matcher, Project Brief Builder, and detailed English pages for each service, product category, city, guide, buyer route, and question. The Project Brief Builder, Service Matcher, China Route Map, and Questions hub are localized across English, Spanish, Portuguese, Russian, and Turkish. The 15 Question answer routes are also generated in all languages; non-English long-form source fallback pages are clearly marked and use `noindex,follow` until reviewed translations are published. Do not mass-translate the remaining knowledge pages without review; that would create weak or duplicate SEO content.
-
-The main page families are:
-
-| Family | Current focus |
-|---|---|
-| Services | Supplier sourcing, samples, factory checks, quality control, production follow-up, packaging, translation, and factory travel |
-| Products | Toys, clothing and textiles, electronics, light furniture, lighting, packaging products, and home goods |
-| Cities | Shenzhen, Dongguan, Guangzhou, Foshan, Zhongshan, Huizhou, Yiwu, Ningbo, Shanghai, and Suzhou/Hangzhou |
-| Guides | Importing, fees, supplier verification, MOQ, quality control, shipping, holidays, culture, currency, and compliance |
-| Buyer Paths | First import, private label, marketplace selling, product development, China travel, and active-order recovery |
-| Interactive tools | Project Brief Builder, Service Matcher, China Route Map, and Sourcing Questions |
-| Journal | 12 flagship English guides plus a 196-title staged editorial roadmap in `sourcingally-premium-expansion-plan.md` |
-
-The site also includes `robots.txt` and a generated `sitemap.xml` endpoint. Compliance and legal topics include a notice that requirements vary by product, destination, importer, and current rules; they are educational pages, not legal or customs advice.
+The current build contains **523 static pages** and six website languages: English, Spanish, Portuguese, Russian, Turkish, and French. The platform includes services, product categories, sourcing cities, sourcing-school guides, buyer paths, Questions and Answers, a Journal, legal pages, and interactive buyer tools.
 
 ## Project structure
 
-- `src/pages/[lang]/index.astro`: localized homepages with the scroll-responsive Sourcing Atlas journey.
-- `src/pages/[lang]/paths/`: premium buyer-path hub and six detailed route pages.
-- `src/pages/[lang]/china-route.astro`: interactive China sourcing route map.
-- `src/pages/[lang]/service-matcher.astro`: browser-local sourcing service matcher.
-- `src/data/buyer-paths.ts`: buyer-path content model.
-- `src/pages/[lang]/blog/index.astro`: localized blog indexes.
-- `src/pages/[lang]/blog/[...slug].astro`: article pages.
-- `src/content/blog/`: Markdown content managed through GitHub.
-- `src/content.config.ts`: blog schema and language validation.
-- `src/layouts/Layout.astro`: shared metadata, navigation, language selector, and footer.
-- `src/pages/[lang]/privacy.astro`, `terms.astro`, `disclaimer.astro`: conservative policy pages for review before launch.
-- `public/images/azar-pamir-cutout-transparent.png`: isolated portrait asset for the redesigned hero and About section.
+- `src/content/blog/` — GitHub-managed Journal Markdown files.
+- `src/content.config.ts` — content schema and language validation.
+- `src/pages/[lang]/blog/` — multilingual Journal index and article routes.
+- `src/data/` — localized site content and interface copy.
+- `docs/multilingual-journal-publishing-guide.md` — detailed author instructions.
+- `scripts/validate-blog-translations.mjs` — translation-key and language-frontmatter validation.
 
+## Claims policy
 
-## Current multilingual rollout
-
-The full homepage and shared navigation/footer are now localized in English, Spanish, Portuguese, Russian, and Turkish. The Buyer Paths hub, Project Brief Builder, Service Matcher, China Route Map, and Sourcing Questions hub are also localized under each language prefix. Each deep Buyer Path and Question URL is generated for all five languages; until the full content has passed language review, a transparent notice identifies the English source material instead of claiming the detailed guide is fully localized. Interim non-English Question answer pages also use `noindex,follow` to avoid presenting an English source answer as localized search content.
-
-Use `docs/article-translation-template.md` when creating a translated Journal article. Keep the same `translationKey` as the English source, use a unique localized filename and slug, set the correct `lang`, and retain `draft: true` until a fluent reviewer has checked the final wording. Once pushed to `main`, Cloudflare Pages can rebuild the site automatically.
-
-## Typography standard
-
-The shared typography layer includes a global readability correction for display headings, navigation, cards, and long-form content. New page templates should not use strongly negative letter spacing: compressed display type is harder to read on mobile screens and can perform poorly with longer Spanish, Portuguese, Russian, and Turkish copy.
+Publish only facts confirmed by Sourcing Ally: its Shenzhen base, listed services, regional travel coverage, contact details, language options, the minimum 5% sourcing fee, the $150/day independent factory-travel support fee, and the exclusion of dangerous or military-related goods. Do not add unverified statistics, client counts, results, certifications, guarantees, or testimonials.
