@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "how-to-find-suppliers-in-china"
+draft: false
 category: "Supplier research"
 tags: ["find suppliers", "Alibaba", "1688", "supplier comparison", "China sourcing"]
 readingTime: "11 min read"

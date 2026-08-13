@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "quality-control-in-china-sourcing"
+draft: false
 category: "Quality control"
 tags: ["quality control", "inspection", "final inspection", "product checklist"]
 readingTime: "10 min read"

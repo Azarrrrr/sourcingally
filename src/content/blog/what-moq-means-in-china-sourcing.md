@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "what-moq-means-in-china-sourcing"
+draft: false
 category: "MOQ, quotes, and negotiation"
 tags: ["MOQ", "minimum order quantity", "supplier quote", "private label"]
 readingTime: "7 min read"

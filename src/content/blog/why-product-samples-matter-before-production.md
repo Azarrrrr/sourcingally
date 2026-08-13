@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "why-product-samples-matter-before-production"
+draft: false
 category: "Samples and product development"
 tags: ["product sample", "pre-production sample", "quality control", "product development"]
 readingTime: "9 min read"

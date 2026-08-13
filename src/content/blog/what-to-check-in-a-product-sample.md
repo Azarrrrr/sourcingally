@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "what-to-check-in-a-product-sample"
+draft: false
 category: "Samples and product development"
 tags: ["sample review", "product sample", "quality checklist", "packaging"]
 readingTime: "8 min read"

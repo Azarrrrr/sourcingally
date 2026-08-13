@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "buying-direct-vs-using-a-sourcing-partner"
+draft: false
 category: "Choosing a sourcing partner"
 tags: ["direct supplier", "sourcing partner", "factory visit", "supplier comparison"]
 readingTime: "8 min read"

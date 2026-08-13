@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "how-to-write-a-product-brief-for-china-sourcing"
+draft: false
 category: "Start importing"
 tags: ["product brief", "supplier quote", "samples", "China sourcing"]
 readingTime: "10 min read"

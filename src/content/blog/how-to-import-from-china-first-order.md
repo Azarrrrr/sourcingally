@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "how-to-import-from-china-first-order"
+draft: false
 category: "Start importing"
 tags: ["import from China", "first order", "supplier research", "project brief"]
 readingTime: "12 min read"

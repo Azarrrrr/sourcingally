@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "how-to-plan-shipping-from-china"
+draft: false
 category: "Shipping and logistics"
 tags: ["shipping from China", "freight", "packing list", "commercial invoice", "import preparation"]
 readingTime: "10 min read"

@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "how-to-choose-a-china-sourcing-agent"
+draft: false
 category: "Choosing a sourcing partner"
 tags: ["sourcing agent", "supplier sourcing", "factory visit", "quality control"]
 readingTime: "9 min read"

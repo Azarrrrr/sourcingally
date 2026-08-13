@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "supplier-verification-checklist-guide"
+draft: false
 category: "Supplier research"
 tags: ["supplier verification", "factory audit", "factory visit", "supplier research"]
 readingTime: "10 min read"

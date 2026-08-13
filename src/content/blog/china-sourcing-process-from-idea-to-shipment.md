@@ -5,6 +5,8 @@ pubDate: 2026-08-13
 author: "Sourcing Ally"
 updatedDate: 2026-08-13
 lang: en
+translationKey: "china-sourcing-process-from-idea-to-shipment"
+draft: false
 category: "Start importing"
 tags: ["sourcing process", "supplier research", "quality control", "shipping"]
 readingTime: "11 min read"

@@ -3,7 +3,8 @@ title: 'What to Prepare Before You Start Sourcing from China'
 description: 'A practical starting checklist for international buyers preparing a sourcing project.'
 pubDate: 2026-08-13
 author: 'Sourcing Ally'
-lang: 'en'
+lang: en
+translationKey: "working-with-a-china-sourcing-agent"
 draft: false
 ---
 
