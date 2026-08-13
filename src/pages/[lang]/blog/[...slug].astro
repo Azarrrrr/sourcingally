@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { lang: post.data.lang, slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Layout title={`${post.data.title} | Sourcing Ally`} description={post.data.description} lang={post.data.lang}>
+  <article class="article-page section-pad">
+    <div class="container article-wrap">
+      <a class="back-link" href={`/${post.data.lang}/blog/`}>← Journal</a>
+      <p class="eyebrow">{post.data.pubDate.toLocaleDateString(post.data.lang, {year:'numeric',month:'long',day:'numeric'})} · {post.data.author}</p>
+      <h1>{post.data.title}</h1>
+      <p class="article-dek">{post.data.description}</p>
+      <div class="article-body"><Content /></div>
+    </div>
+  </article>
+</Layout>
+<style>.article-wrap{max-width:800px}.back-link{display:inline-block;color:var(--blue);font-size:.84rem;font-weight:700;margin-bottom:70px}.article-page h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.02;letter-spacing:-.065em;margin:0 0 22px}.article-dek{font-size:1.15rem;color:var(--muted);line-height:1.7;margin:0 0 60px}.article-body{font-size:1.05rem;line-height:1.85;color:#34445a}.article-body h2{font-size:1.8rem;letter-spacing:-.04em;color:var(--ink);margin:45px 0 12px}.article-body p{margin:0 0 20px}.article-body ul{padding-left:22px}.article-body li{margin:7px 0}</style>

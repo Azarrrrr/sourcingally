@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: string;
+}
+
+const { title, description, lang = 'en' } = Astro.props;
+const languages = [
+  ['en', 'English'],
+  ['es', 'Español'],
+  ['pt', 'Português'],
+  ['ru', 'Русский'],
+  ['tr', 'Türkçe'],
+];
+const path = Astro.url.pathname.replace(/^\/(en|es|pt|ru|tr)/, '') || '/';
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href={`/${lang}/`} aria-label="Sourcing Ally home">
+          <span class="brand-mark">SA</span>
+          <span>Sourcing <b>Ally</b></span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href={`/${lang}/#services`}>Services</a>
+          <a href={`/${lang}/#process`}>How it works</a>
+          <a href={`/${lang}/#about`}>About</a>
+          <a href={`/${lang}/blog/`}>Journal</a>
+        </nav>
+        <div class="nav-actions">
+          <label class="language-picker">
+            <span class="sr-only">Choose language</span>
+            <select onchange="window.location.href=this.value">
+              {languages.map(([code, name]) => <option value={`/${code}${path}`} selected={code === lang}>{name}</option>)}
+            </select>
+          </label>
+          <a class="button button-small" href={`/${lang}/#contact`}>Start a project</a>
+        </div>
+      </div>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href={`/${lang}/`}><span class="brand-mark">SA</span><span>Sourcing <b>Ally</b></span></a>
+          <p class="footer-copy">A sourcing partner on the ground in Shenzhen, helping international buyers work with China more clearly and confidently.</p>
+        </div>
+        <div>
+          <p class="footer-label">Explore</p>
+          <a href={`/${lang}/#services`}>Services</a>
+          <a href={`/${lang}/#process`}>Process</a>
+          <a href={`/${lang}/blog/`}>Journal</a>
+        </div>
+        <div>
+          <p class="footer-label">Contact</p>
+          <a href="mailto:sourcingally@gmail.com">sourcingally@gmail.com</a>
+          <a href="https://wa.me/8619002009100" target="_blank" rel="noreferrer">WhatsApp +86 190 0200 9100</a>
+        </div>
+      </div>
+      <div class="container footer-bottom"><span>© {new Date().getFullYear()} Sourcing Ally</span><span>Shenzhen, China · International service</span></div>
+    </footer>
+  </body>
+</html>
