@@ -81,3 +81,7 @@ The current build contains **523 static pages** and six website languages: Engli
 ## Claims policy
 
 Publish only facts confirmed by Sourcing Ally: its Shenzhen base, listed services, regional travel coverage, contact details, language options, the minimum 5% sourcing fee, the $150/day independent factory-travel support fee, and the exclusion of dangerous or military-related goods. Do not add unverified statistics, client counts, results, certifications, guarantees, or testimonials.
+
+## Deployment verification
+
+The Cloudflare Workers and Pages GitHub App is authorized for this repository. New commits to `main` are expected to trigger a Cloudflare Pages production build automatically.
