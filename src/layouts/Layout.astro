@@ -55,13 +55,9 @@ const organizationJson = {
           <span>Sourcing <b>Ally</b></span>
         </a>
         <nav class="main-nav" aria-label="Main navigation">
-          <a href={`/${lang}/services/`}>Services</a>
-          <a href={`/${lang}/paths/`}>Buyer paths</a>
-          <a href={`/${lang}/products/`}>Products</a>
-          <a href={`/${lang}/cities/`}>China cities</a>
-          <a href={`/${lang}/guides/`}>Sourcing school</a>
-          <a href={`/${lang}/questions/`}>Questions</a>
-          <a href={`/${lang}/blog/`}>Journal</a>
+          <details class="nav-group"><summary>Work with us <span>+</span></summary><div class="nav-panel"><a href={`/${lang}/services/`}>Services</a><a href={`/${lang}/paths/`}>Buyer paths</a><a href={`/${lang}/service-matcher/`}>Service Matcher</a><a href={`/${lang}/start-project/`}>Project Brief Builder</a></div></details>
+          <details class="nav-group"><summary>Learn <span>+</span></summary><div class="nav-panel"><a href={`/${lang}/questions/`}>Sourcing Questions</a><a href={`/${lang}/guides/`}>Sourcing School</a><a href={`/${lang}/blog/`}>Journal</a><a href={`/${lang}/editorial-policy/`}>Editorial standards</a></div></details>
+          <details class="nav-group"><summary>Explore China <span>+</span></summary><div class="nav-panel"><a href={`/${lang}/cities/`}>China cities</a><a href={`/${lang}/china-route/`}>China Route Map</a><a href={`/${lang}/products/`}>Product guides</a></div></details>
         </nav>
         <div class="nav-actions">
           <label class="language-picker">
