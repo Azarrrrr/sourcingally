@@ -35,9 +35,10 @@ const path = Astro.url.pathname.replace(/^\/(en|es|pt|ru|tr)/, '') || '/';
           <span>Sourcing <b>Ally</b></span>
         </a>
         <nav class="main-nav" aria-label="Main navigation">
-          <a href={`/${lang}/#services`}>Services</a>
-          <a href={`/${lang}/#process`}>How it works</a>
-          <a href={`/${lang}/#about`}>About</a>
+          <a href={`/${lang}/services/`}>Services</a>
+          <a href={`/${lang}/products/`}>Products</a>
+          <a href={`/${lang}/cities/`}>China cities</a>
+          <a href={`/${lang}/guides/`}>Sourcing school</a>
           <a href={`/${lang}/blog/`}>Journal</a>
         </nav>
         <div class="nav-actions">
@@ -60,8 +61,10 @@ const path = Astro.url.pathname.replace(/^\/(en|es|pt|ru|tr)/, '') || '/';
         </div>
         <div>
           <p class="footer-label">Explore</p>
-          <a href={`/${lang}/#services`}>Services</a>
-          <a href={`/${lang}/#process`}>Process</a>
+          <a href={`/${lang}/services/`}>Services</a>
+          <a href={`/${lang}/products/`}>Products</a>
+          <a href={`/${lang}/cities/`}>China cities</a>
+          <a href={`/${lang}/guides/`}>Sourcing school</a>
           <a href={`/${lang}/blog/`}>Journal</a>
         </div>
         <div>

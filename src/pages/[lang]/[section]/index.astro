@@ -1,0 +1,19 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { services, products, cities, guides } from '../../../data/site-data';
+const sectionMap = { services, products, cities, guides };
+const labels = {
+  services: {kicker:'Work with us', title:'China sourcing services, explained clearly', intro:'Explore the practical support Sourcing Ally can provide from Shenzhen and across China.'},
+  products: {kicker:'Product knowledge', title:'Sourcing guides by product category', intro:'Understand the questions, samples, materials, packaging, and quality considerations behind different product types.'},
+  cities: {kicker:'China on the ground', title:'Manufacturing cities and sourcing regions', intro:'Learn what different China locations are commonly associated with and how to plan a useful visit.'},
+  guides: {kicker:'China sourcing school', title:'A practical education in importing from China', intro:'Build your understanding of suppliers, fees, quality, shipping, culture, holidays, currency, and compliance.'}
+};
+export function getStaticPaths(){return ['services','products','cities','guides'].map(section=>({params:{lang:'en',section},props:{section}}))}
+const {section}=Astro.props; const t=labels[section as keyof typeof labels]; const items=sectionMap[section as keyof typeof sectionMap];
+---
+<Layout title={`${t.title} | Sourcing Ally`} description={t.intro} lang="en">
+  <section class="section-pad hub-hero"><div class="container hub-wrap"><p class="eyebrow">{t.kicker}</p><h1>{t.title}</h1><p class="hero-intro">{t.intro}</p></div></section>
+  <section class="section-pad section-light"><div class="container hub-grid">{items.map(item=><a class="hub-card" href={`/en/${section}/${item.slug}/`}><span class="card-kicker">{item.shortTitle}</span><h2>{item.title}</h2><p>{item.summary}</p><span class="read-link">Read the full guide ↗</span></a>)}</div></section>
+</Layout>
+<style>.hub-wrap{max-width:900px}.hub-hero h1{font-size:clamp(3rem,6vw,5.8rem);line-height:1;letter-spacing:-.07em;margin:0 0 24px}.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.hub-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:27px;min-height:285px;display:flex;flex-direction:column;transition:.2s}.hub-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 14px 30px rgba(16,35,63,.08)}.card-kicker{color:var(--red);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:750}.hub-card h2{font-size:1.35rem;line-height:1.15;letter-spacing:-.035em;margin:19px 0 10px}.hub-card p{color:var(--muted);font-size:.88rem;line-height:1.7;margin:0}.read-link{margin-top:auto;color:var(--blue);font-size:.8rem;font-weight:750}@media(max-width:850px){.hub-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:540px){.hub-grid{grid-template-columns:1fr}}
+</style>

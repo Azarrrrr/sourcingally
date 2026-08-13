@@ -68,6 +68,21 @@ After the first deployment, add `sourcingally.com` as a custom domain in the Clo
 
 The website currently uses only facts confirmed by the owner: the Sourcing Ally name, Shenzhen base, listed service capabilities, regional coverage, contact details, five-language site structure, a minimum 5% sourcing fee, and the exclusion of dangerous or military-related products. Do not add client counts, testimonials, years of experience, certifications, guarantees, warehouse claims, or performance statistics unless they are verified and approved for publication.
 
+## Expanded website structure
+
+The current build includes **51 generated pages**: five localized homepages, localized blog indexes, one English blog article, service and product hubs, city and sourcing-school hubs, and detailed English pages for each service, product category, city, and guide. The first deep knowledge release is intentionally written in English so it can be reviewed for accuracy before human-quality localization is added for Spanish, Portuguese, Russian, and Turkish. Do not mass-translate the knowledge pages without review; that would create weak or duplicate SEO content.
+
+The main page families are:
+
+| Family | Current focus |
+|---|---|
+| Services | Supplier sourcing, samples, factory checks, quality control, production follow-up, packaging, translation, and factory travel |
+| Products | Toys, clothing and textiles, electronics, light furniture, lighting, packaging products, and home goods |
+| Cities | Shenzhen, Dongguan, Guangzhou, Foshan, Zhongshan, Huizhou, Yiwu, Ningbo, Shanghai, and Suzhou/Hangzhou |
+| Guides | Importing, fees, supplier verification, MOQ, quality control, shipping, holidays, culture, currency, and compliance |
+
+The site also includes `robots.txt` and a generated `sitemap.xml` endpoint. Compliance and legal topics include a notice that requirements vary by product, destination, importer, and current rules; they are educational pages, not legal or customs advice.
+
 ## Project structure
 
 - `src/pages/[lang]/index.astro`: localized homepages.
