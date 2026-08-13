@@ -17,6 +17,18 @@ const languages = [
   ['tr', 'Türkçe'],
 ];
 const path = Astro.url.pathname.replace(/^\/(en|es|pt|ru|tr)/, '') || '/';
+const canonicalUrl = `https://sourcingally.com${Astro.url.pathname}`;
+const organizationJson = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Sourcing Ally',
+  url: 'https://sourcingally.com',
+  email: 'sourcingally@gmail.com',
+  telephone: '+8619002009100',
+  areaServed: 'International',
+  founder: { '@type': 'Person', name: 'Azar Pamir' },
+  description: 'A Shenzhen-based sourcing partner supporting international buyers with agreed sourcing, supplier, sample, factory-check, quality-control, packaging, travel, and translation tasks.'
+};
 ---
 <!doctype html>
 <html lang={lang}>
@@ -26,6 +38,13 @@ const path = Astro.url.pathname.replace(/^\/(en|es|pt|ru|tr)/, '') || '/';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sourcing Ally" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationJson)}></script>
     <title>{title}</title>
   </head>
   <body>
@@ -40,6 +59,7 @@ const path = Astro.url.pathname.replace(/^\/(en|es|pt|ru|tr)/, '') || '/';
           <a href={`/${lang}/products/`}>Products</a>
           <a href={`/${lang}/cities/`}>China cities</a>
           <a href={`/${lang}/guides/`}>Sourcing school</a>
+          <a href={`/${lang}/questions/`}>Questions</a>
           <a href={`/${lang}/blog/`}>Journal</a>
         </nav>
         <div class="nav-actions">
@@ -49,7 +69,7 @@ const path = Astro.url.pathname.replace(/^\/(en|es|pt|ru|tr)/, '') || '/';
               {languages.map(([code, name]) => <option value={`/${code}${path}`} selected={code === lang}>{name}</option>)}
             </select>
           </label>
-          <a class="button button-small" href={`/${lang}/#contact`}>Start a project</a>
+          <a class="button button-small" href={`/${lang}/start-project/`}>Start a project</a>
         </div>
       </div>
     </header>
@@ -66,10 +86,13 @@ const path = Astro.url.pathname.replace(/^\/(en|es|pt|ru|tr)/, '') || '/';
           <a href={`/${lang}/products/`}>Products</a>
           <a href={`/${lang}/cities/`}>China cities</a>
           <a href={`/${lang}/guides/`}>Sourcing school</a>
+          <a href={`/${lang}/questions/`}>Sourcing questions</a>
           <a href={`/${lang}/blog/`}>Journal</a>
+          <a href={`/${lang}/start-project/`}>Project brief</a>
           <a href={`/${lang}/privacy/`}>Privacy</a>
           <a href={`/${lang}/terms/`}>Terms</a>
           <a href={`/${lang}/disclaimer/`}>Disclaimer</a>
+          <a href={`/${lang}/editorial-policy/`}>Editorial policy</a>
         </div>
         <div>
           <p class="footer-label">Contact</p>
