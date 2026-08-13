@@ -9,7 +9,7 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     author: z.string().default('Sourcing Ally'),
     updatedDate: z.coerce.date().optional(),
-    lang: z.enum(['en', 'es', 'pt', 'ru', 'tr']).default('en'),
+    lang: z.enum(['en', 'es', 'pt', 'ru', 'tr', 'fr']).default('en'),
     category: z.string().default('China sourcing'),
     tags: z.array(z.string()).default([]),
     readingTime: z.string().optional(),

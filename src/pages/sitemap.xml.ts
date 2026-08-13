@@ -4,17 +4,21 @@ import { buyerPaths } from '../data/buyer-paths';
 import { cities, guides, products, services } from '../data/site-data';
 
 const base = 'https://sourcingally.com';
-const languages = ['en', 'es', 'pt', 'ru', 'tr'];
+const languages = ['en', 'es', 'pt', 'ru', 'tr', 'fr'];
 
 // These pages contain fully localized core conversion or navigation content.
 // Interim source-language fallback pages are intentionally excluded until reviewed.
-const localizedIndexableUrls = languages.flatMap((lang) => [
-  `/${lang}/`,
-  `/${lang}/paths/`,
-  `/${lang}/start-project/`,
-  `/${lang}/service-matcher/`,
-  `/${lang}/china-route/`,
-]);
+const localizedIndexableLanguages = ['en', 'es', 'pt', 'ru', 'tr'];
+const localizedIndexableUrls = [
+  '/fr/',
+  ...localizedIndexableLanguages.flatMap((lang) => [
+    `/${lang}/`,
+    `/${lang}/paths/`,
+    `/${lang}/start-project/`,
+    `/${lang}/service-matcher/`,
+    `/${lang}/china-route/`,
+  ]),
+];
 
 const englishKnowledgeUrls = [
   '/en/privacy/',

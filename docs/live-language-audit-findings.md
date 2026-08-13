@@ -1,0 +1,9 @@
+# Live language audit findings
+
+- URL inspected: https://sourcingally.com/ru/questions/
+- Browser observation: the Russian Questions hub has a Russian header and explanatory framing, but it visibly displays repeated English answer excerpts, including “Compare suppliers against the same written requirements, then shortlist based on capability, communication, sample quality, commercial fit, and verification—not price alone.”
+- Conclusion: a localized URL and localized navigation do not satisfy the language requirement when question-card answer content remains English. This page family must either receive full translations or be presented as an explicitly English source page rather than a purportedly Russian content experience.
+
+- Strict static-output audit completed: `docs/visible-english-fragment-audit.md` flags 81 pages with reader-facing English blocks for each of ES/PT/RU/TR and 83 for FR. The largest untranslated families are services, products, cities, guides, Journal posts, Buyer Paths, and Questions. Legal and editorial pages were corrected before this audit and are no longer flagged as English fallbacks.
+- Live verification after deployment: https://sourcingally.com/ru/paths/ and https://sourcingally.com/ru/paths/first-import/ now return Russian hub-card and route-detail content, including Russian decision stages, risk sections, checklist, and disclaimer link. The visible English-fragment scan decreased from 65 to 58 affected pages in each of ES/PT/RU/TR and from 67 to 60 in FR after completing Questions and Buyer Paths.
+- Cache-busted live verification: https://sourcingally.com/ru/services/?locale-audit=202608131300 displays Russian service cards from the first viewport and no visible English hero copy. The prior English hero was a browser document-cache artifact; the latest deployed HTML includes source-only markers and the current global stylesheet hides them.
