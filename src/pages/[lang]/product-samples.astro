@@ -1,0 +1,10 @@
+---
+import DecisionSuitePage from '../../components/DecisionSuitePage.astro';
+
+export function getStaticPaths() {
+  return ['en', 'es', 'pt', 'ru', 'tr', 'fr'].map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: 'en' | 'es' | 'pt' | 'ru' | 'tr' | 'fr' };
+---
+<DecisionSuitePage lang={lang} pageKey="productSamples" sequence="02—04" />
