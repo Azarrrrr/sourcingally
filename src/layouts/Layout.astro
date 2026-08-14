@@ -93,38 +93,32 @@ const organizationJson = {
     <main><slot /></main>
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div>
+        <div class="footer-intro">
           <a class="brand footer-brand" href={`/${lang}/`}><span class="brand-mark">SA</span><span>Sourcing <b>Ally</b></span></a>
           <p class="footer-copy">{ui.footer}</p>
         </div>
-        <div>
+        <nav class="footer-links" aria-label={ui.explore}>
           <p class="footer-label">{ui.explore}</p>
           <a href={`/${lang}/services/`}>{ui.services}</a>
-          <a href={`/${lang}/paths/`}>{ui.buyerPaths}</a>
           <a href={`/${lang}/products/`}>{ui.products}</a>
           <a href={`/${lang}/cities/`}>{ui.cities}</a>
           <a href={`/${lang}/guides/`}>{ui.school}</a>
-          <a href={`/${lang}/questions/`}>{ui.questions}</a>
           <a href={`/${lang}/blog/`}>{ui.journal}</a>
+        </nav>
+        <nav class="footer-links" aria-label={ui.work}>
+          <p class="footer-label">{ui.work}</p>
+          <a href={`/${lang}/paths/`}>{ui.buyerPaths}</a>
           <a href={`/${lang}/start-project/`}>{ui.briefBuilder}</a>
-          <a href={`/${lang}/supplier-verification/`}>{ui.supplierVerification}</a>
-          <a href={`/${lang}/product-samples/`}>{ui.productSamples}</a>
-          <a href={`/${lang}/factory-visits/`}>{ui.factoryVisits}</a>
-          <a href={`/${lang}/quality-control-plan/`}>{ui.qualityControlPlan}</a>
-          <a href={`/${lang}/shipping-readiness/`}>{ui.shippingReadiness}</a>
-          <a href={`/${lang}/china-business-travel/`}>{ui.chinaBusinessTravel}</a>
-          <a href={`/${lang}/privacy/`}>{ui.privacy}</a>
-          <a href={`/${lang}/terms/`}>{ui.terms}</a>
-          <a href={`/${lang}/disclaimer/`}>{ui.disclaimer}</a>
-          <a href={`/${lang}/editorial-policy/`}>{ui.policy}</a>
-        </div>
-        <div>
+          <a href={`/${lang}/how-we-work/`}>{ui.howWeWork}</a>
+          <a href={`/${lang}/fees-and-scope/`}>{ui.feesScope}</a>
+        </nav>
+        <div class="footer-contact">
           <p class="footer-label">{ui.contact}</p>
           <a href="mailto:sourcingally@gmail.com">sourcingally@gmail.com</a>
           <a href="https://wa.me/8619002009100" target="_blank" rel="noreferrer">WhatsApp +86 190 0200 9100</a>
         </div>
       </div>
-      <div class="container footer-bottom"><span>© {new Date().getFullYear()} Sourcing Ally</span><span>{ui.international}</span></div>
+      <div class="container footer-bottom"><span>© {new Date().getFullYear()} Sourcing Ally</span><nav class="footer-legal" aria-label="Legal"><a href={`/${lang}/privacy/`}>{ui.privacy}</a><a href={`/${lang}/terms/`}>{ui.terms}</a><a href={`/${lang}/disclaimer/`}>{ui.disclaimer}</a><a href={`/${lang}/editorial-policy/`}>{ui.policy}</a></nav><span>{ui.international}</span></div>
     </footer>
     <script>
       const groups = [...document.querySelectorAll('[data-nav-group]')];
