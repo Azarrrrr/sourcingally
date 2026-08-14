@@ -1,6 +1,7 @@
 ---
 title: "Comment gérer les changements d’un fournisseur après l’approbation d’un échantillon"
 description: "Un guide pratique lorsque le fournisseur propose un autre matériau, composant, emballage, prix, délai ou procédé de production après l’approbation d’un échantillon."
+heroImage: "/images/journal/supplier-change-control-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "8 min de lecture"
 featured: false
 draft: false
 ---
-
 ## Un changement n’est pas automatiquement un problème ; un changement non consigné l’est
 
 Après l’approbation d’un échantillon, un fournisseur peut proposer un autre matériau, un composant différent, une révision de carton, une nouvelle date, un ajustement de prix ou un autre procédé. Parfois, cela est raisonnable : un matériau peut manquer, un composant peut avoir un délai plus long ou l’emballage peut exiger un ajustement pratique.

@@ -1,6 +1,7 @@
 ---
 title: "Comment approuver l’emballage d’une commande en Chine avant production"
 description: "Un guide pratique pour transformer fichiers graphiques, étiquettes, inserts, cartons et données d’expédition en un dossier d’emballage prêt pour la production."
+heroImage: "/images/journal/packaging-approval-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "8 min de lecture"
 featured: false
 draft: false
 ---
-
 ## L’emballage fait partie de la décision produit
 
 L’emballage arrive souvent trop tard, après le produit, le prix et l’échantillon. C’est risqué. Une boîte de vente, un insert, une étiquette, un code-barres, un carton ou une marque d’expédition peuvent modifier le coût, le délai, le volume de fret, la manutention et la présentation au client.

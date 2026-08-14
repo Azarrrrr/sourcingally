@@ -1,6 +1,7 @@
 ---
 title: "Como lidar com mudanças do fornecedor após aprovar uma amostra"
 description: "Um guia prático para quando o fornecedor propõe mudar material, componente, embalagem, preço, prazo ou método de produção após a aprovação da amostra."
+heroImage: "/images/journal/supplier-change-control-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "8 min de leitura"
 featured: false
 draft: false
 ---
-
 ## Uma mudança não é automaticamente um problema; uma mudança sem registro é
 
 Depois da aprovação da amostra, o fornecedor pode sugerir material alternativo, componente diferente, revisão de caixa, nova data, ajuste de preço ou outro processo. Às vezes isso é razoável: pode haver falta de material, prazo maior para um componente ou necessidade prática de ajustar a embalagem.

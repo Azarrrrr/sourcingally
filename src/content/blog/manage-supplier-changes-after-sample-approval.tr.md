@@ -1,6 +1,7 @@
 ---
 title: "Numune Onayından Sonra Tedarikçi Değişiklikleri Nasıl Yönetilir"
 description: "Numune onayından sonra tedarikçi malzeme, parça, ambalaj, fiyat, süre veya üretim yöntemi değişikliği önerdiğinde alıcılar için pratik rehber."
+heroImage: "/images/journal/supplier-change-control-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "8 dakikalık okuma"
 featured: false
 draft: false
 ---
-
 ## Değişiklik her zaman sorun değildir; kayıtsız değişiklik sorundur
 
 Numuneyi onayladıktan sonra tedarikçi alternatif malzeme, farklı parça, koli revizyonu, yeni tarih, fiyat ayarlaması veya farklı üretim yöntemi önerebilir. Bazen bu makuldür: malzeme bulunmayabilir, bir parçanın tedarik süresi uzayabilir ya da ambalaj için pratik bir düzeltme gerekebilir.

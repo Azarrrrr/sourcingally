@@ -1,6 +1,7 @@
 ---
 title: "China Purchase Order Checklist: What to Confirm Before a Deposit"
 description: "A practical order-record checklist for buyers who need to connect the quote, sample, specification, payment basis, packaging, delivery term, and next checks before sending a deposit."
+heroImage: "/images/journal/purchase-order-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14

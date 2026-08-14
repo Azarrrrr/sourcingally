@@ -1,6 +1,7 @@
 ---
 title: "Como aprovar a embalagem de um pedido na China antes da produção"
 description: "Um guia prático para transformar arte, etiquetas, encartes, caixas e dados de embarque em um registro de embalagem pronto para produção."
+heroImage: "/images/journal/packaging-approval-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "8 min de leitura"
 featured: false
 draft: false
 ---
-
 ## A embalagem faz parte da decisão sobre o produto
 
 A embalagem costuma aparecer tarde, depois de produto, preço e amostra. Isso traz risco. Caixa de varejo, encarte, etiqueta, código de barras, caixa externa ou marca de envio podem mudar custo, prazo, volume de frete, manuseio e apresentação ao cliente.

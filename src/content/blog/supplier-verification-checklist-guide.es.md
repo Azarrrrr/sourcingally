@@ -12,7 +12,6 @@ tags: ["verificación de proveedores", "capacidad del producto", "muestras y pru
 readingTime: "10 min de lectura"
 featured: false
 ---
-
 La verificación de proveedores suele presentarse como una prueba de sí o no: verificado o no verificado. En el trabajo real de abastecimiento es más útil pensar en capas. Cada comprobación puede responder a una pregunta distinta. Un dato del registro de la empresa puede ayudar a identificar con quién estás hablando. Una muestra puede mostrar si el proveedor entiende el producto. Una visita a la fábrica puede mostrar operaciones visibles. Ninguna de estas, por sí sola, garantiza todos los resultados futuros.
 
 ## Capa 1: Identidad básica e información de contacto

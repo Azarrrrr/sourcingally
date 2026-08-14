@@ -1,6 +1,7 @@
 ---
 title: "How to Approve Packaging for a China Order Before Production"
 description: "A practical packaging-approval guide for buyers who need to turn artwork, labels, inserts, cartons, and shipping information into a production-ready record."
+heroImage: "/images/journal/packaging-approval-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14

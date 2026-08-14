@@ -1,6 +1,7 @@
 ---
 title: "Checklist de commande en Chine : que confirmer avant un acompte"
 description: "Une checklist pratique pour relier devis, échantillon, spécification, paiement, emballage, règle de livraison et vérifications en attente avant de verser un acompte."
+heroImage: "/images/journal/purchase-order-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "9 min de lecture"
 featured: false
 draft: false
 ---
-
 ## Un bon de commande n’est pas un document magique
 
 Un bon de commande peut clarifier une commande. Il ne prouve pas, à lui seul, que le fournisseur a compris chaque détail technique, qu’un échantillon représente la future production ou que l’expédition arrivera sans problème. Sa vraie utilité est plus simple : il fixe par écrit la version du produit commandé.

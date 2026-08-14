@@ -1,6 +1,7 @@
 ---
 title: "How to Handle Supplier Changes After You Approve a Sample"
 description: "A practical change-control guide for buyers when a supplier proposes a different material, component, packaging detail, price, lead time, or production method after sample approval."
+heroImage: "/images/journal/supplier-change-control-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14

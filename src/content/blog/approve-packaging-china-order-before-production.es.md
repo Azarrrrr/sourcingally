@@ -1,6 +1,7 @@
 ---
 title: "Cómo aprobar el embalaje de un pedido en China antes de la producción"
 description: "Una guía práctica para convertir arte, etiquetas, insertos, cajas y datos de envío en un registro de embalaje listo para producción."
+heroImage: "/images/journal/packaging-approval-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "8 min de lectura"
 featured: false
 draft: false
 ---
-
 ## El embalaje forma parte de la decisión sobre el producto
 
 El embalaje suele aparecer tarde, después de hablar de producto, precio y muestra. Es un riesgo. Una caja de venta, inserto, cartón, etiqueta, código de barras o marca de envío puede afectar el coste, el plazo, el volumen de flete, la manipulación y la presentación ante el cliente.

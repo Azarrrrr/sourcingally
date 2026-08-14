@@ -1,6 +1,7 @@
 ---
 title: "Çin Siparişi Kontrol Listesi: Kapora Göndermeden Önce Ne Doğrulanmalı"
 description: "Kapora ödemeden önce teklifi, numuneyi, spesifikasyonu, ödemeyi, ambalajı, teslim koşulunu ve açık kontrolleri birbirine bağlayan pratik bir sipariş kaydı kontrol listesi."
+heroImage: "/images/journal/purchase-order-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "9 dakikalık okuma"
 featured: false
 draft: false
 ---
-
 ## Satın alma siparişi sihirli bir belge değildir
 
 Satın alma siparişi siparişi daha net hale getirebilir. Ancak tek başına tedarikçinin her teknik ayrıntıyı anladığını, numunenin gelecekteki üretimi temsil ettiğini veya sevkiyatın sorunsuz ulaşacağını kanıtlamaz. Asıl değeri daha basittir: sipariş edilen ürün versiyonunu yazılı hale getirir.

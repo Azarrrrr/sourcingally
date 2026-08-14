@@ -1,6 +1,7 @@
 ---
 title: "Checklist de pedido na China: o que confirmar antes do sinal"
 description: "Um checklist prático para ligar cotação, amostra, especificação, pagamento, embalagem, termo de entrega e verificações pendentes antes de pagar o sinal."
+heroImage: "/images/journal/purchase-order-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "9 min de leitura"
 featured: false
 draft: false
 ---
-
 ## Uma ordem de compra não é um documento mágico
 
 Uma ordem de compra pode tornar o pedido mais claro. Sozinha, ela não prova que o fornecedor entendeu cada detalhe técnico, que uma amostra representa a produção futura ou que o embarque chegará sem problemas. O valor real é mais simples: ela deixa registrada a versão do produto que está sendo encomendada.

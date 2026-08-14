@@ -1,6 +1,7 @@
 ---
 title: "Lista de pedido a China: qué confirmar antes de enviar un anticipo"
 description: "Una lista práctica para conectar la cotización, la muestra, la especificación, el pago, el embalaje, el término de entrega y las verificaciones pendientes antes de enviar un anticipo."
+heroImage: "/images/journal/purchase-order-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "9 min de lectura"
 featured: false
 draft: false
 ---
-
 ## Una orden de compra no es un documento mágico
 
 Una orden de compra puede dar claridad al pedido. Por sí sola no demuestra que el proveedor entienda cada detalle técnico, que una muestra represente la producción futura ni que el envío llegue sin problemas. Su valor real es más sencillo: deja por escrito qué versión del producto se está pidiendo.

@@ -1,6 +1,7 @@
 ---
 title: "Cómo gestionar cambios del proveedor después de aprobar una muestra"
 description: "Una guía práctica para cuando un proveedor propone cambiar material, componente, embalaje, precio, plazo o método de producción después de aprobar una muestra."
+heroImage: "/images/journal/supplier-change-control-editorial.webp"
 pubDate: 2026-08-14
 author: "Sourcing Ally"
 updatedDate: 2026-08-14
@@ -12,7 +13,6 @@ readingTime: "8 min de lectura"
 featured: false
 draft: false
 ---
-
 ## Un cambio no siempre es un problema; un cambio sin registro sí lo es
 
 Un proveedor puede proponer un material alternativo, otro componente, una revisión de caja, una fecha nueva, un ajuste de precio o un proceso distinto después de aprobar la muestra. A veces el cambio es razonable: puede faltar material, un componente puede tardar más o el embalaje puede necesitar un ajuste práctico.
