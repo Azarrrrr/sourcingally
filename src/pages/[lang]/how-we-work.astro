@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { foundationPages, type FoundationLanguage } from '../../data/foundation-pages';
+
+export function getStaticPaths() {
+  return ['en', 'es', 'pt', 'ru', 'tr', 'fr'].map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: FoundationLanguage };
+const copy = foundationPages[lang].howWeWork;
+const localized = (href: string) => `/${lang}${href}`;
+---
+<Layout title={copy.metaTitle} description={copy.metaDescription} lang={lang}>
+  <section class="foundation-hero">
+    <div class="container foundation-hero-grid">
+      <div>
+        <p class="eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
+        <p class="foundation-lede">{copy.lede}</p>
+      </div>
+      <aside class="foundation-hero-note">
+        <span>01—05</span>
+        <b>{copy.processTitle}</b>
+        <p>{copy.intro}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="foundation-section">
+    <div class="container">
+      <div class="foundation-heading"><p class="eyebrow">01 / PROCESS</p><h2>{copy.processTitle}</h2><p>{copy.processIntro}</p></div>
+      <div class="foundation-process-grid">
+        {copy.stages.map((stage) => <article class="foundation-stage"><span>{stage.number}</span><h3>{stage.title}</h3><p>{stage.text}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="foundation-section foundation-section-dark">
+    <div class="container">
+      <div class="foundation-heading foundation-heading-light"><p class="eyebrow">02 / SCOPE</p><h2>{copy.boundariesTitle}</h2><p>{copy.boundariesIntro}</p></div>
+      <div class="foundation-boundary-grid">
+        {copy.boundaries.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="foundation-section foundation-section-soft">
+    <div class="container">
+      <div class="foundation-heading"><p class="eyebrow">03 / NEXT STEP</p><h2>{copy.routeTitle}</h2></div>
+      <div class="foundation-route-grid">
+        {copy.routes.map((route) => <a class="foundation-route-card" href={localized(route.href)}><span>↗</span><h3>{route.title}</h3><p>{route.text}</p><b>{route.label}</b></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="foundation-cta">
+    <div class="container foundation-cta-inner"><div><p class="eyebrow">SOURCING ALLY</p><h2>{copy.ctaTitle}</h2><p>{copy.ctaText}</p></div><a class="button" href={localized('/start-project/')}>{copy.ctaLabel} <span>↗</span></a></div>
+  </section>
+</Layout>

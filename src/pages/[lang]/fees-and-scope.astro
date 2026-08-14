@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { foundationPages, type FoundationLanguage } from '../../data/foundation-pages';
+
+export function getStaticPaths() {
+  return ['en', 'es', 'pt', 'ru', 'tr', 'fr'].map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: FoundationLanguage };
+const copy = foundationPages[lang].feesAndScope;
+const localized = (href: string) => `/${lang}${href}`;
+---
+<Layout title={copy.metaTitle} description={copy.metaDescription} lang={lang}>
+  <section class="foundation-hero foundation-fee-hero">
+    <div class="container foundation-hero-grid">
+      <div>
+        <p class="eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
+        <p class="foundation-lede">{copy.lede}</p>
+      </div>
+      <aside class="foundation-hero-note">
+        <span>5% / $150</span>
+        <b>{copy.modelsTitle}</b>
+        <p>{copy.intro}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="foundation-section foundation-section-soft">
+    <div class="container">
+      <div class="foundation-heading"><p class="eyebrow">01 / PRICING</p><h2>{copy.modelsTitle}</h2><p>{copy.intro}</p></div>
+      <div class="foundation-model-grid">
+        {copy.models.map((model, index) => <article class:list={['foundation-model-card', index === 1 && 'foundation-model-card-alt']}><p>{model.title}</p><strong>{model.price}</strong><span>{model.text}</span></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="foundation-section">
+    <div class="container">
+      <div class="foundation-heading"><p class="eyebrow">02 / SUPPORT</p><h2>{copy.scopeTitle}</h2><p>{copy.scopeIntro}</p></div>
+      <div class="foundation-scope-grid">
+        {copy.scopeItems.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="foundation-section foundation-section-dark">
+    <div class="container">
+      <div class="foundation-heading foundation-heading-light"><p class="eyebrow">03 / AGREEMENT</p><h2>{copy.limitsTitle}</h2></div>
+      <div class="foundation-boundary-grid">
+        {copy.limits.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="foundation-section">
+    <div class="container">
+      <div class="foundation-heading"><p class="eyebrow">04 / EXPLORE</p><h2>{copy.relatedTitle}</h2></div>
+      <div class="foundation-route-grid">
+        {copy.related.map((item) => <a class="foundation-route-card" href={localized(item.href)}><span>↗</span><h3>{item.title}</h3><p>{item.text}</p><b>{item.label}</b></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="foundation-cta">
+    <div class="container foundation-cta-inner"><div><p class="eyebrow">SOURCING ALLY</p><h2>{copy.ctaTitle}</h2><p>{copy.ctaText}</p></div><a class="button" href={localized('/start-project/')}>{copy.ctaLabel} <span>↗</span></a></div>
+  </section>
+</Layout>
