@@ -123,7 +123,7 @@ Use consistent fields for:
 - Payment assumptions
 - Open questions and exclusions
 
-The goal is not to force every supplier into the same answer. It is to see which answers are different and why. Read the [supplier comparison guide](/en/blog/how-to-compare-chinese-suppliers-beyond-lowest-quote/) before treating a low price as a comparable offer.
+The goal is not to force every supplier into the same answer. It is to see which answers are different and why. Read the [supplier comparison guide](/en/blog/compare-chinese-suppliers-beyond-lowest-quote/) before treating a low price as a comparable offer.
 
 ## Prepare a short question list
 

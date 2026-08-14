@@ -91,7 +91,7 @@ export const operationalGuides = {
           "label": "Explore packaging"
         },
         {
-          "href": "/blog/freight-forwarder-guide/",
+          "href": "/blog/what-freight-forwarder-handles-china-shipment/",
           "title": "Freight forwarder guide",
           "text": "Use the Journal guide to prepare questions for a forwarder without confusing logistics support with destination-specific advice.",
           "label": "Read the Journal guide"
@@ -289,7 +289,7 @@ export const operationalGuides = {
           "label": "Explorar embalaje"
         },
         {
-          "href": "/blog/freight-forwarder-guide/",
+          "href": "/blog/what-freight-forwarder-handles-china-shipment/",
           "title": "Guía del agente de carga",
           "text": "Use la guía del Journal para preparar preguntas para un agente de carga sin confundir el soporte logístico con asesoramiento específico del destino.",
           "label": "Leer la guía del Journal"
@@ -487,7 +487,7 @@ export const operationalGuides = {
           "label": "Saiba mais sobre embalagens"
         },
         {
-          "href": "/blog/freight-forwarder-guide/",
+          "href": "/blog/what-freight-forwarder-handles-china-shipment/",
           "title": "Guia do agente de carga",
           "text": "Use o guia do Journal para preparar perguntas ao agente de carga, sem confundir suporte logístico com aconselhamento específico para o destino.",
           "label": "Leia o guia do Journal"
@@ -685,7 +685,7 @@ export const operationalGuides = {
           "label": "Узнать об упаковке"
         },
         {
-          "href": "/blog/freight-forwarder-guide/",
+          "href": "/blog/what-freight-forwarder-handles-china-shipment/",
           "title": "Руководство по работе с экспедитором",
           "text": "Используйте руководство в Journal, чтобы подготовить вопросы для экспедитора, не смешивая общую логистическую поддержку с советами, специфичными для пункта назначения.",
           "label": "Прочитать руководство в Journal"
@@ -821,42 +821,42 @@ export const operationalGuides = {
       "evidence": [
         {
           "number": "01",
-          "title": "Freeze the product and quantity reference",
+          "title": "Ürün ve miktar referansını sabitleyin",
           "text": "Mevcut ürün versiyonunu, tamamlanmış miktarı, varyasyonları, etiketleri, aksesuarları, onaylı ambalajı ve malların teslim için hazır olup olmadığını hâlen etkileyen noktaları belirtin."
         },
         {
           "number": "02",
-          "title": "Make packaging and cargo information visible",
+          "title": "Ambalaj ve kargo bilgisini görünür kılın",
           "text": "Nihai paket sayısını, karton ölçülerini, brüt ve net ağırlığı, nakliye işaretlerini, gerekliyse palet veya yükleme bilgilerini ve pratik bir sorunu çözdüklerinde fotoğrafları talep edin."
         },
         {
           "number": "03",
-          "title": "Name the delivery term and place",
+          "title": "Teslim koşulunu ve yeri belirtin",
           "text": "Kararlaştırılan ticaret terimini, isimlendirilmiş yeri veya limanı ve varsa versiyonunu kaydedin. Kısa bir teslim-terimi etiketi her ödeme, belge, mülkiyet, sigorta, gümrük veya varış yeri yükümlülüğünü açıklamaz diye varsaymayın."
         },
         {
           "number": "04",
-          "title": "Align commercial and transport information",
+          "title": "Ticari ve taşıma bilgisini uyumlu hâle getirin",
           "text": "Ticari fatura, paketleme detayları, ürün tanımı, miktarlar ve sevkiyat talimatları aynı mallara atıfta bulunmalıdır. Tutarsızlıklar belgeler veya kargo serbest bırakılmadan önce netleştirilmelidir."
         },
         {
           "number": "05",
-          "title": "Confirm the open questions with the responsible parties",
+          "title": "Açık soruları sorumlu taraflarla teyit edin",
           "text": "Seçilen bir nakliyeci ve ithalatçı, gerçek sevkiyat için rota, toplama, gerekli bilgiler, varış yeri gereksinimleri, sigorta tercihleri ve tasfiye sorumluluklarını teyit etmelidir."
         }
       ],
       "limitsTitle": "Sevkiyata hazırlığın karar vermediği konular",
       "limits": [
         {
-          "title": "A trade term is not a complete shipping plan",
+          "title": "Bir ticaret terimi eksiksiz bir sevkiyat planı değildir",
           "text": "Ticaret terimleri belirli teslim görevlerini, maliyetleri ve riskleri paylaştırır, ancak her sözleşme maddesini, ödeme detayını, belge gerekliliğini, gümrük yükümlülüğünü veya uyuşmazlık konusunu çözmez."
         },
         {
-          "title": "A document list changes by product and destination",
+          "title": "Belge listesi ürüne ve varış yerine göre değişir",
           "text": "Ticari ve taşıma belgeleri yaygın olabilir; sertifikalar, etiketler, ithalat izinleri, testler, beyanlar, vergiler ve tasfiye gereksinimleri ise mal ve varış yerine göre değişir."
         },
         {
-          "title": "Readiness is not a delivery guarantee",
+          "title": "Hazırlık, teslimat garantisi değildir",
           "text": "Açık bir teslim kayıtı belirsizliği azaltabilir, ancak bir taşıyıcı programını, gümrük sonucunu, sigorta talebini, varış yeri tasfiyesini, maliyeti, hasarsız taşımayı veya teslim tarihini garanti edemez."
         }
       ],
@@ -872,26 +872,26 @@ export const operationalGuides = {
       "routes": [
         {
           "href": "/quality-control-plan/",
-          "title": "Quality-control planning",
+          "title": "Kalite kontrol planlaması",
           "text": "Mallara serbest bırakılmadan önce tanımlanması gereken ürün ve ambalaj kontrolleri ile sevkiyat zamanlamasını bağlayın.",
-          "label": "Plan quality control"
+          "label": "Kalite kontrolünü planlayın"
         },
         {
           "href": "/services/packaging/",
-          "title": "Packaging coordination",
+          "title": "Ambalaj koordinasyonu",
           "text": "Kartonlar, etiketler, ekler, paketleme yöntemi ve nakliye işaretlerini ürün tesliminin bir parçası olarak ele alın; sonradan düşünülmemeli.",
-          "label": "Explore packaging"
+          "label": "Ambalajı inceleyin"
         },
         {
-          "href": "/blog/freight-forwarder-guide/",
-          "title": "Freight forwarder guide",
+          "href": "/blog/what-freight-forwarder-handles-china-shipment/",
+          "title": "Nakliyeci rehberi",
           "text": "Journal rehberini kullanarak bir nakliyeci için soruları hazırlayın; lojistik desteği varış yerine özgü tavsiye ile karıştırmayın.",
-          "label": "Read the Journal guide"
+          "label": "Journal rehberini okuyun"
         }
       ],
       "ctaTitle": "Kargoyu hareket ettirmeden önce teslim devri sorusunu tanımlayın.",
       "ctaText": "Kısa bir proje özeti, bir sonraki operasyonel taahhütten önce ürün, ambalaj, zamanlama ve açık lojistik sorularını görünür kılabilir.",
-      "ctaLabel": "Build a project brief"
+      "ctaLabel": "Bir proje özeti oluşturun"
     },
     "chinaBusinessTravel": {
       "metaTitle": "Çin İş Seyahati ve Fabrika Ziyareti Planlaması | Sourcing Ally",
@@ -943,7 +943,7 @@ export const operationalGuides = {
           "text": "Gözlemlenenleri, hangi soruların yanıtlandığını, neyin belirsiz kaldığını ve tedarikçinin numune, teklif revizyonu, başka bir kontrol, deneme siparişi veya ileri adım gerektirip gerektirmediğini kaydedin."
         }
       ],
-      "limitsTitle": "Fabrika seyahat desteğinin sağlamadığılar",
+      "limitsTitle": "Fabrika seyahat desteğinin sağlamadıkları",
       "limits": [
         {
           "title": "Bu bir göçmenlik veya seyahat tavsiyesi değildir",
@@ -1081,7 +1081,7 @@ export const operationalGuides = {
           "label": "Explorer l'emballage"
         },
         {
-          "href": "/blog/freight-forwarder-guide/",
+          "href": "/blog/what-freight-forwarder-handles-china-shipment/",
           "title": "Guide du transitaire",
           "text": "Utilisez le guide Journal pour préparer les questions à poser à un transitaire sans confondre le support logistique avec des conseils spécifiques à une destination.",
           "label": "Lire le guide Journal"

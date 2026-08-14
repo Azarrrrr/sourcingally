@@ -85,7 +85,7 @@ Write down the named handover point and the event that proves it occurred. For e
 - Named port or airport terminal: cargo is accepted before the relevant cutoff
 - Destination warehouse: cargo is delivered to the agreed appointment location
 
-The delivery term must be equally specific. “FOB China” is not a complete operational instruction. A delivery term should identify the applicable Incoterms 2020 rule and named place, such as “FCA Shenzhen warehouse” or “FOB Yantian.” Read the [Incoterms guide for first-time China buyers](/en/blog/incoterms-first-time-china-buyers-what-they-change/) before treating a shipping term as a complete contract.
+The delivery term must be equally specific. “FOB China” is not a complete operational instruction. A delivery term should identify the applicable Incoterms 2020 rule and named place, such as “FCA Shenzhen warehouse” or “FOB Yantian.” Read the [Incoterms guide for first-time China buyers](/en/blog/incoterms-first-time-china-buyers/) before treating a shipping term as a complete contract.
 
 ## Ask for a quote that can be compared
 
@@ -128,7 +128,7 @@ A strong logistics file links back to the product and supplier record. Store the
 
 This matters when something changes. A late carton-size revision can affect the freight quote. A supplier’s partial completion can affect whether to consolidate or ship separately. A missed inspection can affect the cargo-ready date. If each change sits in a separate chat thread, the forwarder may receive an outdated instruction.
 
-Use the same discipline you would use when [comparing supplier quotes](/en/blog/how-to-compare-chinese-suppliers-beyond-lowest-quote/): identify the assumption, record the decision, and confirm the next owner.
+Use the same discipline you would use when [comparing supplier quotes](/en/blog/compare-chinese-suppliers-beyond-lowest-quote/): identify the assumption, record the decision, and confirm the next owner.
 
 ## Questions to ask before you book
 

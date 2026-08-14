@@ -1,5 +1,6 @@
 import concurrent.futures
 import json
+import time
 from pathlib import Path
 
 from openai import OpenAI
@@ -47,7 +48,7 @@ PAGES = {
         "routes": [
             {"href": "/quality-control-plan/", "title": "Quality-control planning", "text": "Connect shipment timing with the product and packaging checks that should be defined before goods are released.", "label": "Plan quality control"},
             {"href": "/services/packaging/", "title": "Packaging coordination", "text": "Treat cartons, labels, inserts, packing method, and shipping marks as part of the product handover rather than an afterthought.", "label": "Explore packaging"},
-            {"href": "/blog/freight-forwarder-guide/", "title": "Freight forwarder guide", "text": "Use the Journal guide to prepare questions for a forwarder without confusing logistics support with destination-specific advice.", "label": "Read the Journal guide"}
+            {"href": "/blog/what-freight-forwarder-handles-china-shipment/", "title": "Freight forwarder guide", "text": "Use the Journal guide to prepare questions for a forwarder without confusing logistics support with destination-specific advice.", "label": "Read the Journal guide"}
         ],
         "ctaTitle": "Define the handover question before you ask the cargo to move.",
         "ctaText": "A short project brief can make the product, package, timing, and open logistics questions visible before the next operational commitment.",
@@ -143,21 +144,33 @@ This is website copy for Sourcing Ally, a Shenzhen-based sourcing agent. Preserv
 
 Rules:
 1. Translate every natural-language string naturally; do not translate URL href values, the numbering strings, or JSON keys.
-2. Preserve all uncertainty and limitation language.
-3. Preserve meaning and list structure exactly, but use natural language rather than word-for-word phrasing.
-4. Return valid JSON only, with the identical object/list/key structure.
+2. Every title, label, metadata field, heading, description, paragraph, checklist item, and button label must be entirely in the target language. The only permitted unchanged terms are Sourcing Ally, Incoterms, and the US$150 figure.
+3. Preserve all uncertainty and limitation language.
+4. Preserve meaning and list structure exactly, but use natural language rather than word-for-word phrasing.
+5. Before responding, scan your JSON for accidental English words or phrases and translate them.
+6. Return valid JSON only, with the identical object/list/key structure.
 
 JSON:
 {json.dumps(page, ensure_ascii=False)}"""
-    response = client.chat.completions.create(
-        model="gpt-5-mini",
-        messages=[
-            {"role": "system", "content": "You are an expert website localization editor. Return JSON only."},
-            {"role": "user", "content": prompt},
-        ],
-        max_completion_tokens=7500,
-    )
-    raw = response.choices[0].message.content.strip()
+    raw = None
+    for attempt in range(3):
+        response = client.chat.completions.create(
+            model="gpt-5-mini",
+            messages=[
+                {"role": "system", "content": "You are an expert website localization editor. Return JSON only."},
+                {"role": "user", "content": prompt},
+            ],
+            max_completion_tokens=7500,
+        )
+        choices = getattr(response, "choices", None)
+        content = choices and choices[0].message.content
+        if content:
+            raw = content.strip()
+            break
+        if attempt < 2:
+            time.sleep(2 ** attempt)
+    if not raw:
+        raise RuntimeError(f"Empty localization response after retries: {page_key} / {lang}")
     if raw.startswith("```"):
         raw = raw.split("\n", 1)[1].rsplit("```", 1)[0]
     result = json.loads(raw)

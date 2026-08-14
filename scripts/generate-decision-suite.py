@@ -40,7 +40,7 @@ PAGES = {
         "routesTitle": "Move to the next useful page",
         "routes": [
             {"href": "/services/supplier-sourcing/", "title": "Supplier sourcing support", "text": "See how a supplier shortlist can be structured around your specific brief.", "label": "Explore supplier sourcing"},
-            {"href": "/questions/supplier-verification/", "title": "Supplier verification questions", "text": "Read practical answers before you rely on an online profile or supplier statement.", "label": "Explore questions"},
+            {"href": "/questions/", "title": "Supplier verification questions", "text": "Read practical answers before you rely on an online profile or supplier statement.", "label": "Explore questions"},
             {"href": "/blog/supplier-verification-checklist-guide/", "title": "Verification checklist", "text": "Use the Journal guide to prepare an evidence-based comparison before a deposit.", "label": "Read the checklist"}
         ],
         "ctaTitle": "Start with the supplier question you need answered.",

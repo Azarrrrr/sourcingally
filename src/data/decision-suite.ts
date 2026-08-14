@@ -85,7 +85,7 @@ export const decisionSuite = {
           "label": "Explore supplier sourcing"
         },
         {
-          "href": "/questions/supplier-verification/",
+          "href": "/questions/",
           "title": "Supplier verification questions",
           "text": "Read practical answers before you rely on an online profile or supplier statement.",
           "label": "Explore questions"
@@ -479,7 +479,7 @@ export const decisionSuite = {
           "label": "Explorar búsqueda de proveedores"
         },
         {
-          "href": "/questions/supplier-verification/",
+          "href": "/questions/",
           "title": "Preguntas de verificación de proveedores",
           "text": "Lea respuestas prácticas antes de confiar en un perfil en línea o en la declaración de un proveedor.",
           "label": "Explorar preguntas"
@@ -873,7 +873,7 @@ export const decisionSuite = {
           "label": "Explorar seleção de fornecedores"
         },
         {
-          "href": "/questions/supplier-verification/",
+          "href": "/questions/",
           "title": "Perguntas de verificação de fornecedor",
           "text": "Leia respostas práticas antes de confiar em um perfil online ou em uma declaração do fornecedor.",
           "label": "Explorar perguntas"
@@ -1267,7 +1267,7 @@ export const decisionSuite = {
           "label": "Изучить поиск поставщиков"
         },
         {
-          "href": "/questions/supplier-verification/",
+          "href": "/questions/",
           "title": "Вопросы для проверки поставщика",
           "text": "Прочитайте практичные ответы перед тем, как полагаться на онлайн‑профиль или заявление поставщика.",
           "label": "Изучить вопросы"
@@ -1661,7 +1661,7 @@ export const decisionSuite = {
           "label": "Tedarikçi tedarikini keşfedin"
         },
         {
-          "href": "/questions/supplier-verification/",
+          "href": "/questions/",
           "title": "Tedarikçi doğrulama soruları",
           "text": "Çevrimiçi bir profil veya tedarikçi beyanına güvenmeden önce pratik yanıtları okuyun.",
           "label": "Soruları keşfedin"
@@ -2055,7 +2055,7 @@ export const decisionSuite = {
           "label": "Explorer la recherche de fournisseurs"
         },
         {
-          "href": "/questions/supplier-verification/",
+          "href": "/questions/",
           "title": "Questions de vérification des fournisseurs",
           "text": "Lisez des réponses pratiques avant de vous fier à un profil en ligne ou à une déclaration du fournisseur.",
           "label": "Explorer les questions"

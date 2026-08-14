@@ -92,7 +92,7 @@ Create a comparison sheet with a row for each of these items:
 | Delivery | Start and end point for lead time, plus the named delivery term |
 | Exclusions | Anything not included in the price or timeline |
 
-A supplier does not need to have every answer immediately. But it should be possible to see which points are confirmed, proposed, not stated, or still open. This same discipline supports a fairer [supplier comparison](/en/blog/how-to-compare-chinese-suppliers-beyond-lowest-quote/).
+A supplier does not need to have every answer immediately. But it should be possible to see which points are confirmed, proposed, not stated, or still open. This same discipline supports a fairer [supplier comparison](/en/blog/compare-chinese-suppliers-beyond-lowest-quote/).
 
 ## Test how changes are recorded
 

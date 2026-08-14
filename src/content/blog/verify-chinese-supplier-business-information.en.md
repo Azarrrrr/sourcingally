@@ -119,7 +119,7 @@ Payment is a separate control point. Before sending funds, confirm in writing:
 
 Avoid treating a last-minute bank-detail change as routine. Pause, verify through a previously known communication channel, and record the confirmation. Do not rely only on a forwarded email or an edited invoice.
 
-For first orders, the wider commercial terms matter too. Your payment schedule, product specification, sample status, inspection timing, and [delivery term](/en/blog/incoterms-first-time-china-buyers-what-they-change/) should be documented before payment. A company record cannot compensate for an unclear product agreement.
+For first orders, the wider commercial terms matter too. Your payment schedule, product specification, sample status, inspection timing, and [delivery term](/en/blog/incoterms-first-time-china-buyers/) should be documented before payment. A company record cannot compensate for an unclear product agreement.
 
 ## What a business-information check cannot tell you
 
