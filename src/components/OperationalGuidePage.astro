@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { operationalGuides, type OperationalGuideLanguage } from '../data/operational-guides';
+
+type PageKey = keyof typeof operationalGuides.en;
+interface Props {
+  lang: OperationalGuideLanguage;
+  pageKey: PageKey;
+  sequence: string;
+}
+
+const { lang, pageKey, sequence } = Astro.props;
+const copy = operationalGuides[lang][pageKey];
+const localized = (href: string) => `/${lang}${href}`;
+---
+<Layout title={copy.metaTitle} description={copy.metaDescription} lang={lang}>
+  <section class="decision-hero operational-hero">
+    <div class="container decision-hero-grid">
+      <div>
+        <p class="eyebrow">{copy.eyebrow}</p>
+        <h1>{copy.title}</h1>
+        <p class="decision-lede">{copy.lede}</p>
+      </div>
+      <aside class="decision-hero-note">
+        <span>{sequence}</span>
+        <b>{copy.situationsTitle}</b>
+        <p>{copy.situations[0].text}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="decision-section decision-section-soft">
+    <div class="container">
+      <div class="decision-heading"><p class="eyebrow">01 / WHEN IT HELPS</p><h2>{copy.situationsTitle}</h2></div>
+      <div class="decision-situations-grid">
+        {copy.situations.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="decision-section">
+    <div class="container">
+      <div class="decision-heading decision-heading-split"><div><p class="eyebrow">02 / PREPARE THE HANDOVER</p><h2>{copy.evidenceTitle}</h2></div><p>{copy.evidenceIntro}</p></div>
+      <div class="decision-evidence-list">
+        {copy.evidence.map((item) => <article><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="decision-section decision-section-ink">
+    <div class="container">
+      <div class="decision-heading decision-heading-light"><p class="eyebrow">03 / BOUNDARIES</p><h2>{copy.limitsTitle}</h2></div>
+      <div class="decision-limits-grid">
+        {copy.limits.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="decision-section">
+    <div class="container decision-prepare-wrap">
+      <div class="decision-prepare-heading"><p class="eyebrow">04 / PREPARE</p><h2>{copy.prepareTitle}</h2></div>
+      <ol class="decision-prepare-list">{copy.prepare.map((item) => <li>{item}</li>)}</ol>
+    </div>
+  </section>
+
+  <section class="decision-section decision-section-soft">
+    <div class="container">
+      <div class="decision-heading"><p class="eyebrow">05 / CONTINUE</p><h2>{copy.routesTitle}</h2></div>
+      <div class="decision-routes-grid">
+        {copy.routes.map((route) => <a href={localized(route.href)}><span>↗</span><h3>{route.title}</h3><p>{route.text}</p><b>{route.label}</b></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="decision-cta">
+    <div class="container decision-cta-inner"><div><p class="eyebrow">SOURCING ALLY</p><h2>{copy.ctaTitle}</h2><p>{copy.ctaText}</p></div><a class="button" href={localized('/start-project/')}>{copy.ctaLabel} <span>↗</span></a></div>
+  </section>
+</Layout>
