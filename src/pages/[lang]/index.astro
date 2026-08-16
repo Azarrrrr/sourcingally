@@ -98,30 +98,10 @@ const a = lang === 'fr' ? frenchAtlas : (atlasTranslations[lang as keyof typeof 
   <section id="process" class="section-pad process-section"><div class="container process-grid"><div><p class="eyebrow">{s.process}</p><h2>{t.processTitle}</h2><p class="process-lead">{s.lead}</p></div><div class="steps">{t.process.map(([number, title, text]) => <div class="step"><span class="step-number">{number}</span><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></div></section>
   <section id="about" class="section-pad about-section"><div class="container about-grid"><div class="about-image"><img src="/images/azar-pamir-cutout-transparent.png" alt="Azar Pamir, founder of Sourcing Ally" /></div><div class="about-copy"><p class="eyebrow">{t.aboutEyebrow}</p><h2>{t.aboutTitle}</h2><p>{t.aboutText}</p><p>{t.aboutText2}</p><div class="location-tags"><span>Shenzhen</span><span>Guangzhou</span><span>Foshan</span><span>Dongguan</span><span>Zhongshan</span><span>Huizhou</span></div></div></div></section>
   <section id="contact" class="contact-section"><div class="container contact-inner"><div><p class="eyebrow">{s.contact}</p><h2>{t.contactTitle}</h2><p>{t.contactText}</p><p class="limitation">{t.limitation}</p></div><a class="button button-light" href="mailto:sourcingally@gmail.com">{t.contactButton} <span>↗</span></a></div></section>
-  <section class="quote-request-section" id="quote-request"><div class="container"><div class="quote-request-heading"><p class="eyebrow">{quoteCopy[0]}</p><h2>{quoteCopy[1]}</h2><p>{quoteCopy[2]}</p></div><div class="quote-request-frame"><div id="supplier-quote-form"></div></div></div></section>
-  <script is:inline>
-    (() => {
-      const host = 'https://appeqsux2arkwksqlyh.teable.app';
-      const lang = '{lang}';
-      const url = new URL(host);
-      url.searchParams.set('lang', lang);
-      url.searchParams.set('source', window.location.hostname.replace(/^www\\./, '').toLowerCase());
-      url.searchParams.set('sourceUrl', window.location.href);
-      const iframe = document.createElement('iframe');
-      iframe.src = url.toString();
-      iframe.title = 'Quote request';
-      iframe.loading = 'lazy';
-      iframe.width = '100%';
-      iframe.height = '900';
-      iframe.style.display = 'block';
-      iframe.style.width = '100%';
-      iframe.style.border = '0';
-      iframe.style.background = 'transparent';
-      document.getElementById('supplier-quote-form')?.appendChild(iframe);
-    })();
-  </script>
+  <section class="quote-request-section" id="quote-request"><div class="container"><div class="quote-request-heading"><p class="eyebrow">{quoteCopy[0]}</p><h2>{quoteCopy[1]}</h2><p>{quoteCopy[2]}</p><button class="quote-request-launch" type="button" onclick="document.dispatchEvent(new Event('sa:open-quote'))">{t.primary} <span>↗</span></button></div></div></section>
   <style>
-    .quote-request-section{padding:96px 0;background:#f5f8fc}.quote-request-heading{max-width:720px;margin:0 auto 32px;text-align:center}.quote-request-heading h2{margin:0 0 16px;font-size:clamp(2.5rem,5vw,4.8rem);letter-spacing:-.06em;line-height:.98}.quote-request-heading>p:last-child{max-width:620px;margin:0 auto;color:#405069;line-height:1.7}.quote-request-frame{max-width:980px;margin:0 auto;padding:12px;background:#fff;border:1px solid rgba(13,43,80,.12);box-shadow:18px 18px 0 rgba(247,201,72,.5)}@media(max-width:630px){.quote-request-section{padding:68px 0}.quote-request-frame{padding:4px;box-shadow:8px 8px 0 rgba(247,201,72,.5)}.quote-request-frame iframe{height:980px}}
+    .quote-request-section{padding:96px 0;background:#f5f8fc}.quote-request-heading{max-width:720px;margin:0 auto 32px;text-align:center}.quote-request-heading h2{margin:0 0 16px;font-size:clamp(2.5rem,5vw,4.8rem);letter-spacing:-.06em;line-height:.98}.quote-request-heading>p:last-child{max-width:620px;margin:0 auto;color:#405069;line-height:1.7}@media(max-width:630px){.quote-request-section{padding:68px 0}}
+    .quote-request-launch{display:inline-flex;align-items:center;gap:10px;margin-top:28px;border:0;background:#0a5c56;color:#fff;padding:14px 18px;font:800 12px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:7px 7px 0 rgba(10,92,86,.18);transition:transform .16s cubic-bezier(.23,1,.32,1),background-color .16s ease}.quote-request-launch:hover{transform:translate(-2px,-2px);background:#0f746d}.quote-request-launch:active{transform:scale(.97)}.quote-request-launch span{font-size:16px}
   </style>
   <script>
     const atlasSteps = [...document.querySelectorAll('[data-atlas-step]')];

@@ -31,6 +31,14 @@ const ui = {
   tr:{work:'Bizimle çalışın',learn:'Öğrenin',exploreChina:'Çin’i keşfedin',services:'Hizmetler',buyerPaths:'Alıcı rotaları',matcher:'Hizmet Eşleştirici',briefBuilder:'Proje Oluşturucu',questions:'Tedarik soruları',school:'Tedarik Okulu',journal:'Dergi',editorial:'Editoryal standartlar',cities:'Çin şehirleri',routeMap:'Çin rota haritası',products:'Ürün rehberleri',start:'Bir proje başlatın',howWeWork:'Nasıl çalışıyoruz',feesScope:'Ücretler ve kapsam',decisionGuides:'Karar rehberleri',supplierVerification:'Tedarikçi doğrulama',productSamples:'Ürün numuneleri',factoryVisits:'Fabrika ziyaretleri',qualityControlPlan:'Kalite kontrol planı',shippingReadiness:'Sevkiyat hazırlığı',chinaBusinessTravel:'Çin iş seyahati',menu:'Menü',chooseLanguage:'Dil seçin',explore:'Keşfedin',privacy:'Gizlilik',terms:'Koşullar',disclaimer:'Sorumluluk reddi',policy:'Editoryal politika',contact:'İletişim',footer:'Shenzhen’de bulunan ve uluslararası alıcıların Çin ile daha net ve güvenle çalışmasına yardımcı olan tedarik ortağı.',international:'Shenzhen, Çin · Uluslararası hizmet'},
   fr:{work:'Travailler avec nous',learn:'Apprendre',exploreChina:'Explorer la Chine',services:'Services',buyerPaths:'Parcours acheteurs',matcher:'Assistant services',briefBuilder:'Créateur de brief',questions:'Questions sur le sourcing',school:'École du sourcing',journal:'Journal',editorial:'Charte éditoriale',cities:'Villes de Chine',routeMap:'Carte des itinéraires en Chine',products:'Guides produits',start:'Démarrer un projet',howWeWork:'Comment nous travaillons',feesScope:'Tarifs et périmètre',decisionGuides:'Guides de décision',supplierVerification:'Vérification des fournisseurs',productSamples:'Échantillons produit',factoryVisits:'Visites d’usine',qualityControlPlan:'Plan de contrôle qualité',shippingReadiness:'Préparation de l’expédition',chinaBusinessTravel:'Voyage d’affaires en Chine',menu:'Menu',chooseLanguage:'Choisir une langue',explore:'Explorer',privacy:'Confidentialité',terms:'Conditions',disclaimer:'Avertissement',policy:'Politique éditoriale',contact:'Contact',footer:'Un partenaire de sourcing basé à Shenzhen, qui aide les acheteurs internationaux à travailler avec la Chine de façon plus claire et plus sereine.',international:'Shenzhen, Chine · Service international'}
 }[lang as 'en'|'es'|'pt'|'ru'|'tr'|'fr'] ?? undefined;
+const quoteUi = ({
+  en: { trigger: 'Share your product', eyebrow: 'SOURCING ALLY / PROJECT BRIEF', title: 'Bring your product question into the conversation.', note: 'Share the product, quantity, destination, and the support you need. The request opens in a full-page workspace.', close: 'Close request' },
+  es: { trigger: 'Cuéntanos tu producto', eyebrow: 'SOURCING ALLY / BRIEF DE PROYECTO', title: 'Trae tu consulta sobre el producto a la conversación.', note: 'Comparte el producto, la cantidad, el destino y el apoyo que necesitas. La solicitud se abre en una página completa.', close: 'Cerrar solicitud' },
+  pt: { trigger: 'Conte-nos o produto', eyebrow: 'SOURCING ALLY / BRIEF DO PROJETO', title: 'Traga a questão do produto para a conversa.', note: 'Partilhe o produto, a quantidade, o destino e o apoio de que precisa. O pedido abre num espaço de página inteira.', close: 'Fechar pedido' },
+  ru: { trigger: 'Расскажите о товаре', eyebrow: 'SOURCING ALLY / БРИФ ПРОЕКТА', title: 'Добавьте вопрос о товаре в разговор.', note: 'Укажите товар, количество, направление и нужную поддержку. Заявка открывается на весь экран.', close: 'Закрыть заявку' },
+  tr: { trigger: 'Ürününüzü anlatın', eyebrow: 'SOURCING ALLY / PROJE ÖZETİ', title: 'Ürün sorusuyla görüşmeyi başlatın.', note: 'Ürünü, miktarı, varış yerini ve ihtiyacınız olan desteği paylaşın. Talep tam sayfa çalışma alanında açılır.', close: 'Talebi kapat' },
+  fr: { trigger: 'Parlez-nous du produit', eyebrow: 'SOURCING ALLY / BRIEF DE PROJET', title: 'Ajoutez votre question produit à la conversation.', note: 'Partagez le produit, la quantité, la destination et l’accompagnement recherché. La demande s’ouvre en pleine page.', close: 'Fermer la demande' }
+} as Record<string, { trigger: string; eyebrow: string; title: string; note: string; close: string }>)[lang] ?? { trigger: 'Share your product', eyebrow: 'SOURCING ALLY / PROJECT BRIEF', title: 'Bring your product question into the conversation.', note: 'Share the product, quantity, destination, and the support you need.', close: 'Close request' };
 const organizationJson = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -120,6 +128,33 @@ const organizationJson = {
       </div>
       <div class="container footer-bottom"><span>© {new Date().getFullYear()} Sourcing Ally</span><nav class="footer-legal" aria-label="Legal"><a href={`/${lang}/privacy/`}>{ui.privacy}</a><a href={`/${lang}/terms/`}>{ui.terms}</a><a href={`/${lang}/disclaimer/`}>{ui.disclaimer}</a><a href={`/${lang}/editorial-policy/`}>{ui.policy}</a></nav><span>{ui.international}</span></div>
     </footer>
+    <button class="sa-request-fab" type="button" data-quote-open aria-haspopup="dialog"><span class="sa-request-fab-mark">✦</span><span>{quoteUi.trigger}</span><b>↗</b></button>
+    <section class="sa-request-overlay" data-quote-overlay hidden role="dialog" aria-modal="true" aria-label={quoteUi.title}>
+      <header><div><span>{quoteUi.eyebrow}</span><h2>{quoteUi.title}</h2><p>{quoteUi.note}</p></div><button type="button" data-quote-close aria-label={quoteUi.close}><span>{quoteUi.close}</span><b>×</b></button></header>
+      <div class="sa-request-frame"><iframe data-quote-frame title={quoteUi.title}></iframe></div>
+    </section>
+    <script define:vars={{ lang }}>
+      (() => {
+        const button = document.querySelector('[data-quote-open]');
+        const overlay = document.querySelector('[data-quote-overlay]');
+        const closeButton = document.querySelector('[data-quote-close]');
+        const frame = document.querySelector('[data-quote-frame]');
+        const open = () => {
+          const formUrl = new URL('https://appeqsux2arkwksqlyh.teable.app');
+          formUrl.searchParams.set('lang', lang);
+          formUrl.searchParams.set('source', window.location.hostname.replace(/^www\\./, '').toLowerCase());
+          formUrl.searchParams.set('sourceUrl', window.location.href);
+          if (frame) frame.src = formUrl.toString();
+          if (overlay) overlay.hidden = false;
+          document.body.classList.add('quote-workspace-open');
+        };
+        const close = () => { if (overlay) overlay.hidden = true; document.body.classList.remove('quote-workspace-open'); };
+        button?.addEventListener('click', open);
+        closeButton?.addEventListener('click', close);
+        document.addEventListener('sa:open-quote', open);
+        document.addEventListener('keydown', (event) => { if (event.key === 'Escape') close(); });
+      })();
+    </script>
     <script>
       const groups = [...document.querySelectorAll('[data-nav-group]')];
       const closeTimers = new WeakMap();
@@ -148,5 +183,8 @@ const organizationJson = {
       });
       document.addEventListener('keydown', (event) => { if (event.key === 'Escape') groups.forEach(closeNow); });
     </script>
+    <style is:global>
+      .sa-request-fab{position:fixed;left:20px;bottom:20px;z-index:80;display:inline-flex;align-items:center;gap:9px;border:1px solid #0a5c56;border-radius:999px;background:#0a5c56;color:#fff;padding:9px 13px 9px 9px;box-shadow:0 14px 32px rgba(11,46,43,.28);font:800 11px/1.1 system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:transform .16s cubic-bezier(.23,1,.32,1),background-color .16s ease}.sa-request-fab:hover{transform:translateY(-3px);background:#0f746d}.sa-request-fab:active{transform:scale(.97)}.sa-request-fab-mark{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#d1e8df;color:#0a5c56;font-size:15px}.sa-request-fab b{font-size:14px}.sa-request-overlay{position:fixed;inset:0;z-index:100;display:grid;grid-template-rows:auto minmax(0,1fr);background:#f6faf8}.sa-request-overlay[hidden]{display:none}.sa-request-overlay header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:20px clamp(18px,4vw,60px);background:#073b38;color:#fff;border-bottom:4px solid #c6dcd2}.sa-request-overlay header>div{max-width:760px}.sa-request-overlay header>div>span{display:block;color:#d1e8df;font:800 10px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase}.sa-request-overlay h2{margin:9px 0 7px;font-size:clamp(1.35rem,2.7vw,2.4rem);line-height:1.02}.sa-request-overlay p{margin:0;max-width:700px;color:#d9ece6;font-size:.94rem;line-height:1.45}.sa-request-overlay header button{display:inline-flex;align-items:center;gap:9px;flex:0 0 auto;border:1px solid rgba(255,255,255,.34);border-radius:999px;background:transparent;color:#fff;padding:8px 11px;font:800 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.sa-request-overlay header button:hover{background:rgba(255,255,255,.1)}.sa-request-overlay header button b{font-size:22px;font-weight:400;line-height:.6}.sa-request-frame{min-height:0;background:#fff}.sa-request-frame iframe{display:block;width:100%;height:100%;border:0;background:#fff}body.quote-workspace-open{overflow:hidden}@media(max-width:640px){.sa-request-fab{left:13px;bottom:13px;font-size:10px}.sa-request-overlay header{padding:16px;gap:12px}.sa-request-overlay header p{display:none}.sa-request-overlay header button span{display:none}.sa-request-overlay header button{padding:9px}.sa-request-overlay h2{font-size:1.2rem}}
+    </style>
   </body>
 </html>
