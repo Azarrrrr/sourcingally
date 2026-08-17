@@ -4,15 +4,20 @@ import test from 'node:test';
 
 const helperUrl = new URL('./sanityPublic.ts', import.meta.url);
 const journalUrl = new URL('../pages/[lang]/blog/index.astro', import.meta.url);
+const detailUrl = new URL('../pages/[lang]/blog/[...slug].astro', import.meta.url);
 
 test('targets the SourcingAlly site key and passes localized labels to the browser reader', async () => {
-  const [helper, journal] = await Promise.all([readFile(helperUrl, 'utf8'), readFile(journalUrl, 'utf8')]);
+  const [helper, journal, detail] = await Promise.all([readFile(helperUrl, 'utf8'), readFile(journalUrl, 'utf8'), readFile(detailUrl, 'utf8')]);
   assert.match(helper, /siteKey == "sourcing-ally"/);
   assert.match(helper, /listSanityArticles=\(locale:string\)/);
   assert.match(helper, /locale == \$locale/);
   assert.match(helper, /getSanityArticle/);
   assert.match(journal, /define:vars={{lang,t}}/);
   assert.match(journal, /replace\(\/\\\/\+\$\//);
+  assert.match(detail, /slug: 'sanity-article'/);
+  assert.match(detail, /siteKey == "sourcing-ally"/);
+  assert.match(detail, /live-sanity-detail/);
+  assert.match(detail, /isSanityProxy/);
 });
 
 test('renders a direct shared-Sanity article URL with localized browser labels', async () => {

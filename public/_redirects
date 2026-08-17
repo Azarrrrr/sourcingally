@@ -1,6 +1,6 @@
-/en/blog/* /en/blog/?article=:splat 200
-/es/blog/* /es/blog/?article=:splat 200
-/pt/blog/* /pt/blog/?article=:splat 200
-/ru/blog/* /ru/blog/?article=:splat 200
-/tr/blog/* /tr/blog/?article=:splat 200
-/fr/blog/* /fr/blog/?article=:splat 200
+/en/blog/* /en/blog/sanity-article/?article=:splat 200
+/es/blog/* /es/blog/sanity-article/?article=:splat 200
+/pt/blog/* /pt/blog/sanity-article/?article=:splat 200
+/ru/blog/* /ru/blog/sanity-article/?article=:splat 200
+/tr/blog/* /tr/blog/sanity-article/?article=:splat 200
+/fr/blog/* /fr/blog/sanity-article/?article=:splat 200
