@@ -12,7 +12,7 @@ test('targets the SourcingAlly site key and passes localized labels to the brows
   assert.match(helper, /listSanityArticles=\(locale:string\)/);
   assert.match(helper, /locale == \$locale/);
   assert.match(helper, /getSanityArticle/);
-  assert.match(journal, /define:vars={{lang,t}}/);
+  assert.match(journal, /define:vars={{lang,t,generatedSanitySlugs}}/);
   assert.match(journal, /replace\(\/\\\/\+\$\//);
   assert.match(detail, /slug: 'sanity-article'/);
   assert.match(detail, /siteKey == "sourcing-ally"/);
@@ -23,7 +23,7 @@ test('targets the SourcingAlly site key and passes localized labels to the brows
 
 test('renders a direct shared-Sanity article URL with localized browser labels', async () => {
   const journal = await readFile(journalUrl, 'utf8');
-  const script = journal.match(/<script define:vars={{lang,t}}>([\s\S]*?)<\/script>/)?.[1];
+  const script = journal.match(/<script define:vars={{lang,t,generatedSanitySlugs}}>([\s\S]*?)<\/script>/)?.[1];
   assert.ok(script, 'journal client script should be present');
   assert.match(script, /;\(async\(\)=>\{/);
   const target = { innerHTML: '' };
@@ -31,8 +31,8 @@ test('renders a direct shared-Sanity article URL with localized browser labels',
   const document = { querySelector: selector => selector === '#sanity-journal-content' ? target : selector === '#sanity-journal' ? wrap : null, querySelectorAll: () => [] };
   const article = { title: 'How to compare supplier quotes before placing an order', description: 'A practical comparison guide.', bodyMarkdown: 'Introductory guidance.\n\n## Confirm the assumptions\n\nCompare like with like.', publishedAt: '2026-08-17T00:00:00.000Z', wordCount: 256 };
   const clientBody = script.replace(/^\s*;\(async\(\)=>\{/, '').replace(/\}\)\(\);\s*$/, '');
-  const run = new Function('document', 'location', 'fetch', 'URL', 'URLSearchParams', 'lang', 't', `return (async () => {${clientBody}})()`);
-  await run(document, { pathname: '/en/blog/compare-supplier-quotes-before-ordering/', search: '' }, async () => ({ ok: true, json: async () => ({ result: article }) }), URL, URLSearchParams, 'en', { read: 'Read article', intro: 'Journal introduction' });
+  const run = new Function('document', 'location', 'fetch', 'URL', 'URLSearchParams', 'lang', 't', 'generatedSanitySlugs', `return (async () => {${clientBody}})()`);
+  await run(document, { pathname: '/en/blog/compare-supplier-quotes-before-ordering/', search: '' }, async () => ({ ok: true, json: async () => ({ result: article }) }), URL, URLSearchParams, 'en', { read: 'Read article', intro: 'Journal introduction' }, ['compare-supplier-quotes-before-ordering']);
   assert.equal(wrap.hidden, false);
   assert.match(target.innerHTML, /How to compare supplier quotes before placing an order/);
   assert.match(target.innerHTML, /Confirm the assumptions/);
