@@ -6,6 +6,9 @@ export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   const locales = ['en','es','pt','ru','tr','fr'] as const;
   const articleKeys = [...new Set(posts.map((post) => post.data.translationKey ?? post.id))];
+  const sanityUrl = new URL('https://iksqqwui.api.sanity.io/v2025-02-19/data/query/production');
+  sanityUrl.searchParams.set('query', '*[_type == "article" && siteKey == "sourcing-ally"]{slug,locale}');
+  const sanityArticles = await fetch(sanityUrl).then(async (response) => response.ok ? ((await response.json()) as { result: { slug?: string; locale?: string }[] }).result : []).catch(() => []);
   const fallbackPost = posts.find((item) => item.data.lang === 'en') ?? posts[0];
   const markdownPaths = locales.flatMap((lang) => articleKeys.flatMap((articleKey) => {
     const post = posts.find((item) => item.data.lang === lang && (item.data.translationKey ?? item.id) === articleKey)
@@ -13,7 +16,8 @@ export async function getStaticPaths() {
     return post ? [{ params: { lang, slug: articleKey }, props: { post, lang, articleKey } }] : [];
   }));
   const sanityProxyPaths = fallbackPost ? locales.map((lang) => ({ params: { lang, slug: 'sanity-article' }, props: { post: posts.find((item) => item.data.lang === lang) ?? fallbackPost, lang, articleKey: 'sanity-article', isSanityProxy: true } })) : [];
-  return [...markdownPaths, ...sanityProxyPaths];
+  const sanityArticlePaths = fallbackPost ? sanityArticles.filter((article) => article.slug && locales.includes(article.locale as typeof locales[number]) && article.slug !== 'sanity-article').map((article) => ({ params: { lang: article.locale!, slug: article.slug! }, props: { post: posts.find((item) => item.data.lang === article.locale) ?? fallbackPost, lang: article.locale!, articleKey: article.slug!, isSanityProxy: true } })) : [];
+  return [...markdownPaths, ...sanityProxyPaths, ...sanityArticlePaths];
 }
 const { post, lang, articleKey, isSanityProxy = false } = Astro.props; const { Content } = await render(post);
 const usesFallbackArticle = lang !== post.data.lang;

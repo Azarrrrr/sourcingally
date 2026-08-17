@@ -18,6 +18,7 @@ test('targets the SourcingAlly site key and passes localized labels to the brows
   assert.match(detail, /siteKey == "sourcing-ally"/);
   assert.match(detail, /live-sanity-detail/);
   assert.match(detail, /isSanityProxy/);
+  assert.match(detail, /sanityArticlePaths/);
 });
 
 test('renders a direct shared-Sanity article URL with localized browser labels', async () => {
