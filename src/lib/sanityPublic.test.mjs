@@ -7,4 +7,5 @@ test('targets the SourcingAlly site key and accepts a locale parameter', async (
   assert.match(source, /siteKey == "sourcing-ally"/);
   assert.match(source, /listSanityArticles=\(locale:string\)/);
   assert.match(source, /locale == \$locale/);
+  assert.match(source, /getSanityArticle/);
 });
