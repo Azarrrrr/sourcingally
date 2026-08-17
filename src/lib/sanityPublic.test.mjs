@@ -12,6 +12,7 @@ test('targets the SourcingAlly site key and passes localized labels to the brows
   assert.match(helper, /locale == \$locale/);
   assert.match(helper, /getSanityArticle/);
   assert.match(journal, /define:vars={{lang,t}}/);
+  assert.match(journal, /replace\(\/\\\/\+\$\//);
 });
 
 test('renders a direct shared-Sanity article URL with localized browser labels', async () => {
