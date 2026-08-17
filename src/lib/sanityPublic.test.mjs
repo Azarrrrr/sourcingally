@@ -14,6 +14,9 @@ test('targets the SourcingAlly site key and passes localized labels to the brows
   assert.match(helper, /getSanityArticle/);
   assert.match(journal, /define:vars={{lang,t,generatedSanitySlugs}}/);
   assert.match(journal, /replace\(\/\\\/\+\$\//);
+  assert.match(journal, /const pageSize=12/);
+  assert.match(journal, /journal-pagination/);
+  assert.doesNotMatch(journal, /Write in GitHub\. Publish through Cloudflare/);
   assert.match(detail, /slug: 'sanity-article'/);
   assert.match(detail, /siteKey == "sourcing-ally"/);
   assert.match(detail, /live-sanity-detail/);
