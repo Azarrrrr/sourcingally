@@ -1,0 +1,5 @@
+export type SanityArticle={_id:string;title:string;slug:string;description:string;bodyMarkdown?:string;publishedAt:string;wordCount:number};
+const endpoint='https://iksqqwui.api.sanity.io/v2025-02-19/data/query/production';
+async function query<T>(groq:string,params:Record<string,string>){const url=new URL(endpoint);url.searchParams.set('query',groq);Object.entries(params).forEach(([key,value])=>url.searchParams.set(`$${key}`,JSON.stringify(value)));const response=await fetch(url.toString(),{headers:{Accept:'application/json'}});if(!response.ok)throw new Error(`Sanity request failed with ${response.status}`);return ((await response.json())as{result:T}).result;}
+export const listSanityArticles=(locale:string)=>query<SanityArticle[]>('*[_type == "article" && siteKey == "sourcing-ally" && locale == $locale] | order(publishedAt desc){_id,title,slug,description,publishedAt,wordCount}',{locale});
+export const getSanityArticle=(locale:string,slug:string)=>query<SanityArticle|null>('*[_type == "article" && siteKey == "sourcing-ally" && locale == $locale && slug == $slug][0]{_id,title,slug,description,bodyMarkdown,publishedAt,wordCount}',{locale,slug});
