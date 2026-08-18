@@ -5,3 +5,5 @@
 - [x] Render live shared-Sanity articles from the actual Astro detail route, using Markdown collection pages only as fallback content.
 - [x] Generate the actual matching article-slug detail page for published Sanity records and re-verify the clean production slug URL.
 - [ ] Make the Sanity journal paginate twelve articles per page in SourcingAlly’s existing blueprint style and remove obsolete GitHub-first publishing instructions.
+- [x] Add a SourcingAlly “Field Guide” sticky companion with active sections, a reading meter, continuation content, and an accessible mobile disclosure.
+- [x] Enhance SourcingAlly field-note cards with complete metadata, full-card links, route-marker hover feedback, keyboard focus states, and reduced-motion support.
