@@ -2,7 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import { questionGroups } from '../../../data/questions';
 import { questionLocales } from '../../../data/questions-locales';
-export function getStaticPaths(){return ['en','es','pt','ru','tr','fr'].map(lang=>({params:{lang},props:{lang}}))}
+export function getStaticPaths(){return ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'].map(lang=>({params:{lang},props:{lang}}))}
 const {lang}=Astro.props; const isSource=lang==='en';
 const localizedGroups = lang === 'en' ? questionGroups : (questionLocales[lang as keyof typeof questionLocales]?.groups ?? questionGroups);
 const visibleQuestionGroups = localizedGroups.map((group, groupIndex) => ({...group, questions: group.questions.map((item, questionIndex) => ({...item, related: questionGroups[groupIndex].questions[questionIndex].related.map((related, relatedIndex) => ({...related, label: item.relatedLabels?.[relatedIndex] ?? related.label}))}))}));

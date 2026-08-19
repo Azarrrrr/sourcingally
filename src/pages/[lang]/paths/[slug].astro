@@ -3,7 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { buyerPaths } from '../../../data/buyer-paths';
 import { buyerPathLocales } from '../../../data/buyer-path-locales';
 import { buyerPathUiLocales } from '../../../data/buyer-path-ui-locales';
-export function getStaticPaths(){return ['en','es','pt','ru','tr','fr'].flatMap(lang=>buyerPaths.map(path=>({params:{lang,slug:path.slug},props:{lang,slug:path.slug}})))}
+export function getStaticPaths(){return ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'].flatMap(lang=>buyerPaths.map(path=>({params:{lang,slug:path.slug},props:{lang,slug:path.slug}})))}
 const {slug,lang}=Astro.props;
 const sourcePath=buyerPaths.find(item=>item.slug===slug);
 if (!sourcePath) throw new Error(`Unknown buyer path: ${slug}`);

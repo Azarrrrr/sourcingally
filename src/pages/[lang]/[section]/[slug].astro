@@ -5,7 +5,7 @@ import { knowledgeLibraryLocales } from '../../../data/knowledge-library-locales
 
 const sectionMap = { services, products, cities, guides };
 export function getStaticPaths() {
-  return ['en','es','pt','ru','tr','fr'].flatMap((lang) => [
+  return ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'].flatMap((lang) => [
     ...services.map((page) => ({ params: { lang, section: 'services', slug: page.slug }, props: { section: 'services', slug: page.slug, lang } })),
     ...products.map((page) => ({ params: { lang, section: 'products', slug: page.slug }, props: { section: 'products', slug: page.slug, lang } })),
     ...cities.map((page) => ({ params: { lang, section: 'cities', slug: page.slug }, props: { section: 'cities', slug: page.slug, lang } })),

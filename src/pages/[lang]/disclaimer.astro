@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { legalLocales } from '../../data/legal-locales';
-export function getStaticPaths(){return ['en','es','pt','ru','tr','fr'].map(lang=>({params:{lang},props:{lang}}))}
+export function getStaticPaths(){return ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'].map(lang=>({params:{lang},props:{lang}}))}
 const { lang } = Astro.props;
 const c = legalLocales[lang as keyof typeof legalLocales]?.disclaimer ?? legalLocales.en.disclaimer;
 ---

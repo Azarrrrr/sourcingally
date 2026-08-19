@@ -2,7 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import { allQuestions, questionGroups } from '../../../data/questions';
 import { questionLocales } from '../../../data/questions-locales';
-export function getStaticPaths(){return ['en','es','pt','ru','tr','fr'].flatMap(lang=>allQuestions.map(question=>({params:{lang,slug:question.slug},props:{lang,slug:question.slug}})))}
+export function getStaticPaths(){return ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'].flatMap(lang=>allQuestions.map(question=>({params:{lang,slug:question.slug},props:{lang,slug:question.slug}})))}
 const {slug,lang}=Astro.props;
 const isSource=lang==='en';
 const sourceQuestion=allQuestions.find(item=>item.slug===slug);
