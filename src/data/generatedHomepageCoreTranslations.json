@@ -1,0 +1,692 @@
+{
+  "ja": {
+    "home": {
+      "title": "Sourcing Ally | 中国での調達パートナー",
+      "description": "Sourcing Allyは、海外バイヤーが中国のサプライヤーを見つけ、製品を検証し、梱包を調整し、工場と円滑にやり取りするのを支援します。",
+      "eyebrow": "中国での調達を、より明確に",
+      "headline": "中国における信頼できる目と耳。",
+      "intro": "Sourcing Allyは、海外バイヤーが適切なサプライヤーを見つけ、品質を確認し、Shenzhenにいる現地パートナーとともにプロジェクトを前進させます。",
+      "primary": "ご要望をお聞かせください",
+      "secondary": "プロセスを見る",
+      "servicesTitle": "最初のサプライヤー検索から最終確認まで。",
+      "servicesIntro": "中国から輸入する海外バイヤーのための、実務的で現地に根ざしたサポート。",
+      "services": [
+        [
+          "01",
+          "サプライヤー調達",
+          "製品要件、予算、納期に基づき、候補となるサプライヤーを調査・連絡します。"
+        ],
+        [
+          "02",
+          "サンプルと工場チェック",
+          "必要に応じてサンプルを手配し、工場を訪問して、生産前に何を購入しているかを把握するお手伝いをします。"
+        ],
+        [
+          "03",
+          "品質管理",
+          "お客様と確認した要件に基づいて、サンプル段階、生産中、最終段階で製品を検査します。"
+        ],
+        [
+          "04",
+          "梱包と翻訳",
+          "梱包の詳細を調整し、中国のサプライヤーとのコミュニケーションの橋渡しを行います。"
+        ]
+      ],
+      "processTitle": "シンプルなプロセス。明確なコミュニケーション。",
+      "process": [
+        [
+          "01",
+          "要件を共有する",
+          "製品、数量、仕様、販売対象市場、納期について教えてください。"
+        ],
+        [
+          "02",
+          "選択肢を検討",
+          "適切なサプライヤーを探し、判断に必要な情報を共有します。"
+        ],
+        [
+          "03",
+          "自信を持って前に進む",
+          "サンプル、工場とのやり取り、検査、梱包、その他合意した作業をサポートします。"
+        ]
+      ],
+      "aboutEyebrow": "Shenzhenに拠点を置く",
+      "aboutTitle": "国際ビジネスのための現地パートナー。",
+      "aboutText": "私はSourcing Allyの創業者、Azar Pamirです。Shenzhenから、クライアントがサプライヤーとコミュニケーションを取り、工場を訪問し、製品を確認し、海外からでは扱いにくい細部を管理するのを支援しています。",
+      "aboutText2": "当社の拠点により、Shenzhen、Guangzhou、Foshan、Dongguan、Zhongshan、Huizhouの各地での対応が容易です。より遠方のプロジェクトについても、必要に応じて中国国内を移動して対応できます。",
+      "contactTitle": "取り扱いたい製品はありますか？",
+      "contactText": "ご要件をお送りください。支援方法についてご相談します。当社の調達サービス手数料は5％からで、最終的な料金は作業範囲によって決まります。",
+      "contactButton": "Sourcing Allyに問い合わせる",
+      "limitation": "危険物や軍事関連製品の取り扱いは行っておりません。"
+    },
+    "command": {
+      "mark": "SA / 調達コマンドセンター",
+      "world": "SHENZHEN → 世界",
+      "headline": "より良い情報に基づいて次の調達判断を下しましょう。",
+      "founder": "創業者 · Shenzhenで現地対応",
+      "brief": "プロジェクト概要を作成する",
+      "questions": "調達に関する質問を探る",
+      "choose": "開始ポイントを選択してください",
+      "firstLabel": "ここから始める",
+      "first": "初めて輸入します",
+      "firstText": "アイデアと数量を、より明確な最初の概要に落とし込みます。",
+      "buildLabel": "製品を開発する",
+      "build": "製品を開発中または調達しています",
+      "buildText": "要件、サンプル、梱包、品質チェックを連携します。",
+      "activeLabel": "進行中の注文",
+      "active": "サプライヤーや注文に関して支援が必要です",
+      "activeText": "不明瞭な状況を、把握できる事実と次のアクションに整理します。",
+      "based": "Shenzhenを拠点に · 国際的なクライアントに対応",
+      "matcher": "迷っている場合はサービスマッチングをご利用ください。",
+      "scroll": "スクロールしてご確認ください"
+    },
+    "atlas": {
+      "eyebrow": "ソーシングアトラス",
+      "title": "1つのプロジェクト。つながっているべき6つの意思決定。",
+      "intro": "ルートをスクロールしてご覧ください。各段階にはそれぞれ異なる問い、必要な証拠、そして取るべき次の行動があります。",
+      "link": "調達の進め方を選ぶ",
+      "stages": [
+        [
+          "調達",
+          "製品を定義する",
+          "アイデアをサプライヤーが実際に回答できるブリーフに落とし込みます。"
+        ],
+        [
+          "比較",
+          "前提を確認する",
+          "サプライヤーの回答を同じ要件で比較します。"
+        ],
+        [
+          "テスト",
+          "サンプルで確認する",
+          "量産前に重要な点をテストします。"
+        ],
+        [
+          "管理",
+          "検査を計画する",
+          "品質や梱包に関する課題を早期に可視化します。"
+        ],
+        [
+          "移動",
+          "引き渡しを準備する",
+          "製品、梱包、書類、出荷に関する事項をつなげます。"
+        ],
+        [
+          "学習",
+          "記録を残す",
+          "証拠を活用して次回の注文をより明確にします。"
+        ]
+      ],
+      "what": "私たちが行うこと",
+      "exploreServices": "サービスを見る",
+      "products": "製品ガイド",
+      "productsSub": "製品カテゴリを調査する",
+      "cities": "中国の都市",
+      "citiesSub": "製品の生産地を確認する",
+      "school": "調達スクール",
+      "schoolSub": "輸入の仕組みを学ぶ"
+    },
+    "section": {
+      "process": "進め方",
+      "lead": "良い調達は単に安い価格を見つけることではありません。現地で何が起きているかを把握し、適切な質問を投げかけ、コミュニケーションを継続することが重要です。",
+      "contact": "ご相談を始める"
+    },
+    "quote": [
+      "見積依頼",
+      "プロジェクトの詳細を送ってください。",
+      "下のフォームは、回答前に製品、数量、配送先、必要なサポートを把握するためのものです。"
+    ]
+  },
+  "de": {
+    "home": {
+      "title": "Sourcing Ally | Ihr Beschaffungspartner in China",
+      "description": "Sourcing Ally hilft internationalen Käufern, Lieferanten zu finden, Produkte zu verifizieren, Verpackungen zu koordinieren und mit Fabriken in China zu kommunizieren.",
+      "eyebrow": "Beschaffung aus China — klarer.",
+      "headline": "Ihre vertrauenswürdigen Augen und Ohren in China.",
+      "intro": "Sourcing Ally hilft internationalen Käufern, die richtigen Lieferanten zu finden, die Qualität zu prüfen und Projekte mit einem Partner vor Ort in Shenzhen voranzubringen.",
+      "primary": "Teilen Sie uns mit, was Sie benötigen",
+      "secondary": "Erkunden Sie unseren Prozess",
+      "servicesTitle": "Von der ersten Lieferantensuche bis zur Endkontrolle.",
+      "servicesIntro": "Praktische Unterstützung vor Ort für internationale Käufer, die aus China importieren.",
+      "services": [
+        [
+          "01",
+          "Lieferantensuche",
+          "Wir recherchieren und kontaktieren potenzielle Lieferanten basierend auf Ihren Produktanforderungen, Budget und Zeitplan."
+        ],
+        [
+          "02",
+          "Muster- & Fabrikprüfungen",
+          "Wir organisieren Muster, besuchen bei Bedarf Fabriken und helfen Ihnen zu verstehen, was Sie vor der Produktion kaufen."
+        ],
+        [
+          "03",
+          "Qualitätskontrolle",
+          "Wir prüfen Produkte in Muster-, Produktions- und Endphasen entsprechend den Anforderungen, die Sie mit uns bestätigen."
+        ],
+        [
+          "04",
+          "Verpackung & Übersetzung",
+          "Wir koordinieren Verpackungsdetails und vermitteln in der Kommunikation zwischen Ihnen und Ihren chinesischen Lieferanten."
+        ]
+      ],
+      "processTitle": "Ein einfacher Ablauf. Klare Kommunikation.",
+      "process": [
+        [
+          "01",
+          "Teilen Sie Ihre Anforderungen",
+          "Erzählen Sie uns von Produkt, Menge, Spezifikationen, Zielmarkt und Zeitplan."
+        ],
+        [
+          "02",
+          "Optionen prüfen",
+          "Wir suchen geeignete Lieferanten und teilen die relevanten Informationen, damit Sie eine fundierte Entscheidung treffen können."
+        ],
+        [
+          "03",
+          "Mit Zuversicht voranschreiten",
+          "Wir unterstützen bei Mustern, Fabrikkommunikation, Prüfungen, Verpackung und anderen vereinbarten Aufgaben."
+        ]
+      ],
+      "aboutEyebrow": "Vor Ort in Shenzhen",
+      "aboutTitle": "Ein lokaler Partner für internationales Geschäft.",
+      "aboutText": "Ich bin Azar Pamir, Gründerin von Sourcing Ally. Von Shenzhen aus helfe ich Kunden, mit Lieferanten zu kommunizieren, Fabriken zu besuchen, Produkte zu prüfen und Details zu managen, die aus dem Ausland schwer zu handhaben sind.",
+      "aboutText2": "Unser Standort ermöglicht es uns, problemlos in Shenzhen, Guangzhou, Foshan, Dongguan, Zhongshan und Huizhou zu arbeiten. Für weiter entfernte Projekte können wir bei Bedarf auch innerhalb Chinas reisen.",
+      "contactTitle": "Haben Sie ein Produkt im Sinn?",
+      "contactText": "Senden Sie uns Ihre Anforderungen und wir besprechen, wie wir Ihnen helfen können. Unsere Beschaffungsgebühr beginnt bei 5 %, die endgültige Gebühr richtet sich nach dem Umfang der Arbeit.",
+      "contactButton": "Sourcing Ally kontaktieren",
+      "limitation": "Wir bearbeiten keine Gefahrgüter oder militärbezogenen Produkte."
+    },
+    "command": {
+      "mark": "SA / BESCHAFFUNGS-LEITSTELLE",
+      "world": "SHENZHEN → WELT",
+      "headline": "Treffen Sie die nächste Beschaffungsentscheidung mit besseren Informationen.",
+      "founder": "Gründerin · Vor Ort in Shenzhen",
+      "brief": "Ein Projektbrief erstellen",
+      "questions": "Beschaffungsfragen erkunden",
+      "choose": "Wählen Sie Ihren Einstiegspunkt",
+      "firstLabel": "HIER STARTEN",
+      "first": "Ich importiere zum ersten Mal",
+      "firstText": "Verwandeln Sie eine Idee und Menge in ein klareres Erstbriefing.",
+      "buildLabel": "PRODUKT ENTWICKELN",
+      "build": "Ich entwickle oder beschaffe ein Produkt",
+      "buildText": "Vernetzen Sie Anforderungen, Muster, Verpackung und Qualitätsprüfungen.",
+      "activeLabel": "AKTIVER AUFTRAG",
+      "active": "Ich benötige Hilfe mit einem Lieferanten oder Auftrag",
+      "activeText": "Bringen Sie eine unklare Situation zurück zu sichtbaren Fakten und nächsten Schritten.",
+      "based": "Mit Sitz in Shenzhen · Betreuung internationaler Kunden",
+      "matcher": "Nicht sicher? Nutzen Sie den Dienstleister-Finder",
+      "scroll": "Zum Erkunden scrollen"
+    },
+    "atlas": {
+      "eyebrow": "Der Beschaffungs-Atlas",
+      "title": "Ein Projekt. Sechs Entscheidungen, die miteinander verbunden bleiben müssen.",
+      "intro": "Scrollen Sie durch die Route. Jede Phase hat eine andere Frage, eine andere Art von Beweismitteln und eine andere nächste Handlung.",
+      "link": "Wählen Sie Ihren Beschaffungsweg",
+      "stages": [
+        [
+          "BESCHAFFUNG",
+          "Das Produkt definieren",
+          "Verwandeln Sie eine Idee in ein Briefing, das Lieferanten tatsächlich beantworten können."
+        ],
+        [
+          "VERGLEICH",
+          "Annahmen prüfen",
+          "Vergleichen Sie die Antworten der Lieferanten mit denselben Anforderungen."
+        ],
+        [
+          "TESTEN",
+          "Das Muster verwenden",
+          "Testen Sie, was wichtig ist, bevor eine komplette Charge hergestellt wird."
+        ],
+        [
+          "KONTROLLE",
+          "Prüfungen planen",
+          "Machen Sie Qualitäts- und Verpackungsfragen früh sichtbar."
+        ],
+        [
+          "ÜBERGABE",
+          "Die Übergabe vorbereiten",
+          "Vernetzen Sie Produkt-, Verpackungs-, Dokumenten- und Versandfragen."
+        ],
+        [
+          "LERNEN",
+          "Dokumentation führen",
+          "Nutzen Sie die Beweismittel, um die nächste Bestellung klarer zu machen."
+        ]
+      ],
+      "what": "Was wir tun",
+      "exploreServices": "Dienstleistungen erkunden",
+      "products": "Produktleitfäden",
+      "productsSub": "Recherchieren Sie Ihre Produktkategorie",
+      "cities": "Städte in China",
+      "citiesSub": "Erfahren Sie, wo Produkte hergestellt werden",
+      "school": "Beschaffungs-Schule",
+      "schoolSub": "Erfahren Sie, wie Import funktioniert"
+    },
+    "section": {
+      "process": "Wie es funktioniert",
+      "lead": "Gute Beschaffung bedeutet mehr als einen niedrigen Preis zu finden. Es geht darum, die richtigen Fragen zu stellen, vor Ort zu sehen, was passiert, und die Kommunikation am Laufen zu halten.",
+      "contact": "Kontakt aufnehmen"
+    },
+    "quote": [
+      "ANGEBOTSANFRAGE",
+      "Senden Sie uns Ihre Projektdetails.",
+      "Das Formular unten hilft uns, Produkt, Menge, Bestimmungsort und den benötigten Support zu verstehen, bevor wir antworten."
+    ]
+  },
+  "ar": {
+    "home": {
+      "title": "Sourcing Ally | شريكك في التوريد في الصين",
+      "description": "Sourcing Ally تساعد المشترين الدوليين في العثور على الموردين، التحقق من المنتجات، تنسيق التغليف، والتواصل مع المصانع في الصين.",
+      "eyebrow": "التوريد من الصين، بشكل أوضح",
+      "headline": "عيونك وآذانك الموثوقة في الصين.",
+      "intro": "Sourcing Ally تساعد المشترين الدوليين على إيجاد الموردين المناسبين، فحص الجودة، وتقدم المشاريع بمساعدة شريك موجود على الأرض في Shenzhen.",
+      "primary": "أخبرنا بما تحتاجه",
+      "secondary": "استكشف عمليتنا",
+      "servicesTitle": "من البحث الأول عن الموردين إلى الفحص النهائي.",
+      "servicesIntro": "دعم عملي وميداني للمشترين الدوليين المستوردين من الصين.",
+      "services": [
+        [
+          "01",
+          "البحث عن الموردين",
+          "نقوم بالبحث والتواصل مع الموردين المحتملين بناءً على متطلبات المنتج، والميزانية، والجدول الزمني الخاص بك."
+        ],
+        [
+          "02",
+          "فحص العينات والمصانع",
+          "نرتب العينات، نزور المصانع عند الحاجة، ونساعدك على فهم ما تشتريه قبل بدء الإنتاج."
+        ],
+        [
+          "03",
+          "مراقبة الجودة",
+          "نفحص المنتجات في مراحل العينة والإنتاج والمرحلة النهائية وفقًا للمتطلبات التي تؤكدها معنا."
+        ],
+        [
+          "04",
+          "التغليف والترجمة",
+          "ننسق تفاصيل التغليف ونساعد في تسهيل التواصل بينك وبين مورديك في الصين."
+        ]
+      ],
+      "processTitle": "عملية بسيطة. تواصل واضح.",
+      "process": [
+        [
+          "01",
+          "شارك متطلباتك",
+          "أخبرنا عن المنتج، الكمية، المواصفات، السوق المستهدف، والموعد."
+        ],
+        [
+          "02",
+          "راجع الخيارات",
+          "نبحث عن الموردين المناسبين ونشاركك المعلومات ذات الصلة حتى تتمكن من اتخاذ قرار مستنير."
+        ],
+        [
+          "03",
+          "المضي قدمًا بثقة",
+          "ندعم ترتيب العينات، التواصل مع المصانع، الفحوص، التغليف، والمهام الأخرى المتفق عليها."
+        ]
+      ],
+      "aboutEyebrow": "متواجدون على الأرض في Shenzhen",
+      "aboutTitle": "شريك محلي للأعمال الدولية.",
+      "aboutText": "أنا Azar Pamir، مؤسس Sourcing Ally. من Shenzhen، أساعد العملاء على التواصل مع الموردين، زيارة المصانع، فحص المنتجات، وإدارة التفاصيل التي يصعب التعامل معها من الخارج.",
+      "aboutText2": "قاعدة عملنا تجعل من السهل العمل في Shenzhen، Guangzhou، Foshan، Dongguan، Zhongshan، وHuizhou. للمشاريع الأبعد، يمكننا أيضاً السفر داخل الصين عندما يتطلب العمل ذلك.",
+      "contactTitle": "هل لديك منتج في الاعتبار؟",
+      "contactText": "أرسل لنا متطلباتك وسنناقش كيف يمكننا المساعدة. تبدأ رسوم خدمة التوريد لدينا من 5%، على أن تعتمد الرسوم النهائية على نطاق العمل.",
+      "contactButton": "تواصل مع Sourcing Ally",
+      "limitation": "لا نتعامل مع المواد الخطرة أو المنتجات ذات الصلة بالقطاع العسكري."
+    },
+    "command": {
+      "mark": "SA / مركز قيادة التوريد",
+      "world": "SHENZHEN → العالم",
+      "headline": "اتخذ قرار التوريد التالي بمعلومات أفضل.",
+      "founder": "المؤسس · متواجد على الأرض في Shenzhen",
+      "brief": "إنشاء موجز للمشروع",
+      "questions": "استكشف أسئلة التوريد",
+      "choose": "اختر نقطة البداية الخاصة بك",
+      "firstLabel": "ابدأ من هنا",
+      "first": "أقوم بالاستيراد للمرة الأولى",
+      "firstText": "حوّل فكرة وكمية إلى موجز أول أوضح.",
+      "buildLabel": "طوّر منتجًا",
+      "build": "أعمل على تطوير منتج أو الحصول عليه من الموردين",
+      "buildText": "ربط المتطلبات، العينات، التغليف، وفحوصات الجودة.",
+      "activeLabel": "طلب جاري",
+      "active": "أحتاج مساعدة بشأن مورد أو طلب",
+      "activeText": "إعادة حالة غير واضحة إلى حقائق مرئية وخطوات تالية.",
+      "based": "مقرنا في Shenzhen · نخدم عملاء دوليين",
+      "matcher": "لست متأكدًا؟ استخدم أداة مطابقة الخدمة",
+      "scroll": "مرّر للاستكشاف"
+    },
+    "atlas": {
+      "eyebrow": "أطلس التوريد",
+      "title": "مشروع واحد. ستة قرارات يجب أن تظل مترابطة.",
+      "intro": "مرّر عبر المسار. كل مرحلة لها سؤال مختلف، ونوع مختلف من الأدلة، وخطوة تالية مختلفة.",
+      "link": "اختر مسار التوريد الخاص بك",
+      "stages": [
+        [
+          "التوريد",
+          "حدد المنتج",
+          "حوّل فكرة إلى موجز يمكن للموردين الإجابة عليه فعليًا."
+        ],
+        [
+          "المقارنة",
+          "تحقق من الافتراضات",
+          "قارن ردود الموردين مع نفس المتطلب."
+        ],
+        [
+          "الاختبار",
+          "استخدم العينة",
+          "اختبر ما يهم قبل إنتاج الدفعة الكاملة."
+        ],
+        [
+          "المراقبة",
+          "خطط الفحوص",
+          "اجعل مسائل الجودة والتغليف واضحة مبكرًا."
+        ],
+        [
+          "التحضير",
+          "حضّر عملية التسليم",
+          "ربط أسئلة المنتج، التغليف، المستندات، والشحن."
+        ],
+        [
+          "التعلم",
+          "احتفظ بالسجل",
+          "استخدم الأدلة لتوضيح الطلب التالي."
+        ]
+      ],
+      "what": "ما نقدمه",
+      "exploreServices": "استكشف الخدمات",
+      "products": "أدلة المنتجات",
+      "productsSub": "ابحث في فئة منتجك",
+      "cities": "مدن الصين",
+      "citiesSub": "تعرف أين تُصنع المنتجات",
+      "school": "مدرسة التوريد",
+      "schoolSub": "تعلم كيفية عمل الاستيراد"
+    },
+    "section": {
+      "process": "كيف تعمل",
+      "lead": "التوريد الجيد أكثر من مجرد العثور على سعر منخفض. إنه يتعلق بطرح الأسئلة الصحيحة، مراقبة ما يحدث على الأرض، والحفاظ على سير التواصل.",
+      "contact": "ابدأ محادثة"
+    },
+    "quote": [
+      "طلب عرض سعر",
+      "أرسل تفاصيل مشروعك.",
+      "يساعدنا النموذج أدناه على فهم المنتج، الكمية، الوجهة، والدعم الذي تحتاجه قبل أن نرد."
+    ]
+  },
+  "id": {
+    "home": {
+      "title": "Sourcing Ally | Mitra pengadaan Anda di Tiongkok",
+      "description": "Sourcing Ally membantu pembeli internasional menemukan pemasok, memverifikasi produk, mengoordinasikan kemasan, dan berkomunikasi dengan pabrik di Tiongkok.",
+      "eyebrow": "Pengadaan dari Tiongkok, jadi lebih jelas",
+      "headline": "Mata dan telinga tepercaya Anda di Tiongkok.",
+      "intro": "Sourcing Ally membantu pembeli internasional menemukan pemasok yang tepat, memeriksa kualitas, dan memajukan proyek dengan mitra yang berada di lapangan di Shenzhen.",
+      "primary": "Beritahu kami kebutuhan Anda",
+      "secondary": "Jelajahi proses kami",
+      "servicesTitle": "Dari pencarian pemasok pertama hingga pemeriksaan akhir.",
+      "servicesIntro": "Dukungan praktis di lapangan untuk pembeli internasional yang mengimpor dari Tiongkok.",
+      "services": [
+        [
+          "01",
+          "Pencarian pemasok",
+          "Kami meneliti dan menghubungi pemasok potensial berdasarkan persyaratan produk, anggaran, dan jadwal Anda."
+        ],
+        [
+          "02",
+          "Pemeriksaan sampel & pabrik",
+          "Kami mengatur sampel, mengunjungi pabrik bila diperlukan, dan membantu Anda memahami apa yang Anda beli sebelum produksi."
+        ],
+        [
+          "03",
+          "Pengendalian kualitas",
+          "Kami memeriksa produk pada tahap sampel, produksi, dan akhir sesuai dengan persyaratan yang Anda konfirmasikan kepada kami."
+        ],
+        [
+          "04",
+          "Pengemasan & terjemahan",
+          "Kami mengoordinasikan detail kemasan dan membantu menjembatani komunikasi antara Anda dan pemasok Tiongkok Anda."
+        ]
+      ],
+      "processTitle": "Proses sederhana. Komunikasi yang jelas.",
+      "process": [
+        [
+          "01",
+          "Bagikan kebutuhan Anda",
+          "Ceritakan tentang produk, jumlah, spesifikasi, pasar sasaran, dan jadwal."
+        ],
+        [
+          "02",
+          "Tinjau opsi",
+          "Kami mencari pemasok yang sesuai dan membagikan informasi relevan sehingga Anda dapat membuat keputusan yang tepat."
+        ],
+        [
+          "03",
+          "Lanjutkan dengan percaya diri",
+          "Kami mendukung pengelolaan sampel, komunikasi pabrik, pemeriksaan, kemasan, dan tugas lain yang disepakati."
+        ]
+      ],
+      "aboutEyebrow": "Di lapangan di Shenzhen",
+      "aboutTitle": "Mitra lokal untuk bisnis internasional.",
+      "aboutText": "Saya Azar Pamir, pendiri Sourcing Ally. Dari Shenzhen, saya membantu klien berkomunikasi dengan pemasok, mengunjungi pabrik, memeriksa produk, dan mengelola detail yang sulit ditangani dari luar negeri.",
+      "aboutText2": "Basis kami memudahkan kerja di Shenzhen, Guangzhou, Foshan, Dongguan, Zhongshan, dan Huizhou. Untuk proyek yang lebih jauh, kami juga dapat melakukan perjalanan di dalam Tiongkok jika pekerjaan mengharuskannya.",
+      "contactTitle": "Punya produk dalam pikiran?",
+      "contactText": "Kirimkan kebutuhan Anda kepada kami dan kami akan membahas bagaimana kami dapat membantu. Biaya layanan pengadaan kami mulai dari 5%, dengan biaya akhir tergantung pada lingkup pekerjaan.",
+      "contactButton": "Hubungi Sourcing Ally",
+      "limitation": "Kami tidak menangani barang berbahaya atau produk terkait militer."
+    },
+    "command": {
+      "mark": "SA / PUSAT KOMANDO PENGADAAN",
+      "world": "SHENZHEN → DUNIA",
+      "headline": "Ambil keputusan pengadaan berikutnya dengan informasi yang lebih baik.",
+      "founder": "Pendiri · Berada di Shenzhen",
+      "brief": "Buat ringkasan proyek",
+      "questions": "Jelajahi pertanyaan pengadaan",
+      "choose": "PILIH TITIK MULAI ANDA",
+      "firstLabel": "MULAI DI SINI",
+      "first": "Saya mengimpor untuk pertama kali",
+      "firstText": "Ubah ide dan kuantitas menjadi ringkasan awal yang lebih jelas.",
+      "buildLabel": "KEMBANGKAN PRODUK",
+      "build": "Saya sedang mengembangkan produk atau mencari pemasok",
+      "buildText": "Hubungkan persyaratan, sampel, kemasan, dan pemeriksaan kualitas.",
+      "activeLabel": "PESANAN AKTIF",
+      "active": "Saya membutuhkan bantuan dengan pemasok atau pesanan",
+      "activeText": "Perjelas situasi yang tidak jelas menjadi fakta yang terlihat dan tindakan selanjutnya.",
+      "based": "Berkantor di Shenzhen · Melayani klien secara internasional",
+      "matcher": "Belum yakin? Gunakan Pencocok Layanan",
+      "scroll": "GULUNG UNTUK MENJELAJAHI"
+    },
+    "atlas": {
+      "eyebrow": "Atlas Pengadaan",
+      "title": "Satu proyek. Enam keputusan yang harus tetap terhubung.",
+      "intro": "Gulir melalui rutenya. Setiap tahap memiliki pertanyaan berbeda, jenis bukti yang berbeda, dan tindakan selanjutnya yang berbeda.",
+      "link": "Pilih jalur pengadaan Anda",
+      "stages": [
+        [
+          "SUMBER",
+          "Tentukan produk",
+          "Ubah ide menjadi ringkasan yang bisa dijawab oleh pemasok."
+        ],
+        [
+          "BANDINGKAN",
+          "Periksa asumsi",
+          "Bandingkan tanggapan pemasok terhadap persyaratan yang sama."
+        ],
+        [
+          "UJI",
+          "Gunakan sampel",
+          "Uji hal-hal penting sebelum batch penuh diproduksi."
+        ],
+        [
+          "KENDALIKAN",
+          "Rencanakan pemeriksaan",
+          "Buat pertanyaan kualitas dan kemasan terlihat sejak awal."
+        ],
+        [
+          "PERSIAPKAN",
+          "Siapkan serah terima",
+          "Hubungkan pertanyaan tentang produk, kemasan, dokumen, dan pengiriman."
+        ],
+        [
+          "PELAJARI",
+          "Simpan catatan",
+          "Gunakan bukti untuk membuat pesanan berikutnya lebih jelas."
+        ]
+      ],
+      "what": "Apa yang kami lakukan",
+      "exploreServices": "Jelajahi layanan",
+      "products": "Panduan produk",
+      "productsSub": "Teliti kategori produk Anda",
+      "cities": "Kota-kota di Tiongkok",
+      "citiesSub": "Pelajari lokasi produksi produk",
+      "school": "Sekolah Pengadaan",
+      "schoolSub": "Pelajari cara kerja impor"
+    },
+    "section": {
+      "process": "Cara kerjanya",
+      "lead": "Pengadaan yang baik lebih dari sekadar mencari harga rendah. Ini tentang mengajukan pertanyaan yang tepat, melihat apa yang terjadi di lapangan, dan menjaga komunikasi tetap berjalan.",
+      "contact": "Mulai percakapan"
+    },
+    "quote": [
+      "PERMINTAAN PENAWARAN",
+      "Kirimkan detail proyek Anda.",
+      "Formulir di bawah membantu kami memahami produk, jumlah, tujuan, dan dukungan yang Anda butuhkan sebelum kami membalas."
+    ]
+  },
+  "it": {
+    "home": {
+      "title": "Sourcing Ally | Il tuo partner per l'approvvigionamento in Cina",
+      "description": "Sourcing Ally aiuta gli acquirenti internazionali a trovare fornitori, verificare i prodotti, coordinare gli imballaggi e comunicare con le fabbriche in Cina.",
+      "eyebrow": "Approvvigionamento dalla Cina, più chiaro",
+      "headline": "I tuoi occhi e le tue orecchie di fiducia in Cina.",
+      "intro": "Sourcing Ally aiuta gli acquirenti internazionali a trovare i fornitori giusti, verificare la qualità e portare avanti i progetti con un partner presente a Shenzhen.",
+      "primary": "Dicci cosa ti serve",
+      "secondary": "Scopri il nostro processo",
+      "servicesTitle": "Dalla prima ricerca di fornitori al controllo finale.",
+      "servicesIntro": "Supporto pratico e operativo per acquirenti internazionali che importano dalla Cina.",
+      "services": [
+        [
+          "01",
+          "Ricerca fornitori",
+          "Ricerchiamo e contattiamo i fornitori potenziali in base ai requisiti del tuo prodotto, al budget e ai tempi."
+        ],
+        [
+          "02",
+          "Controlli su campioni e fabbrica",
+          "Organizziamo campioni, visitiamo le fabbriche quando necessario e ti aiutiamo a capire cosa stai acquistando prima della produzione."
+        ],
+        [
+          "03",
+          "Controllo qualità",
+          "Verifichiamo i prodotti nelle fasi di campione, produzione e controllo finale secondo i requisiti che ci confermi."
+        ],
+        [
+          "04",
+          "Imballaggio e traduzione",
+          "Coordinamo i dettagli dell'imballaggio e facilitiamo la comunicazione tra te e i tuoi fornitori cinesi."
+        ]
+      ],
+      "processTitle": "Un processo semplice. Comunicazione chiara.",
+      "process": [
+        [
+          "01",
+          "Condividi i tuoi requisiti",
+          "Parlaci del prodotto, della quantità, delle specifiche, del mercato di destinazione e dei tempi."
+        ],
+        [
+          "02",
+          "Valuta le opzioni",
+          "Cerchiamo fornitori idonei e condividiamo le informazioni rilevanti in modo che tu possa prendere una decisione informata."
+        ],
+        [
+          "03",
+          "Procedi con fiducia",
+          "Supportiamo campioni, comunicazione con la fabbrica, controlli, imballaggio e altre attività concordate."
+        ]
+      ],
+      "aboutEyebrow": "Presenti a Shenzhen",
+      "aboutTitle": "Un partner locale per il commercio internazionale.",
+      "aboutText": "Sono Azar Pamir, fondatrice di Sourcing Ally. Da Shenzhen aiuto i clienti a comunicare con i fornitori, visitare le fabbriche, controllare i prodotti e gestire i dettagli difficili da curare dall'estero.",
+      "aboutText2": "La nostra sede ci consente di operare facilmente a Shenzhen, Guangzhou, Foshan, Dongguan, Zhongshan e Huizhou. Per progetti più lontani, possiamo anche spostarci all'interno della Cina quando il lavoro lo richiede.",
+      "contactTitle": "Hai un prodotto in mente?",
+      "contactText": "Inviaci i tuoi requisiti e discuteremo come possiamo aiutarti. La nostra commissione per il servizio di sourcing parte dal 5%, con la tariffa finale che dipende dall'ambito del lavoro.",
+      "contactButton": "Contatta Sourcing Ally",
+      "limitation": "Non gestiamo merci pericolose né prodotti correlati al settore militare."
+    },
+    "command": {
+      "mark": "SA / CENTRO COMANDO PER L'APPROVVIGIONAMENTO",
+      "world": "SHENZHEN → MONDO",
+      "headline": "Prendi la prossima decisione di approvvigionamento con informazioni più precise.",
+      "founder": "Fondatrice · Presente a Shenzhen",
+      "brief": "Crea un brief di progetto",
+      "questions": "Esplora le domande sull'approvvigionamento",
+      "choose": "SCEGLI IL TUO PUNTO DI PARTENZA",
+      "firstLabel": "INIZIA QUI",
+      "first": "Sto importando per la prima volta",
+      "firstText": "Trasforma un'idea e una quantità in un brief iniziale più chiaro.",
+      "buildLabel": "SVILUPPA UN PRODOTTO",
+      "build": "Sto sviluppando o approvvigionando un prodotto",
+      "buildText": "Collega requisiti, campioni, imballaggio e controlli qualità.",
+      "activeLabel": "ORDINE ATTIVO",
+      "active": "Ho bisogno di aiuto con un fornitore o un ordine",
+      "activeText": "Trasforma una situazione poco chiara in fatti verificabili e in azioni successive.",
+      "based": "Con sede a Shenzhen · Serviamo clienti a livello internazionale",
+      "matcher": "Non sei sicuro? Usa il Selettore di servizi",
+      "scroll": "SCORRI PER ESPLORARE"
+    },
+    "atlas": {
+      "eyebrow": "L'Atlante dell'approvvigionamento",
+      "title": "Un progetto. Sei decisioni che devono rimanere collegate.",
+      "intro": "Scorri il percorso. Ogni fase ha una domanda diversa, un tipo differente di prove e una diversa azione successiva.",
+      "link": "Scegli il tuo percorso di approvvigionamento",
+      "stages": [
+        [
+          "REPERIRE",
+          "Definisci il prodotto",
+          "Trasforma un'idea in un brief a cui i fornitori possano realmente rispondere."
+        ],
+        [
+          "CONFRONTARE",
+          "Verifica le ipotesi",
+          "Confronta le risposte dei fornitori rispetto allo stesso requisito."
+        ],
+        [
+          "TESTARE",
+          "Usa il campione",
+          "Testa ciò che conta prima che venga prodotto l'intero lotto."
+        ],
+        [
+          "CONTROLLARE",
+          "Pianifica i controlli",
+          "Rendi visibili fin da subito le questioni relative a qualità e imballaggio."
+        ],
+        [
+          "TRASFERIRE",
+          "Prepara il passaggio",
+          "Metti in relazione prodotto, imballaggio, documenti e questioni di spedizione."
+        ],
+        [
+          "APPRENDERE",
+          "Tieni traccia",
+          "Usa le prove per rendere più chiaro il prossimo ordine."
+        ]
+      ],
+      "what": "Cosa facciamo",
+      "exploreServices": "Scopri i servizi",
+      "products": "Guide di prodotto",
+      "productsSub": "Ricerca la tua categoria di prodotto",
+      "cities": "Città cinesi",
+      "citiesSub": "Scopri dove vengono prodotti",
+      "school": "Scuola di approvvigionamento",
+      "schoolSub": "Impara come funziona l'importazione"
+    },
+    "section": {
+      "process": "Come funziona",
+      "lead": "Un buon approvvigionamento non significa soltanto trovare un prezzo basso. Si tratta di porre le domande giuste, vedere cosa succede sul posto e mantenere la comunicazione attiva.",
+      "contact": "Inizia una conversazione"
+    },
+    "quote": [
+      "RICHIESTA DI PREVENTIVO",
+      "Invia i dettagli del tuo progetto.",
+      "Il modulo sottostante ci aiuta a capire il prodotto, la quantità, la destinazione e il supporto di cui hai bisogno prima di rispondere."
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import homepageLocales from '../../data/generatedHomepageCoreTranslations.json';
 
 const translations = {
   en: {
@@ -68,11 +69,13 @@ const frenchAtlas = {eyebrow:'L’Atlas du sourcing',title:'Un projet. Six déci
 const frenchSectionUi = {process:'Comment cela fonctionne',lead:'Un bon sourcing ne consiste pas seulement à trouver un prix bas. Il consiste à poser les bonnes questions, voir ce qui se passe sur le terrain et garder la communication en mouvement.',contact:'Démarrer une conversation'};
 export function getStaticPaths() { return ['en', 'es', 'pt', 'ru', 'tr', 'fr', 'ja', 'de', 'ar', 'id', 'it'].map((lang) => ({ params: { lang }, props: { lang } })); }
 const { lang } = Astro.props;
-const t = lang === 'fr' ? frenchHome : (translations[lang as keyof typeof translations] ?? translations.en);
-const c = lang === 'fr' ? frenchCommand : (commandTranslations[lang as keyof typeof commandTranslations] ?? commandTranslations.en);
-const a = lang === 'fr' ? frenchAtlas : (atlasTranslations[lang as keyof typeof atlasTranslations] ?? atlasTranslations.en);
-  const s = lang === 'fr' ? frenchSectionUi : (sectionUi[lang as keyof typeof sectionUi] ?? sectionUi.en);
-  const quoteCopy = ({
+const generated = homepageLocales as Record<string, { home: typeof translations.en; command: typeof commandTranslations.en; atlas: typeof atlasTranslations.en; section: typeof sectionUi.en; quote: string[] }>;
+const generatedLocale = generated[lang];
+const t = generatedLocale?.home ?? (lang === 'fr' ? frenchHome : (translations[lang as keyof typeof translations] ?? translations.en));
+const c = generatedLocale?.command ?? (lang === 'fr' ? frenchCommand : (commandTranslations[lang as keyof typeof commandTranslations] ?? commandTranslations.en));
+const a = generatedLocale?.atlas ?? (lang === 'fr' ? frenchAtlas : (atlasTranslations[lang as keyof typeof atlasTranslations] ?? atlasTranslations.en));
+const s = generatedLocale?.section ?? (lang === 'fr' ? frenchSectionUi : (sectionUi[lang as keyof typeof sectionUi] ?? sectionUi.en));
+const quoteCopy = generatedLocale?.quote ?? ({
     en: ['QUOTE REQUEST', 'Send your project details.', 'The form below helps us understand the product, quantity, destination, and support you need before we reply.'],
     es: ['SOLICITUD DE COTIZACIÓN', 'Envíe los detalles de su proyecto.', 'El formulario nos ayuda a entender el producto, la cantidad, el destino y el apoyo que necesita antes de responder.'],
     pt: ['PEDIDO DE COTAÇÃO', 'Envie os detalhes do seu projeto.', 'O formulário ajuda-nos a entender o produto, a quantidade, o destino e o apoio de que precisa antes de responder.'],
