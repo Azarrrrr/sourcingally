@@ -1,10 +1,11 @@
 ---
 import DecisionSuitePage from '../../components/DecisionSuitePage.astro';
+import { decisionLanguages, type DecisionLanguage } from '../../data/decision-suite';
 
 export function getStaticPaths() {
-  return ['en', 'es', 'pt', 'ru', 'tr', 'fr'].map((lang) => ({ params: { lang } }));
+  return decisionLanguages.map((lang) => ({ params: { lang } }));
 }
 
-const { lang } = Astro.params as { lang: 'en' | 'es' | 'pt' | 'ru' | 'tr' | 'fr' };
+const { lang } = Astro.params as { lang: DecisionLanguage };
 ---
 <DecisionSuitePage lang={lang} pageKey="qualityControlPlan" sequence="04—04" />
