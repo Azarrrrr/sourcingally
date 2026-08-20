@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import '../styles/refresh.css';
+import layoutLocales from '../data/generatedLayoutTranslations.json';
 
 interface Props {
   title: string;
@@ -36,8 +37,10 @@ const uiValues = {
   tr:{work:'Bizimle çalışın',learn:'Öğrenin',exploreChina:'Çin’i keşfedin',services:'Hizmetler',buyerPaths:'Alıcı rotaları',matcher:'Hizmet Eşleştirici',briefBuilder:'Proje Oluşturucu',questions:'Tedarik soruları',school:'Tedarik Okulu',journal:'Dergi',editorial:'Editoryal standartlar',cities:'Çin şehirleri',routeMap:'Çin rota haritası',products:'Ürün rehberleri',start:'Bir proje başlatın',howWeWork:'Nasıl çalışıyoruz',feesScope:'Ücretler ve kapsam',decisionGuides:'Karar rehberleri',supplierVerification:'Tedarikçi doğrulama',productSamples:'Ürün numuneleri',factoryVisits:'Fabrika ziyaretleri',qualityControlPlan:'Kalite kontrol planı',shippingReadiness:'Sevkiyat hazırlığı',chinaBusinessTravel:'Çin iş seyahati',menu:'Menü',chooseLanguage:'Dil seçin',explore:'Keşfedin',privacy:'Gizlilik',terms:'Koşullar',disclaimer:'Sorumluluk reddi',policy:'Editoryal politika',contact:'İletişim',footer:'Shenzhen’de bulunan ve uluslararası alıcıların Çin ile daha net ve güvenle çalışmasına yardımcı olan tedarik ortağı.',international:'Shenzhen, Çin · Uluslararası hizmet'},
   fr:{work:'Travailler avec nous',learn:'Apprendre',exploreChina:'Explorer la Chine',services:'Services',buyerPaths:'Parcours acheteurs',matcher:'Assistant services',briefBuilder:'Créateur de brief',questions:'Questions sur le sourcing',school:'École du sourcing',journal:'Journal',editorial:'Charte éditoriale',cities:'Villes de Chine',routeMap:'Carte des itinéraires en Chine',products:'Guides produits',start:'Démarrer un projet',howWeWork:'Comment nous travaillons',feesScope:'Tarifs et périmètre',decisionGuides:'Guides de décision',supplierVerification:'Vérification des fournisseurs',productSamples:'Échantillons produit',factoryVisits:'Visites d’usine',qualityControlPlan:'Plan de contrôle qualité',shippingReadiness:'Préparation de l’expédition',chinaBusinessTravel:'Voyage d’affaires en Chine',menu:'Menu',chooseLanguage:'Choisir une langue',explore:'Explorer',privacy:'Confidentialité',terms:'Conditions',disclaimer:'Avertissement',policy:'Politique éditoriale',contact:'Contact',footer:'Un partenaire de sourcing basé à Shenzhen, qui aide les acheteurs internationaux à travailler avec la Chine de façon plus claire et plus sereine.',international:'Shenzhen, Chine · Service international'}
 };
-const ui = uiValues[lang as keyof typeof uiValues] ?? uiValues.en;
-const quoteUi = ({
+const generatedLayout = layoutLocales as Record<string, { ui: typeof uiValues.en; quote: { trigger: string; eyebrow: string; title: string; note: string; close: string } }>;
+const generatedLayoutLocale = generatedLayout[lang];
+const ui = generatedLayoutLocale?.ui ?? uiValues[lang as keyof typeof uiValues] ?? uiValues.en;
+const quoteUi = generatedLayoutLocale?.quote ?? ({
   en: { trigger: 'Share your product', eyebrow: 'SOURCING ALLY / PROJECT BRIEF', title: 'Bring your product question into the conversation.', note: 'Share the product, quantity, destination, and the support you need. The request opens in a full-page workspace.', close: 'Close request' },
   es: { trigger: 'Cuéntanos tu producto', eyebrow: 'SOURCING ALLY / BRIEF DE PROYECTO', title: 'Trae tu consulta sobre el producto a la conversación.', note: 'Comparte el producto, la cantidad, el destino y el apoyo que necesitas. La solicitud se abre en una página completa.', close: 'Cerrar solicitud' },
   pt: { trigger: 'Conte-nos o produto', eyebrow: 'SOURCING ALLY / BRIEF DO PROJETO', title: 'Traga a questão do produto para a conversa.', note: 'Partilhe o produto, a quantidade, o destino e o apoio de que precisa. O pedido abre num espaço de página inteira.', close: 'Fechar pedido' },
