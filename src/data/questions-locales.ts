@@ -1,4 +1,7 @@
-export const questionLocales = {
+import { questionGroups } from './questions';
+import generatedDecisionSuiteTranslations from './generatedDecisionSuiteTranslations.json';
+
+const baseQuestionLocales = {
   "es": {
     "groups": [
       {
@@ -994,4 +997,26 @@ export const questionLocales = {
       }
     ]
   }
+} as const;
+
+type TranslationDictionary = Record<string, string>;
+
+function localizeValue<T>(value: T, dictionary: TranslationDictionary): T {
+  if (typeof value === 'string') return (dictionary[value] ?? value) as T;
+  if (Array.isArray(value)) return value.map((entry) => localizeValue(entry, dictionary)) as T;
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, localizeValue(entry, dictionary)])) as T;
+  }
+  return value;
+}
+
+const generated = generatedDecisionSuiteTranslations as Record<'ja' | 'de' | 'ar' | 'id' | 'it', TranslationDictionary>;
+
+export const questionLocales = {
+  ...baseQuestionLocales,
+  ja: { groups: localizeValue(questionGroups, generated.ja) },
+  de: { groups: localizeValue(questionGroups, generated.de) },
+  ar: { groups: localizeValue(questionGroups, generated.ar) },
+  id: { groups: localizeValue(questionGroups, generated.id) },
+  it: { groups: localizeValue(questionGroups, generated.it) },
 } as const;
