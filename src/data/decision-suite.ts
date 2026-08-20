@@ -1,7 +1,9 @@
-export const decisionLanguages = ['en', 'es', 'pt', 'ru', 'tr', 'fr'] as const;
+import generatedDecisionSuiteTranslations from './generatedDecisionSuiteTranslations.json';
+
+export const decisionLanguages = ['en', 'es', 'pt', 'ru', 'tr', 'fr', 'ja', 'de', 'ar', 'id', 'it'] as const;
 export type DecisionLanguage = (typeof decisionLanguages)[number];
 
-export const decisionSuite = {
+const baseDecisionSuite = {
   "en": {
     "supplierVerification": {
       "metaTitle": "Verify a Chinese Supplier Before You Pay | Sourcing Ally",
@@ -2366,4 +2368,26 @@ export const decisionSuite = {
       "ctaLabel": "Rédiger un cahier des charges"
     }
   }
+} as const;
+
+type TranslationDictionary = Record<string, string>;
+
+function localizeValue<T>(value: T, dictionary: TranslationDictionary): T {
+  if (typeof value === 'string') return (dictionary[value] ?? value) as T;
+  if (Array.isArray(value)) return value.map((entry) => localizeValue(entry, dictionary)) as T;
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, localizeValue(entry, dictionary)])) as T;
+  }
+  return value;
+}
+
+const generated = generatedDecisionSuiteTranslations as Record<'ja' | 'de' | 'ar' | 'id' | 'it', TranslationDictionary>;
+
+export const decisionSuite = {
+  ...baseDecisionSuite,
+  ja: localizeValue(baseDecisionSuite.en, generated.ja),
+  de: localizeValue(baseDecisionSuite.en, generated.de),
+  ar: localizeValue(baseDecisionSuite.en, generated.ar),
+  id: localizeValue(baseDecisionSuite.en, generated.id),
+  it: localizeValue(baseDecisionSuite.en, generated.it),
 } as const;
