@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { operationalGuides, type OperationalGuideLanguage } from '../data/operational-guides';
+import { sequenceLabel } from '../data/static-chrome';
 
 type PageKey = keyof typeof operationalGuides.en;
 interface Props {
@@ -31,7 +32,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
   <section class="decision-section decision-section-soft">
     <div class="container">
-      <div class="decision-heading"><p class="eyebrow">01 / WHEN IT HELPS</p><h2>{copy.situationsTitle}</h2></div>
+      <div class="decision-heading"><p class="eyebrow">{sequenceLabel(lang, '01', 'WHEN IT HELPS')}</p><h2>{copy.situationsTitle}</h2></div>
       <div class="decision-situations-grid">
         {copy.situations.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
       </div>
@@ -40,7 +41,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
   <section class="decision-section">
     <div class="container">
-      <div class="decision-heading decision-heading-split"><div><p class="eyebrow">02 / PREPARE THE HANDOVER</p><h2>{copy.evidenceTitle}</h2></div><p>{copy.evidenceIntro}</p></div>
+      <div class="decision-heading decision-heading-split"><div><p class="eyebrow">{sequenceLabel(lang, '02', 'PREPARE THE HANDOVER')}</p><h2>{copy.evidenceTitle}</h2></div><p>{copy.evidenceIntro}</p></div>
       <div class="decision-evidence-list">
         {copy.evidence.map((item) => <article><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}
       </div>
@@ -49,7 +50,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
   <section class="decision-section decision-section-ink">
     <div class="container">
-      <div class="decision-heading decision-heading-light"><p class="eyebrow">03 / BOUNDARIES</p><h2>{copy.limitsTitle}</h2></div>
+      <div class="decision-heading decision-heading-light"><p class="eyebrow">{sequenceLabel(lang, '03', 'BOUNDARIES')}</p><h2>{copy.limitsTitle}</h2></div>
       <div class="decision-limits-grid">
         {copy.limits.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
       </div>
@@ -58,7 +59,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
   <section class="decision-section">
     <div class="container decision-prepare-wrap">
-      <div class="decision-prepare-heading"><p class="eyebrow">04 / PREPARE</p><h2>{copy.prepareTitle}</h2></div>
+      <div class="decision-prepare-heading"><p class="eyebrow">{sequenceLabel(lang, '04', 'PREPARE')}</p><h2>{copy.prepareTitle}</h2></div>
       <ol class="decision-prepare-list">{copy.prepare.map((item) => <li>{item}</li>)}</ol>
     </div>
   </section>

@@ -1,0 +1,72 @@
+{
+  "es": {
+    "WHEN IT HELPS": "CUANDO AYUDA",
+    "EVIDENCE PATH": "RUTA DE EVIDENCIA",
+    "BOUNDARIES": "LÍMITES",
+    "PREPARE": "PREPARAR",
+    "PREPARE THE HANDOVER": "PREPARAR LA ENTREGA"
+  },
+  "ru": {
+    "WHEN IT HELPS": "КОГДА ЭТО ПОМОГАЕТ",
+    "EVIDENCE PATH": "ПУТЬ ДОКАЗАТЕЛЬСТВ",
+    "BOUNDARIES": "ГРАНИЦЫ",
+    "PREPARE": "ПОДГОТОВЬТЕ",
+    "PREPARE THE HANDOVER": "ПОДГОТОВЬТЕ ПЕРЕДАЧУ"
+  },
+  "ja": {
+    "WHEN IT HELPS": "役に立つとき",
+    "EVIDENCE PATH": "証拠のパス",
+    "BOUNDARIES": "境界線",
+    "PREPARE": "準備する",
+    "PREPARE THE HANDOVER": "引き継ぎの準備をする"
+  },
+  "de": {
+    "WHEN IT HELPS": "WENN ES HILFT",
+    "EVIDENCE PATH": "BEWEISWEG",
+    "BOUNDARIES": "GRENZEN",
+    "PREPARE": "VORBEREITEN",
+    "PREPARE THE HANDOVER": "Bereiten Sie die Übergabe vor"
+  },
+  "pt": {
+    "WHEN IT HELPS": "QUANDO AJUDA",
+    "EVIDENCE PATH": "CAMINHO DE EVIDÊNCIA",
+    "BOUNDARIES": "LIMITES",
+    "PREPARE": "PREPARAR",
+    "PREPARE THE HANDOVER": "PREPARAR A ENTREGA"
+  },
+  "fr": {
+    "WHEN IT HELPS": "QUAND ÇA AIDE",
+    "EVIDENCE PATH": "CHEMIN DE PREUVE",
+    "BOUNDARIES": "LIMITES",
+    "PREPARE": "PRÉPARER",
+    "PREPARE THE HANDOVER": "PRÉPARER LA TRANSMISSION"
+  },
+  "ar": {
+    "WHEN IT HELPS": "عندما يساعد",
+    "EVIDENCE PATH": "مسار الأدلة",
+    "BOUNDARIES": "الحدود",
+    "PREPARE": "الاستعداد",
+    "PREPARE THE HANDOVER": "تحضير التسليم"
+  },
+  "id": {
+    "WHEN IT HELPS": "KETIKA MEMBANTU",
+    "EVIDENCE PATH": "JALUR BUKTI",
+    "BOUNDARIES": "BATAS",
+    "PREPARE": "PERSIAPKAN",
+    "PREPARE THE HANDOVER": "PERSIAPKAN PENYERAHANNYA"
+  },
+  "tr": {
+    "WHEN IT HELPS": "NE ZAMAN YARDIMCI OLUR",
+    "EVIDENCE PATH": "KANIT YOLU",
+    "BOUNDARIES": "SINIRLAR",
+    "PREPARE": "HAZIRLAN",
+    "PREPARE THE HANDOVER": "DEVRİMİ HAZIRLAYIN"
+  },
+  "it": {
+    "WHEN IT HELPS": "QUANDO AIUTA",
+    "EVIDENCE PATH": "PERCORSO DI EVIDENZA",
+    "BOUNDARIES": "CONFINI",
+    "PREPARE": "PREPARARE",
+    "PREPARE THE HANDOVER": "PREPARARE LA CONSEGNA"
+  }
+}
