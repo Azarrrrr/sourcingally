@@ -1,10 +1,11 @@
 ---
 import OperationalGuidePage from '../../components/OperationalGuidePage.astro';
+import { operationalGuideLanguages, type OperationalGuideLanguage } from '../../data/operational-guides';
 
 export function getStaticPaths() {
-  return ['en', 'es', 'pt', 'ru', 'tr', 'fr'].map((lang) => ({ params: { lang } }));
+  return operationalGuideLanguages.map((lang) => ({ params: { lang } }));
 }
 
-const { lang } = Astro.params as { lang: 'en' | 'es' | 'pt' | 'ru' | 'tr' | 'fr' };
+const { lang } = Astro.params as { lang: OperationalGuideLanguage };
 ---
 <OperationalGuidePage lang={lang} pageKey="shippingReadiness" sequence="01—02" />

@@ -1,7 +1,9 @@
-export const operationalGuideLanguages = ['en', 'es', 'pt', 'ru', 'tr', 'fr'] as const;
+import generatedDecisionSuiteTranslations from './generatedDecisionSuiteTranslations.json';
+
+export const operationalGuideLanguages = ['en', 'es', 'pt', 'ru', 'tr', 'fr', 'ja', 'de', 'ar', 'id', 'it'] as const;
 export type OperationalGuideLanguage = (typeof operationalGuideLanguages)[number];
 
-export const operationalGuides = {
+const baseOperationalGuides = {
   "en": {
     "shippingReadiness": {
       "metaTitle": "Shipping Readiness for China Orders | Sourcing Ally",
@@ -1190,4 +1192,26 @@ export const operationalGuides = {
       "ctaLabel": "Rédiger un cahier des charges"
     }
   }
+} as const;
+
+type TranslationDictionary = Record<string, string>;
+
+function localizeValue<T>(value: T, dictionary: TranslationDictionary): T {
+  if (typeof value === 'string') return (dictionary[value] ?? value) as T;
+  if (Array.isArray(value)) return value.map((entry) => localizeValue(entry, dictionary)) as T;
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, localizeValue(entry, dictionary)])) as T;
+  }
+  return value;
+}
+
+const generated = generatedDecisionSuiteTranslations as Record<'ja' | 'de' | 'ar' | 'id' | 'it', TranslationDictionary>;
+
+export const operationalGuides = {
+  ...baseOperationalGuides,
+  ja: localizeValue(baseOperationalGuides.en, generated.ja),
+  de: localizeValue(baseOperationalGuides.en, generated.de),
+  ar: localizeValue(baseOperationalGuides.en, generated.ar),
+  id: localizeValue(baseOperationalGuides.en, generated.id),
+  it: localizeValue(baseOperationalGuides.en, generated.it),
 } as const;
