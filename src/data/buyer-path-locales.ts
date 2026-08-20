@@ -1,4 +1,7 @@
-export const buyerPathLocales = {
+import { buyerPaths } from './buyer-paths';
+import generatedDecisionSuiteTranslations from './generatedDecisionSuiteTranslations.json';
+
+const baseBuyerPathLocales = {
   "es": {
     "paths": [
       {
@@ -1579,4 +1582,46 @@ export const buyerPathLocales = {
       }
     ]
   }
+} as const;
+
+type TranslationDictionary = Record<string, string>;
+
+function localizeValue<T>(value: T, dictionary: TranslationDictionary): T {
+  if (typeof value === 'string') return (dictionary[value] ?? value) as T;
+  if (Array.isArray(value)) return value.map((entry) => localizeValue(entry, dictionary)) as T;
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, localizeValue(entry, dictionary)])) as T;
+  }
+  return value;
+}
+
+const generated = generatedDecisionSuiteTranslations as Record<'ja' | 'de' | 'ar' | 'id' | 'it', TranslationDictionary>;
+
+function localizedPaths(dictionary: TranslationDictionary) {
+  return buyerPaths.map((path) => ({
+    slug: path.slug,
+    label: localizeValue(path.label, dictionary),
+    title: localizeValue(path.title, dictionary),
+    description: localizeValue(path.description, dictionary),
+    promise: localizeValue(path.promise, dictionary),
+    stages: path.stages.map((stage) => ({
+      title: localizeValue(stage.title, dictionary),
+      text: localizeValue(stage.text, dictionary),
+    })),
+    risks: path.risks.map((risk) => ({
+      title: localizeValue(risk.title, dictionary),
+      text: localizeValue(risk.text, dictionary),
+    })),
+    checklist: path.checklist.map((item) => localizeValue(item, dictionary)),
+    nextLabels: path.next.map((item) => localizeValue(item.label, dictionary)),
+  }));
+}
+
+export const buyerPathLocales = {
+  ...baseBuyerPathLocales,
+  ja: { paths: localizedPaths(generated.ja) },
+  de: { paths: localizedPaths(generated.de) },
+  ar: { paths: localizedPaths(generated.ar) },
+  id: { paths: localizedPaths(generated.id) },
+  it: { paths: localizedPaths(generated.it) },
 } as const;
