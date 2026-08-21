@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { buyerPaths } from '../../../data/buyer-paths';
 import { buyerPathLocales } from '../../../data/buyer-path-locales';
 import { buyerPathUiLocales } from '../../../data/buyer-path-ui-locales';
+import generatedBuyerPathUiTranslations from '../../../data/generatedBuyerPathUiTranslations.json';
 export function getStaticPaths(){return ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'].flatMap(lang=>buyerPaths.map(path=>({params:{lang,slug:path.slug},props:{lang,slug:path.slug}})))}
 const {slug,lang}=Astro.props;
 const sourcePath=buyerPaths.find(item=>item.slug===slug);
@@ -10,7 +11,15 @@ if (!sourcePath) throw new Error(`Unknown buyer path: ${slug}`);
 const localPath=lang==='en' ? undefined : buyerPathLocales[lang as keyof typeof buyerPathLocales]?.paths.find(item=>item.slug===slug);
 const path=localPath ? {...sourcePath,...localPath,stages:sourcePath.stages.map((item,index)=>({...item,...localPath.stages[index]})),risks:sourcePath.risks.map((item,index)=>({...item,...localPath.risks[index]})),next:sourcePath.next.map((item,index)=>({...item,label:localPath.nextLabels[index]}))} : sourcePath;
 const localHref=(href:string)=>href.replace(/^\/en/,`/${lang}`);
-const ui=buyerPathUiLocales[lang as keyof typeof buyerPathUiLocales] ?? buyerPathUiLocales.en;
+const generatedBuyerPathUi = generatedBuyerPathUiTranslations as Partial<Record<string, Record<string, string>>>;
+const localizeUiValue = (value: unknown, dictionary?: Record<string, string>): any => {
+  if (!dictionary) return value;
+  if (typeof value === 'string') return dictionary[value] ?? value;
+  if (Array.isArray(value)) return value.map((entry) => localizeUiValue(entry, dictionary));
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value as Record<string, unknown>).map(([key, entry]) => [key, localizeUiValue(entry, dictionary)]));
+  return value;
+};
+const ui=buyerPathUiLocales[lang as keyof typeof buyerPathUiLocales] ?? localizeUiValue(buyerPathUiLocales.en, generatedBuyerPathUi[lang]);
 const pageJson={'@context':'https://schema.org','@type':'Article',headline:path.title,description:path.description,author:{'@type':'Organization',name:'Sourcing Ally'},publisher:{'@type':'Organization',name:'Sourcing Ally'},mainEntityOfPage:`https://sourcingally.com/${lang}/paths/${path.slug}/`};
 ---
 <Layout title={`${path.title} | Sourcing Ally`} description={path.description} lang={lang}>
