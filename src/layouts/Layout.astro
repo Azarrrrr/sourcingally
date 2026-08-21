@@ -167,7 +167,6 @@ const organizationJson = {
     <script>
       document.querySelectorAll('[data-language-picker]').forEach((picker) => {
         picker.addEventListener('mouseenter', () => { picker.open = true; });
-        picker.addEventListener('mouseleave', () => { picker.open = false; });
         picker.addEventListener('focusin', () => { picker.open = true; });
         picker.addEventListener('focusout', (event) => { if (!picker.contains(event.relatedTarget)) picker.open = false; });
       });
