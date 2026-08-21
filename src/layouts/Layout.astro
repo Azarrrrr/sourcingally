@@ -166,9 +166,16 @@ const organizationJson = {
     </script>
     <script>
       document.querySelectorAll('[data-language-picker]').forEach((picker) => {
-        picker.addEventListener('mouseenter', () => { picker.open = true; });
-        picker.addEventListener('focusin', () => { picker.open = true; });
-        picker.addEventListener('focusout', (event) => { if (!picker.contains(event.relatedTarget)) picker.open = false; });
+        let languageCloseTimer;
+        const cancelLanguageClose = () => { window.clearTimeout(languageCloseTimer); languageCloseTimer = undefined; };
+        const closeLanguageNow = () => { cancelLanguageClose(); picker.open = false; };
+        const openLanguage = () => { cancelLanguageClose(); picker.open = true; };
+        const scheduleLanguageClose = () => { cancelLanguageClose(); languageCloseTimer = window.setTimeout(closeLanguageNow, 1000); };
+        picker.addEventListener('mouseenter', openLanguage);
+        picker.addEventListener('mouseleave', scheduleLanguageClose);
+        picker.addEventListener('focusin', openLanguage);
+        picker.addEventListener('focusout', (event) => { if (!picker.contains(event.relatedTarget)) scheduleLanguageClose(); });
+        window.addEventListener('sourcingally:close-language', closeLanguageNow);
       });
       const groups = [...document.querySelectorAll('[data-nav-group]')];
       const closeTimers = new WeakMap();
@@ -183,6 +190,7 @@ const organizationJson = {
       };
       const openGroup = (group) => {
         window.clearTimeout(closeTimers.get(group));
+        window.dispatchEvent(new Event('sourcingally:close-language'));
         groups.forEach((item) => { if (item !== group) closeNow(item); });
         group.classList.add('is-open');
         group.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'true');
