@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import { allKnowledge, services, products, cities, guides } from '../../../data/site-data';
 import { knowledgeLibraryLocales } from '../../../data/knowledge-library-locales';
+import generatedKnowledgeLibraryTranslations from '../../../data/generatedKnowledgeLibraryTranslations.json';
 
 const sectionMap = { services, products, cities, guides };
 export function getStaticPaths() {
@@ -17,7 +18,17 @@ const sourcePages = sectionMap[section as keyof typeof sectionMap];
 const sourcePage = sourcePages.find((item) => item.slug === slug);
 if (!sourcePage) throw new Error(`Unknown knowledge page: ${section}/${slug}`);
 const localizedPage = lang === 'en' ? undefined : knowledgeLibraryLocales[lang as keyof typeof knowledgeLibraryLocales]?.[section as 'services'|'products'|'cities'|'guides']?.find((item) => item.slug === slug);
-const page = localizedPage ? {...sourcePage, ...localizedPage, related: sourcePage.related} : sourcePage;
+const generatedKnowledge = generatedKnowledgeLibraryTranslations as Partial<Record<string, Record<string, string>>>;
+const localizeGeneratedPage = <T extends typeof sourcePage>(source: T, dictionary?: Record<string, string>) => !dictionary ? source : ({
+  ...source,
+  shortTitle: dictionary[source.shortTitle] ?? source.shortTitle,
+  title: dictionary[source.title] ?? source.title,
+  summary: dictionary[source.summary] ?? source.summary,
+  intro: dictionary[source.intro] ?? source.intro,
+  sections: source.sections.map((item) => ({ heading: dictionary[item.heading] ?? item.heading, body: dictionary[item.body] ?? item.body })),
+  questions: source.questions.map((question) => dictionary[question] ?? question),
+});
+const page = localizedPage ? {...sourcePage, ...localizedPage, related: sourcePage.related} : localizeGeneratedPage(sourcePage, generatedKnowledge[lang]);
 const localHref = (href: string) => href.replace(/^\/en(?=\/|$)/, `/${lang}`);
 const sectionLabel = section === 'services' ? 'Sourcing services' : section === 'products' ? 'Product sourcing' : section === 'cities' ? 'China manufacturing cities' : 'China sourcing education';
 const relatedPages = page.related.map((relatedSlug: string) => {
@@ -25,7 +36,7 @@ const relatedPages = page.related.map((relatedSlug: string) => {
   if (!sourceRelated) return undefined;
   const relatedSection = sectionMap.services.includes(sourceRelated) ? 'services' : sectionMap.products.includes(sourceRelated) ? 'products' : sectionMap.cities.includes(sourceRelated) ? 'cities' : 'guides';
   const translatedRelated = lang === 'en' ? undefined : knowledgeLibraryLocales[lang as keyof typeof knowledgeLibraryLocales]?.[relatedSection]?.find((item) => item.slug === relatedSlug);
-  return { item: translatedRelated ? {...sourceRelated, ...translatedRelated, related: sourceRelated.related} : sourceRelated, section: relatedSection };
+  return { item: translatedRelated ? {...sourceRelated, ...translatedRelated, related: sourceRelated.related} : localizeGeneratedPage(sourceRelated, generatedKnowledge[lang]), section: relatedSection };
 }).filter(Boolean);
 const preparation = section === 'services' ? 'Prepare the product brief, target quantity, destination market, timing, budget assumptions, and the specific decision you need help making.' : section === 'products' ? 'Start with the intended use, target buyer, materials, dimensions, expected quantity, packaging, destination market, and any existing reference sample.' : section === 'cities' ? 'Confirm the exact product process, supplier addresses, number of meetings, travel timing, and what evidence you need from each visit.' : 'Use this guide as a planning framework. Write down your assumptions, open questions, responsible parties, and the next decision before contacting a supplier.';
 const nextStep = section === 'services' ? 'After the scope is clear, the next step is a written brief and a practical conversation about what Sourcing Ally should handle.' : section === 'products' ? 'After reviewing the category, connect the product requirements to supplier research, sample review, quality control, packaging, and destination-market checks.' : section === 'cities' ? 'After choosing a region, build a supplier shortlist and itinerary around actual factory addresses rather than relying only on a city label.' : 'After learning the framework, apply it to one real product and one real destination market; the details should be checked before money or production is committed.';
