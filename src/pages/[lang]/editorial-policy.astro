@@ -1,9 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { legalLocales } from '../../data/legal-locales';
+import { legalCopy } from '../../data/legal-localization';
 export function getStaticPaths(){return ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'].map(lang=>({params:{lang},props:{lang}}))}
 const { lang } = Astro.props;
-const c = legalLocales[lang as keyof typeof legalLocales]?.editorial ?? legalLocales.en.editorial;
+const c = legalCopy(lang, 'editorial');
 ---
 <Layout title={c.title} description={c.description} lang={lang}>
   <section class="policy-hero"><div class="container policy-wrap"><p class="eyebrow">{c.eyebrow}</p><h1>{c.heading}</h1><p>{c.reviewed}</p></div></section>
