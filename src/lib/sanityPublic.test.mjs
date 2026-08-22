@@ -6,37 +6,25 @@ const helperUrl = new URL('./sanityPublic.ts', import.meta.url);
 const journalUrl = new URL('../pages/[lang]/blog/index.astro', import.meta.url);
 const detailUrl = new URL('../pages/[lang]/blog/[...slug].astro', import.meta.url);
 
-test('targets the SourcingAlly site key and passes localized labels to the browser reader', async () => {
+test('uses published SourcingAlly Sanity records for the archive and reader routes', async () => {
   const [helper, journal, detail] = await Promise.all([readFile(helperUrl, 'utf8'), readFile(journalUrl, 'utf8'), readFile(detailUrl, 'utf8')]);
   assert.match(helper, /siteKey == "sourcing-ally"/);
-  assert.match(helper, /listSanityArticles=\(locale:string\)/);
   assert.match(helper, /locale == \$locale/);
-  assert.match(helper, /getSanityArticle/);
-  assert.match(journal, /define:vars={{lang,t,generatedSanitySlugs,generatedSanityArticles}}/);
-  assert.match(journal, /replace\(\/\\\/\+\$\//);
-  assert.match(journal, /const pageSize=12/);
-  assert.match(journal, /journal-pagination/);
-  assert.doesNotMatch(journal, /Write in GitHub\. Publish through Cloudflare/);
-  assert.match(detail, /slug: 'sanity-article'/);
+  assert.match(journal, /siteKey == "sourcing-ally"/);
+  assert.match(journal, /Unable to load published SourcingAlly articles/);
+  assert.match(journal, /articles\.map\(\(article\)/);
   assert.match(detail, /siteKey == "sourcing-ally"/);
-  assert.match(detail, /live-sanity-detail/);
-  assert.match(detail, /isSanityProxy/);
-  assert.match(detail, /sanityArticlePaths/);
+  assert.match(detail, /getStaticPaths/);
+  assert.match(detail, /bodyMarkdown/);
 });
 
-test('renders a direct shared-Sanity article URL with localized browser labels', async () => {
-  const journal = await readFile(journalUrl, 'utf8');
-  const script = journal.match(/<script define:vars={{lang,t,generatedSanitySlugs,generatedSanityArticles}}>([\s\S]*?)<\/script>/)?.[1];
-  assert.ok(script, 'journal client script should be present');
-  assert.match(script, /;\(async\(\)=>\{/);
-  const target = { innerHTML: '' };
-  const wrap = { hidden: true };
-  const document = { querySelector: selector => selector === '#sanity-journal-content' ? target : selector === '#sanity-journal' ? wrap : null, querySelectorAll: () => [] };
-  const article = { title: 'How to compare supplier quotes before placing an order', description: 'A practical comparison guide.', bodyMarkdown: 'Introductory guidance.\n\n## Confirm the assumptions\n\nCompare like with like.', publishedAt: '2026-08-17T00:00:00.000Z', wordCount: 256 };
-  const clientBody = script.replace(/^\s*;\(async\(\)=>\{/, '').replace(/\}\)\(\);\s*$/, '');
-  const run = new Function('document', 'location', 'fetch', 'URL', 'URLSearchParams', 'lang', 't', 'generatedSanitySlugs', 'generatedSanityArticles', `return (async () => {${clientBody}})()`);
-  await run(document, { pathname: '/en/blog/compare-supplier-quotes-before-ordering/', search: '' }, async () => ({ ok: true, json: async () => ({ result: article }) }), URL, URLSearchParams, 'en', { read: 'Read article', intro: 'Journal introduction' }, ['compare-supplier-quotes-before-ordering'], []);
-  assert.equal(wrap.hidden, false);
-  assert.match(target.innerHTML, /How to compare supplier quotes before placing an order/);
-  assert.match(target.innerHTML, /Confirm the assumptions/);
+test('contains no local Markdown collection or fallback reader dependency', async () => {
+  const [journal, detail] = await Promise.all([readFile(journalUrl, 'utf8'), readFile(detailUrl, 'utf8')]);
+  for (const source of [journal, detail]) {
+    assert.doesNotMatch(source, /astro:content/);
+    assert.doesNotMatch(source, /getCollection\(/);
+    assert.doesNotMatch(source, /isSanityProxy/);
+    assert.doesNotMatch(source, /sanity-article/);
+    assert.doesNotMatch(source, /Markdown fallback/);
+  }
 });
