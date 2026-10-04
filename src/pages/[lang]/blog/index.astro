@@ -14,7 +14,7 @@ const labels = {
 export function getStaticPaths() { return ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'].map((lang) => ({ params: { lang }, props: { lang } })); }
 const { lang } = Astro.props;
 const t = labels[lang as keyof typeof labels] ?? labels.en;
-const endpoint = 'https://iksqqwui.api.sanity.io/v2025-02-19/data/query/production';
+const endpoint = 'https://jbonouxr.api.sanity.io/v2025-02-19/data/query/production';
 const query = '*[_type == "article" && siteKey == "sourcing-ally" && locale == $locale] | order(publishedAt desc){title,slug,description,publishedAt,wordCount}';
 const url = new URL(endpoint); url.searchParams.set('query', query); url.searchParams.set('$locale', JSON.stringify(lang));
 const response = await fetch(url);
