@@ -1,10 +1,10 @@
-import { getCollection } from 'astro:content';
+import { listSanityArticles } from '../lib/sanityPublic';
 import { allQuestions } from '../data/questions';
 import { buyerPaths } from '../data/buyer-paths';
 import { cities, guides, products, services } from '../data/site-data';
 
 const base = 'https://sourcingally.com';
-const languages = ['en', 'es', 'pt', 'ru', 'tr', 'fr'];
+const languages = ['en', 'es', 'pt', 'ru', 'tr', 'fr', 'ja', 'de', 'ar', 'id', 'it'];
 
 // These pages contain fully localized core conversion or navigation content.
 // Interim source-language fallback pages are intentionally excluded until reviewed.
@@ -48,9 +48,14 @@ const xmlEscape = (value: string) => value.replace(/[<>&'\"]/g, (character) => (
 }[character] ?? character));
 
 export async function GET() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  const journalUrls = posts.map((post) => `/${post.data.lang}/blog/${post.id}/`);
-  const urls = [...new Set([...localizedIndexableUrls, ...englishKnowledgeUrls, ...journalUrls])].sort();
+  const journalUrls = (await Promise.all(languages.map(async (lang) => {
+    const articles = await listSanityArticles(lang);
+    return articles
+      .filter((article) => typeof article.slug === 'string' && article.slug.length > 0)
+      .map((article) => `/${lang}/blog/${article.slug}/`);
+  }))).flat();
+  const journalArchives = languages.map((lang) => `/${lang}/blog/`);
+  const urls = [...new Set([...localizedIndexableUrls, ...englishKnowledgeUrls, ...journalArchives, ...journalUrls])].sort();
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((url) => `<url><loc>${xmlEscape(`${base}${url}`)}</loc></url>`).join('')}</urlset>`;
 
   return new Response(body, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
