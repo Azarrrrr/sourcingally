@@ -4,7 +4,7 @@ import Layout from '../../../layouts/Layout.astro';
 const locales = ['en','es','pt','ru','tr','fr','ja','de','ar','id','it'] as const;
 type PublishedArticle = { title: string; slug: string; description: string; bodyMarkdown?: string; publishedAt: string; wordCount?: number; locale: string };
 export async function getStaticPaths() {
-  const endpoint = 'https://iksqqwui.api.sanity.io/v2025-02-19/data/query/production';
+  const endpoint = 'https://jbonouxr.api.sanity.io/v2025-02-19/data/query/production';
   const query = '*[_type == "article" && siteKey == "sourcing-ally" && defined(locale) && defined(slug)]{title,slug,description,bodyMarkdown,publishedAt,wordCount,locale}';
   const response = await fetch(`${endpoint}?query=${encodeURIComponent(query)}`);
   if (!response.ok) throw new Error(`Unable to load published SourcingAlly articles: ${response.status}`);
