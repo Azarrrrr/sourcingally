@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/refresh.css';
 import layoutLocales from '../data/generatedLayoutTranslations.json';
+import reviewedLayoutLocales from '../data/reviewedLayoutTranslations.json';
 
 interface Props {
   title: string;
@@ -39,8 +40,10 @@ const uiValues = {
 };
 const generatedLayout = layoutLocales as Record<string, { ui: typeof uiValues.en; quote: { trigger: string; eyebrow: string; title: string; note: string; close: string } }>;
 const generatedLayoutLocale = generatedLayout[lang];
-const ui = generatedLayoutLocale?.ui ?? uiValues[lang as keyof typeof uiValues] ?? uiValues.en;
-const quoteUi = generatedLayoutLocale?.quote ?? ({
+const reviewedLayout = reviewedLayoutLocales as Record<string, { ui: typeof uiValues.en; quoteUi: { trigger: string; eyebrow: string; title: string; note: string; close: string } }>;
+const reviewedLayoutLocale = reviewedLayout[lang];
+const ui = reviewedLayoutLocale?.ui ?? generatedLayoutLocale?.ui ?? uiValues[lang as keyof typeof uiValues] ?? uiValues.en;
+const quoteUi = reviewedLayoutLocale?.quoteUi ?? generatedLayoutLocale?.quote ?? ({
   en: { trigger: 'Share your product', eyebrow: 'SOURCING ALLY / PROJECT BRIEF', title: 'Bring your product question into the conversation.', note: 'Share the product, quantity, destination, and the support you need. The request opens in a full-page workspace.', close: 'Close request' },
   es: { trigger: 'Cuéntanos tu producto', eyebrow: 'SOURCING ALLY / BRIEF DE PROYECTO', title: 'Trae tu consulta sobre el producto a la conversación.', note: 'Comparte el producto, la cantidad, el destino y el apoyo que necesitas. La solicitud se abre en una página completa.', close: 'Cerrar solicitud' },
   pt: { trigger: 'Conte-nos o produto', eyebrow: 'SOURCING ALLY / BRIEF DO PROJETO', title: 'Traga a questão do produto para a conversa.', note: 'Partilhe o produto, a quantidade, o destino e o apoio de que precisa. O pedido abre num espaço de página inteira.', close: 'Fechar pedido' },
