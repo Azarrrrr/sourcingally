@@ -6,7 +6,9 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "predev": "node scripts/generate-blog-route-map.mjs",
     "dev": "astro dev",
+    "prebuild": "node scripts/generate-blog-route-map.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "test": "node --test src/lib/*.test.mjs",
