@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { decisionSuite, type DecisionLanguage } from '../data/decision-suite';
 import { sequenceLabel } from '../data/static-chrome';
+import blogRouteMap from '../data/blog-route-map.json';
 
 type PageKey = keyof typeof decisionSuite.en;
 interface Props {
@@ -12,7 +13,10 @@ interface Props {
 
 const { lang, pageKey, sequence } = Astro.props;
 const copy = decisionSuite[lang][pageKey];
-const localized = (href: string) => `/${lang}${href}`;
+const blogRoutesByLocale = blogRouteMap as Record<string, string[]>;
+const englishGuideLabels: Record<string, string> = { en: 'English article', es: 'Artículo en inglés', pt: 'Artigo em inglês', ru: 'Статья на английском', tr: 'İngilizce makale', fr: 'Article en anglais', ja: '英語の記事', de: 'Artikel auf Englisch', ar: 'مقالة باللغة الإنجليزية', id: 'Artikel berbahasa Inggris', it: 'Articolo in inglese' };
+const isEnglishGuide = (href: string) => href.startsWith('/blog/') && !blogRoutesByLocale[lang]?.includes(href);
+const localized = (href: string) => isEnglishGuide(href) ? `/en${href}` : `/${lang}${href}`;
 ---
 <Layout title={copy.metaTitle} description={copy.metaDescription} lang={lang}>
   <section class="decision-hero">
@@ -68,7 +72,7 @@ const localized = (href: string) => `/${lang}${href}`;
     <div class="container">
       <div class="decision-heading"><p class="eyebrow">05 / CONTINUE</p><h2>{copy.routesTitle}</h2></div>
       <div class="decision-routes-grid">
-        {copy.routes.map((route) => <a href={localized(route.href)}><span>↗</span><h3>{route.title}</h3><p>{route.text}</p><b>{route.label}</b></a>)}
+        {copy.routes.map((route) => <a href={localized(route.href)} hreflang={isEnglishGuide(route.href) ? 'en' : undefined}><span>↗</span><h3>{route.title}</h3><p>{route.text}</p><b>{route.label}</b>{isEnglishGuide(route.href) && <small lang={lang}>{englishGuideLabels[lang] ?? 'English article'}</small>}</a>)}
       </div>
     </div>
   </section>

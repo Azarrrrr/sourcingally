@@ -5,16 +5,20 @@ export const legalLocales = {
       "description": "How Sourcing Ally approaches privacy and contact information.",
       "eyebrow": "Website policy",
       "heading": "Privacy Policy",
-      "reviewed": "Last reviewed: 13 August 2026",
-      "intro": "This page explains the current privacy approach for the Sourcing Ally website. It is written for the present website configuration, where visitors can contact Sourcing Ally by email or WhatsApp. It should be reviewed again if forms, analytics, advertising pixels, newsletters, accounts, or other data-collection tools are added.",
+      "reviewed": "Last reviewed: 21 November 2026",
+      "intro": "This page explains the current privacy approach for the Sourcing Ally website. Visitors can contact Sourcing Ally by email or WhatsApp, or submit a quote request through a form hosted by Teable.",
       "sections": [
         {
           "heading": "Information you choose to send",
           "body": "If you contact Sourcing Ally by email or WhatsApp, you may choose to share information such as your name, contact details, product requirements, quantities, destination, timing, files, or questions. Sourcing Ally uses that information to respond to the enquiry and discuss the requested sourcing work."
         },
         {
+          "heading": "Hosted quote request form",
+          "body": "The quote request form on this site is hosted by Teable, a third-party service. It asks for your name and email address and may ask for your phone or WhatsApp number, along with information about your product, quantity, destination, and project. If you submit the form, the information is provided to Sourcing Ally so we can respond; Teable also processes it to provide the form service. The form also receives the selected language, the website hostname, and the current page address without query parameters or a URL fragment. Please review Teable’s own privacy information before submitting. Do not include confidential or sensitive personal information."
+        },
+        {
           "heading": "Website data",
-          "body": "This website is a static Astro site. No account or customer portal is provided by this version. The final hosting, analytics, cookie, and security configuration should be checked before launch so this page accurately describes the deployed services."
+          "body": "The Sourcing Ally website is published as static pages and does not provide user accounts or a customer portal. The quote request form is provided by Teable, as described above. If analytics, non-essential cookies, or other third-party tools are introduced, this notice should be updated before they are enabled."
         },
         {
           "heading": "Third-party channels",
@@ -22,7 +26,7 @@ export const legalLocales = {
         },
         {
           "heading": "Retention and requests",
-          "body": "Sourcing Ally should retain enquiry information only for as long as reasonably necessary to respond, manage an agreed project, maintain business records, or meet applicable obligations. If you have a privacy question about an enquiry, contact sourcingally@gmail.com."
+          "body": "Sourcing Ally should retain enquiry information only for as long as reasonably necessary to respond, manage an agreed project, maintain business records, or meet applicable obligations. If you have a privacy question about an enquiry, contact captain@sourcingally.com."
         },
         {
           "heading": "Changes",
@@ -112,7 +116,7 @@ export const legalLocales = {
         },
         {
           "heading": "Corrections and feedback",
-          "body": "If you find an error, need clarification, or believe a page should be updated, contact sourcingally@gmail.com. Sourcing Ally can review the information and amend the page when appropriate."
+          "body": "If you find an error, need clarification, or believe a page should be updated, contact captain@sourcingally.com. Sourcing Ally can review the information and amend the page when appropriate."
         }
       ]
     }
@@ -123,16 +127,20 @@ export const legalLocales = {
       "description": "Cómo Sourcing Ally aborda la privacidad y la información de contacto.",
       "eyebrow": "Política del sitio web",
       "heading": "Política de privacidad",
-      "reviewed": "Última revisión: 13 de agosto de 2026",
-      "intro": "Esta página explica el enfoque de privacidad vigente para el sitio web de Sourcing Ally. Está redactada para la configuración actual del sitio, en la que las personas pueden contactar a Sourcing Ally por correo electrónico o WhatsApp. Debe revisarse de nuevo si se añaden formularios, analítica, píxeles publicitarios, boletines, cuentas u otras herramientas de recopilación de datos.",
+      "reviewed": "Última revisión: 21 de noviembre de 2026",
+      "intro": "Esta página explica el enfoque de privacidad vigente del sitio web de Sourcing Ally. Puede contactar a Sourcing Ally por correo electrónico o WhatsApp, o enviar una solicitud de cotización mediante un formulario alojado en Teable.",
       "sections": [
         {
           "heading": "Información que usted decide enviar",
           "body": "Si contacta a Sourcing Ally por correo electrónico o WhatsApp, puede optar por compartir información como su nombre, datos de contacto, requisitos del producto, cantidades, destino, plazos, archivos o preguntas. Sourcing Ally utiliza esa información para responder a la consulta y hablar sobre el trabajo de sourcing solicitado."
         },
         {
+          "heading": "Formulario de solicitud de cotización alojado",
+          "body": "El formulario de cotización de este sitio está alojado en Teable, un servicio de terceros. Solicita su nombre y correo electrónico y puede solicitar su teléfono o número de WhatsApp, además de datos sobre el producto, la cantidad, el destino y el proyecto. Si envía el formulario, la información se comparte con Sourcing Ally para responderle; Teable también la procesa para prestar el servicio del formulario. El formulario también recibe el idioma seleccionado, el nombre del host del sitio y la dirección de la página actual (sin parámetros de consulta ni fragmento de URL). Consulte la información de privacidad de Teable antes de enviarlo. No incluya información confidencial ni datos personales sensibles."
+        },
+        {
           "heading": "Datos del sitio web",
-          "body": "Este sitio web es un sitio estático de Astro. Esta versión no proporciona cuentas ni un portal de clientes. La configuración final de alojamiento, analítica, cookies y seguridad debe verificarse antes del lanzamiento para que esta página describa con precisión los servicios desplegados."
+          "body": "El sitio web de Sourcing Ally se publica como páginas estáticas y no ofrece cuentas de usuario ni un portal de clientes. El formulario de solicitud de cotización lo proporciona Teable, como se indica arriba. Si se incorporan herramientas de análisis, cookies no esenciales u otros servicios de terceros, esta política debe actualizarse antes de activarlos."
         },
         {
           "heading": "Canales de terceros",
@@ -140,7 +148,7 @@ export const legalLocales = {
         },
         {
           "heading": "Conservación y solicitudes",
-          "body": "Sourcing Ally debe conservar la información de las consultas solo durante el tiempo razonablemente necesario para responder, gestionar un proyecto acordado, mantener registros comerciales o cumplir obligaciones aplicables. Si tiene una pregunta de privacidad sobre una consulta, contacte a sourcingally@gmail.com."
+          "body": "Sourcing Ally debe conservar la información de las consultas solo durante el tiempo razonablemente necesario para responder, gestionar un proyecto acordado, mantener registros comerciales o cumplir obligaciones aplicables. Si tiene una pregunta de privacidad sobre una consulta, contacte a captain@sourcingally.com."
         },
         {
           "heading": "Cambios",
@@ -230,7 +238,7 @@ export const legalLocales = {
         },
         {
           "heading": "Correcciones y comentarios",
-          "body": "Si encuentra un error, necesita una aclaración o considera que una página debe actualizarse, contacte a sourcingally@gmail.com. Sourcing Ally revisará la información y podrá enmendar la página cuando corresponda."
+          "body": "Si encuentra un error, necesita una aclaración o considera que una página debe actualizarse, contacte a captain@sourcingally.com. Sourcing Ally revisará la información y podrá enmendar la página cuando corresponda."
         }
       ]
     }
@@ -241,16 +249,20 @@ export const legalLocales = {
       "description": "Como a Sourcing Ally trata privacidade e informações de contato.",
       "eyebrow": "Política do site",
       "heading": "Política de Privacidade",
-      "reviewed": "Última revisão: 13 de agosto de 2026",
-      "intro": "Esta página explica a abordagem atual de privacidade do site da Sourcing Ally. Foi escrita para a configuração presente do site, na qual os visitantes podem contatar a Sourcing Ally por e‑mail ou WhatsApp. Deve ser revista caso sejam adicionados formulários, ferramentas de análise, pixels de publicidade, newsletters, contas ou outros instrumentos de coleta de dados.",
+      "reviewed": "Última revisão: 21 de novembro de 2026",
+      "intro": "Esta página explica a abordagem de privacidade atual do site da Sourcing Ally. Você pode entrar em contato por e-mail ou WhatsApp, ou enviar um pedido de cotação por meio de um formulário hospedado na Teable.",
       "sections": [
         {
           "heading": "Informações que você optar por enviar",
           "body": "Se você contatar a Sourcing Ally por e‑mail ou WhatsApp, poderá optar por compartilhar informações como seu nome, dados de contato, requisitos do produto, quantidades, destino, prazos, arquivos ou perguntas. A Sourcing Ally usa essas informações para responder à consulta e tratar do trabalho de sourcing solicitado."
         },
         {
+          "heading": "Formulário hospedado de pedido de cotação",
+          "body": "O formulário de cotação deste site é hospedado pela Teable, um serviço de terceiros. Ele solicita seu nome e e-mail e pode solicitar seu telefone ou número de WhatsApp, além de informações sobre produto, quantidade, destino e projeto. Se você enviar o formulário, as informações serão fornecidas à Sourcing Ally para que possamos responder; a Teable também as processa para prestar o serviço do formulário. O formulário também recebe o idioma selecionado, o nome do host do site e o endereço da página atual (sem parâmetros de consulta nem fragmento de URL). Consulte as informações de privacidade da Teable antes de enviar. Não inclua informações confidenciais nem dados pessoais sensíveis."
+        },
+        {
           "heading": "Dados do site",
-          "body": "Este site é um site estático criado com Astro. Esta versão não oferece conta nem portal de cliente. A configuração final de hospedagem, análises, cookies e segurança deve ser verificada antes do lançamento para que esta página descreva com precisão os serviços implantados."
+          "body": "O site da Sourcing Ally é publicado como páginas estáticas e não oferece contas de usuário nem portal do cliente. O formulário de solicitação de orçamento é fornecido pela Teable, conforme descrito acima. Se forem adicionados recursos de análise, cookies não essenciais ou outros serviços de terceiros, este aviso deverá ser atualizado antes da ativação."
         },
         {
           "heading": "Canais de terceiros",
@@ -258,7 +270,7 @@ export const legalLocales = {
         },
         {
           "heading": "Retenção e solicitações",
-          "body": "A Sourcing Ally deve reter as informações de consultas somente pelo tempo razoavelmente necessário para responder, gerir um projeto acordado, manter registros comerciais ou cumprir obrigações aplicáveis. Se você tiver uma dúvida sobre privacidade relacionada a uma consulta, entre em contato pelo e‑mail sourcingally@gmail.com."
+          "body": "A Sourcing Ally deve reter as informações de consultas somente pelo tempo razoavelmente necessário para responder, gerir um projeto acordado, manter registros comerciais ou cumprir obrigações aplicáveis. Se você tiver uma dúvida sobre privacidade relacionada a uma consulta, entre em contato pelo e‑mail captain@sourcingally.com."
         },
         {
           "heading": "Alterações",
@@ -348,7 +360,7 @@ export const legalLocales = {
         },
         {
           "heading": "Correções e feedback",
-          "body": "Se você encontrar um erro, precisar de esclarecimento ou acreditar que uma página deva ser atualizada, contacte sourcingally@gmail.com. A Sourcing Ally pode rever a informação e emendar a página quando apropriado."
+          "body": "Se você encontrar um erro, precisar de esclarecimento ou acreditar que uma página deva ser atualizada, contacte captain@sourcingally.com. A Sourcing Ally pode rever a informação e emendar a página quando apropriado."
         }
       ]
     }
@@ -359,16 +371,20 @@ export const legalLocales = {
       "description": "Как Sourcing Ally относится к конфиденциальности и контактной информации.",
       "eyebrow": "Политика сайта",
       "heading": "Политика конфиденциальности",
-      "reviewed": "Дата последнего рассмотрения: 13 августа 2026",
-      "intro": "На этой странице описан текущий подход к конфиденциальности для сайта Sourcing Ally. Текст подготовлен для нынешней конфигурации сайта, где посетители могут связаться с Sourcing Ally по электронной почте или через WhatsApp. Страницу следует пересмотреть при добавлении форм, аналитики, рекламных пикселей, рассылок, аккаунтов или других средств сбора данных.",
+      "reviewed": "Последняя проверка: 21 ноября 2026 г.",
+      "intro": "На этой странице описан текущий подход Sourcing Ally к конфиденциальности. Связаться с Sourcing Ally можно по электронной почте или WhatsApp, а запрос цены можно отправить через форму, размещённую на Teable.",
       "sections": [
         {
           "heading": "Информация, которую вы выбираете отправить",
           "body": "Если вы связываетесь с Sourcing Ally по электронной почте или через WhatsApp, вы можете по своему усмотрению сообщать сведения, например имя, контактные данные, требования к продукту, объёмы, пункт назначения, сроки, файлы или вопросы. Sourcing Ally использует эту информацию для ответа на запрос и обсуждения запрошенной работы по поиску поставщика."
         },
         {
+          "heading": "Форма запроса цены на стороннем сервисе",
+          "body": "Форма запроса цены на этом сайте размещена на платформе Teable — стороннем сервисе. В ней указываются имя и адрес электронной почты; также может запрашиваться номер телефона или WhatsApp, а ещё сведения о товаре, количестве, месте назначения и проекте. Если вы отправите форму, данные будут переданы Sourcing Ally для ответа; Teable также обрабатывает их для работы формы. Форма также получает выбранный язык, имя хоста сайта и адрес текущей страницы (без параметров запроса и фрагмента URL). Перед отправкой ознакомьтесь с информацией Teable о конфиденциальности. Не указывайте конфиденциальные сведения или чувствительные персональные данные."
+        },
+        {
           "heading": "Данные сайта",
-          "body": "Этот сайт — статический сайт Astro. В этой версии не предусмотрены аккаунт или клиентский портал. Конечные настройки хостинга, аналитики, файлов cookie и безопасности должны быть проверены перед запуском, чтобы эта страница точно отражала используемые сервисы."
+          "body": "Сайт Sourcing Ally опубликован в виде статических страниц и не предоставляет учетных записей пользователей или клиентского портала. Форму запроса ценового предложения предоставляет Teable, как описано выше. Если будут добавлены инструменты аналитики, необязательные файлы cookie или другие сторонние сервисы, это уведомление следует обновить до их включения."
         },
         {
           "heading": "Сторонние каналы",
@@ -376,7 +392,7 @@ export const legalLocales = {
         },
         {
           "heading": "Сроки хранения и запросы",
-          "body": "Sourcing Ally должна хранить информацию по запросу только столько, сколько разумно необходимо для ответа, управления согласованным проектом, ведения деловой документации или выполнения применимых обязательств. Если у вас есть вопрос по конфиденциальности в отношении запроса, свяжитесь по адресу sourcingally@gmail.com."
+          "body": "Sourcing Ally должна хранить информацию по запросу только столько, сколько разумно необходимо для ответа, управления согласованным проектом, ведения деловой документации или выполнения применимых обязательств. Если у вас есть вопрос по конфиденциальности в отношении запроса, свяжитесь по адресу captain@sourcingally.com."
         },
         {
           "heading": "Изменения",
@@ -466,7 +482,7 @@ export const legalLocales = {
         },
         {
           "heading": "Исправления и обратная связь",
-          "body": "Если вы обнаружили ошибку, нуждаетесь в уточнении или считаете, что страницу следует обновить, свяжитесь по адресу sourcingally@gmail.com. Sourcing Ally рассмотрит информацию и при необходимости внесёт корректировки."
+          "body": "Если вы обнаружили ошибку, нуждаетесь в уточнении или считаете, что страницу следует обновить, свяжитесь по адресу captain@sourcingally.com. Sourcing Ally рассмотрит информацию и при необходимости внесёт корректировки."
         }
       ]
     }
@@ -477,16 +493,20 @@ export const legalLocales = {
       "description": "Sourcing Ally’in gizlilik ve iletişim bilgilerine yaklaşımı.",
       "eyebrow": "Web sitesi politikası",
       "heading": "Gizlilik Politikası",
-      "reviewed": "Son gözden geçirme: 13 Ağustos 2026",
-      "intro": "Bu sayfa, Sourcing Ally web sitesi için geçerli gizlilik yaklaşımını açıklar. İçerik, ziyaretçilerin Sourcing Ally ile e‑posta veya WhatsApp üzerinden iletişim kurabildiği mevcut site yapılandırması dikkate alınarak yazılmıştır. Forma, analiz araçlarına, reklam pikseline, bültenlere, hesaplara veya diğer veri toplama araçlarına eklemeler yapılırsa sayfanın yeniden gözden geçirilmesi gerekir.",
+      "reviewed": "Son inceleme: 21 Kasım 2026",
+      "intro": "Bu sayfa, Sourcing Ally web sitesinin güncel gizlilik yaklaşımını açıklar. Sourcing Ally ile e-posta veya WhatsApp üzerinden iletişim kurabilir ya da Teable üzerinde barındırılan bir form aracılığıyla teklif talebi gönderebilirsiniz.",
       "sections": [
         {
           "heading": "Paylaşmayı seçtiğiniz bilgiler",
           "body": "Sourcing Ally ile e‑posta veya WhatsApp aracılığıyla iletişime geçtiğinizde adınız, iletişim bilgileriniz, ürün gereksinimleri, miktarlar, varış yeri, zamanlama, dosyalar veya sorular gibi bilgileri paylaşmayı seçebilirsiniz. Sourcing Ally, bu bilgileri talebe yanıt vermek ve istenen tedarik çalışmasını görüşmek için kullanır."
         },
         {
+          "heading": "Harici hizmette barındırılan teklif talep formu",
+          "body": "Bu sitedeki teklif talep formu, üçüncü taraf bir hizmet olan Teable üzerinde barındırılır. Form adınızı ve e-posta adresinizi ister; telefon veya WhatsApp numaranızı da isteyebilir. Ayrıca ürün, miktar, varış yeri ve proje hakkında bilgi istenir. Formu gönderirseniz bilgiler yanıt verebilmemiz için Sourcing Ally’ye iletilir; Teable de form hizmetini sunmak için bu bilgileri işler. Form ayrıca seçilen dili, sitenin alan adını ve mevcut sayfa adresini (sorgu parametreleri ve URL parçası olmadan) alır. Göndermeden önce Teable’ın gizlilik bilgilerini inceleyin. Gizli veya hassas kişisel bilgiler eklemeyin."
+        },
+        {
           "heading": "Web sitesi verileri",
-          "body": "Bu web sitesi statik bir Astro sitesidir. Bu sürümde hesap veya müşteri portalı sağlanmamaktadır. Bu sayfanın dağıtılan hizmetleri doğru tanımladığından emin olmak için son barındırma, analiz, çerez ve güvenlik yapılandırması lansman öncesi kontrol edilmelidir."
+          "body": "Sourcing Ally web sitesi statik sayfalar olarak yayımlanır; kullanıcı hesabı veya müşteri portalı sunmaz. Teklif talep formu, yukarıda açıklandığı gibi Teable tarafından sağlanır. Analitik araçları, zorunlu olmayan çerezler veya başka üçüncü taraf hizmetleri eklenirse, etkinleştirilmeden önce bu bildirim güncellenmelidir."
         },
         {
           "heading": "Üçüncü taraf kanallar",
@@ -494,7 +514,7 @@ export const legalLocales = {
         },
         {
           "heading": "Saklama ve talepler",
-          "body": "Sourcing Ally, talep bilgilerini yalnızca makul ölçüde yanıt vermek, üzerinde anlaşılmış bir projeyi yönetmek, iş kayıtlarını tutmak veya geçerli yükümlülüklere uymak için gerekli olduğu süre boyunca saklamalıdır. Bir talebe ilişkin gizlilik sorunuz varsa sourcingally@gmail.com adresiyle iletişime geçin."
+          "body": "Sourcing Ally, talep bilgilerini yalnızca makul ölçüde yanıt vermek, üzerinde anlaşılmış bir projeyi yönetmek, iş kayıtlarını tutmak veya geçerli yükümlülüklere uymak için gerekli olduğu süre boyunca saklamalıdır. Bir talebe ilişkin gizlilik sorunuz varsa captain@sourcingally.com adresiyle iletişime geçin."
         },
         {
           "heading": "Değişiklikler",
@@ -584,7 +604,7 @@ export const legalLocales = {
         },
         {
           "heading": "Düzeltmeler ve geri bildirim",
-          "body": "Bir hata bulursanız, açıklamaya ihtiyaç duyuyorsanız veya bir sayfanın güncellenmesi gerektiğini düşünüyorsanız sourcingally@gmail.com adresiyle iletişime geçin. Sourcing Ally bilgiyi gözden geçirip uygun olduğunda sayfayı düzeltebilir."
+          "body": "Bir hata bulursanız, açıklamaya ihtiyaç duyuyorsanız veya bir sayfanın güncellenmesi gerektiğini düşünüyorsanız captain@sourcingally.com adresiyle iletişime geçin. Sourcing Ally bilgiyi gözden geçirip uygun olduğunda sayfayı düzeltebilir."
         }
       ]
     }
@@ -595,16 +615,20 @@ export const legalLocales = {
       "description": "Comment Sourcing Ally traite la confidentialité et les informations de contact.",
       "eyebrow": "Politique du site",
       "heading": "Politique de confidentialité",
-      "reviewed": "Dernière révision : 13 août 2026",
-      "intro": "Cette page explique l'approche actuelle en matière de confidentialité pour le site Sourcing Ally. Elle est rédigée pour la configuration présente du site, où les visiteurs peuvent contacter Sourcing Ally par e-mail ou WhatsApp. Elle doit être revue si des formulaires, outils d’analyse, pixels publicitaires, newsletters, comptes ou autres outils de collecte de données sont ajoutés.",
+      "reviewed": "Dernière révision : 21 novembre 2026",
+      "intro": "Cette page décrit l’approche actuelle de Sourcing Ally en matière de confidentialité. Vous pouvez contacter Sourcing Ally par e-mail ou WhatsApp, ou envoyer une demande de devis via un formulaire hébergé par Teable.",
       "sections": [
         {
           "heading": "Informations que vous choisissez d'envoyer",
           "body": "Si vous contactez Sourcing Ally par e-mail ou WhatsApp, vous pouvez choisir de communiquer des informations telles que votre nom, vos coordonnées, exigences produit, quantités, destination, calendrier, fichiers ou questions. Sourcing Ally utilise ces informations pour répondre à la demande et discuter du travail d'approvisionnement demandé."
         },
         {
+          "heading": "Formulaire de demande de devis hébergé par un tiers",
+          "body": "Le formulaire de demande de devis de ce site est hébergé par Teable, un service tiers. Il demande votre nom et votre adresse e-mail et peut demander votre numéro de téléphone ou WhatsApp, ainsi que des informations sur le produit, la quantité, la destination et le projet. Si vous envoyez le formulaire, ces informations sont transmises à Sourcing Ally afin que nous puissions vous répondre ; Teable les traite également pour fournir le service de formulaire. Le formulaire reçoit également la langue sélectionnée, le nom d’hôte du site et l’adresse de la page actuelle (sans paramètres de requête ni fragment d’URL). Consultez les informations de confidentialité de Teable avant l’envoi. N’incluez pas d’informations confidentielles ni de données personnelles sensibles."
+        },
+        {
           "heading": "Données du site web",
-          "body": "Ce site est un site Astro statique. Cette version ne fournit pas de compte ni de portail client. La configuration finale d’hébergement, d’analyse, de cookies et de sécurité doit être vérifiée avant le lancement afin que cette page décrive fidèlement les services déployés."
+          "body": "Le site de Sourcing Ally est publié sous forme de pages statiques et ne propose ni compte utilisateur ni portail client. Le formulaire de demande de devis est fourni par Teable, comme indiqué ci-dessus. Si des outils d’analyse, des cookies non essentiels ou d’autres services tiers sont ajoutés, cette notice doit être mise à jour avant leur activation."
         },
         {
           "heading": "Canaux tiers",
@@ -612,7 +636,7 @@ export const legalLocales = {
         },
         {
           "heading": "Conservation et demandes",
-          "body": "Sourcing Ally doit conserver les informations relatives aux demandes uniquement aussi longtemps qu’il est raisonnablement nécessaire pour répondre, gérer un projet convenu, tenir des registres commerciaux ou satisfaire aux obligations applicables. Si vous avez une question sur la confidentialité d’une demande, contactez sourcingally@gmail.com."
+          "body": "Sourcing Ally doit conserver les informations relatives aux demandes uniquement aussi longtemps qu’il est raisonnablement nécessaire pour répondre, gérer un projet convenu, tenir des registres commerciaux ou satisfaire aux obligations applicables. Si vous avez une question sur la confidentialité d’une demande, contactez captain@sourcingally.com."
         },
         {
           "heading": "Modifications",
@@ -702,7 +726,7 @@ export const legalLocales = {
         },
         {
           "heading": "Corrections et retours",
-          "body": "Si vous constatez une erreur, avez besoin de précisions ou estimez qu’une page doit être mise à jour, contactez sourcingally@gmail.com. Sourcing Ally pourra examiner l’information et modifier la page si nécessaire."
+          "body": "Si vous constatez une erreur, avez besoin de précisions ou estimez qu’une page doit être mise à jour, contactez captain@sourcingally.com. Sourcing Ally pourra examiner l’information et modifier la page si nécessaire."
         }
       ]
     }
