@@ -37,6 +37,7 @@ const htmlFiles = walk(DIST).filter((file) => file.endsWith('.html'));
 const brokenLinks = [];
 const englishLinksFromOtherLocales = [];
 const fallbackPages = [];
+const missingNoindexFallbacks = [];
 const languagePageCounts = Object.fromEntries(PAGE_LANGS.map((lang) => [lang, 0]));
 
 for (const file of htmlFiles) {
@@ -45,8 +46,12 @@ for (const file of htmlFiles) {
   const match = route.match(/^\/(en|es|pt|ru|tr|fr|ja|de|ar|id|it)(?:\/|$)/);
   if (match) languagePageCounts[match[1]] += 1;
   const isFallbackJournalPage = html.includes('article-availability');
-  const isExplicitLocaleFallback = html.includes('locale-source-only');
-  if (html.includes('locale-source-only')) fallbackPages.push(route);
+  const isExplicitLocaleFallback = html.includes('explicit-locale-fallback') || html.includes('locale-source-only');
+  if (isExplicitLocaleFallback) {
+    fallbackPages.push(route);
+    const robotsMeta = html.match(/<meta\b[^>]*\bname="robots"[^>]*>/i)?.[0];
+    if (!robotsMeta || !/\bcontent="[^"]*\bnoindex\b/i.test(robotsMeta)) missingNoindexFallbacks.push(route);
+  }
   const anchors = [...html.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>/g)];
   for (const anchor of anchors) {
     const href = normalizeHref(anchor[1]);
@@ -76,6 +81,7 @@ const result = {
   brokenInternalLinks: brokenLinks,
   englishNavigationLinksOnNonEnglishPages: englishLinksFromOtherLocales,
   fallbackMarkerPages: fallbackPages,
+  missingNoindexFallbacks,
   journal: {
     articleTopics: translationGroups.size,
     languageCoverage: articleLanguageCoverage,
@@ -84,4 +90,4 @@ const result = {
 };
 
 console.log(JSON.stringify(result, null, 2));
-if (brokenLinks.length || englishLinksFromOtherLocales.length) process.exitCode = 1;
+if (brokenLinks.length || englishLinksFromOtherLocales.length || missingNoindexFallbacks.length) process.exitCode = 1;

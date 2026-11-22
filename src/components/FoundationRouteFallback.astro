@@ -14,7 +14,7 @@ const { lang, page } = Astro.props;
 const copy = foundationRouteFallbacks[lang][page];
 const englishPath = page === 'howWeWork' ? '/en/how-we-work/' : '/en/fees-and-scope/';
 ---
-<section class="foundation-route-fallback container locale-source-only">
+<section class="foundation-route-fallback container explicit-locale-fallback">
   <p class="eyebrow">{copy.eyebrow}</p>
   <h1>{copy.title}</h1>
   <p class="foundation-route-fallback__notice">{copy.notice}</p>

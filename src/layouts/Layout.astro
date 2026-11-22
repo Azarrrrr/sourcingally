@@ -174,7 +174,10 @@ const organizationJson = {
           const formUrl = new URL('https://appeqsux2arkwksqlyh.teable.app');
           formUrl.searchParams.set('lang', lang);
           formUrl.searchParams.set('source', window.location.hostname.replace(/^www\\./, '').toLowerCase());
-          formUrl.searchParams.set('sourceUrl', window.location.href);
+          const sourceUrl = new URL(window.location.href);
+          sourceUrl.search = '';
+          sourceUrl.hash = '';
+          formUrl.searchParams.set('sourceUrl', sourceUrl.toString());
           if (frame) frame.src = formUrl.toString();
           if (overlay) overlay.hidden = false;
           document.documentElement.classList.add('quote-workspace-open'); document.body.classList.add('quote-workspace-open');

@@ -14,7 +14,7 @@ export const legalLocales = {
         },
         {
           "heading": "Hosted quote request form",
-          "body": "The quote request form on this site is hosted by Teable, a third-party service. It asks for your name and email address and may ask for your phone or WhatsApp number, along with information about your product, quantity, destination, and project. If you submit the form, the information is provided to Sourcing Ally so we can respond; Teable also processes it to provide the form service. Please review Teable’s own privacy information before submitting. Do not include confidential or sensitive personal information."
+          "body": "The quote request form on this site is hosted by Teable, a third-party service. It asks for your name and email address and may ask for your phone or WhatsApp number, along with information about your product, quantity, destination, and project. If you submit the form, the information is provided to Sourcing Ally so we can respond; Teable also processes it to provide the form service. The form also receives the selected language, the website hostname, and the current page address without query parameters or a URL fragment. Please review Teable’s own privacy information before submitting. Do not include confidential or sensitive personal information."
         },
         {
           "heading": "Website data",
@@ -136,7 +136,7 @@ export const legalLocales = {
         },
         {
           "heading": "Formulario de solicitud de cotización alojado",
-          "body": "El formulario de cotización de este sitio está alojado en Teable, un servicio de terceros. Solicita su nombre y correo electrónico y puede solicitar su teléfono o número de WhatsApp, además de datos sobre el producto, la cantidad, el destino y el proyecto. Si envía el formulario, la información se comparte con Sourcing Ally para responderle; Teable también la procesa para prestar el servicio del formulario. Consulte la información de privacidad de Teable antes de enviarlo. No incluya información confidencial ni datos personales sensibles."
+          "body": "El formulario de cotización de este sitio está alojado en Teable, un servicio de terceros. Solicita su nombre y correo electrónico y puede solicitar su teléfono o número de WhatsApp, además de datos sobre el producto, la cantidad, el destino y el proyecto. Si envía el formulario, la información se comparte con Sourcing Ally para responderle; Teable también la procesa para prestar el servicio del formulario. El formulario también recibe el idioma seleccionado, el nombre del host del sitio y la dirección de la página actual (sin parámetros de consulta ni fragmento de URL). Consulte la información de privacidad de Teable antes de enviarlo. No incluya información confidencial ni datos personales sensibles."
         },
         {
           "heading": "Datos del sitio web",
@@ -258,7 +258,7 @@ export const legalLocales = {
         },
         {
           "heading": "Formulário hospedado de pedido de cotação",
-          "body": "O formulário de cotação deste site é hospedado pela Teable, um serviço de terceiros. Ele solicita seu nome e e-mail e pode solicitar seu telefone ou número de WhatsApp, além de informações sobre produto, quantidade, destino e projeto. Se você enviar o formulário, as informações serão fornecidas à Sourcing Ally para que possamos responder; a Teable também as processa para prestar o serviço do formulário. Consulte as informações de privacidade da Teable antes de enviar. Não inclua informações confidenciais nem dados pessoais sensíveis."
+          "body": "O formulário de cotação deste site é hospedado pela Teable, um serviço de terceiros. Ele solicita seu nome e e-mail e pode solicitar seu telefone ou número de WhatsApp, além de informações sobre produto, quantidade, destino e projeto. Se você enviar o formulário, as informações serão fornecidas à Sourcing Ally para que possamos responder; a Teable também as processa para prestar o serviço do formulário. O formulário também recebe o idioma selecionado, o nome do host do site e o endereço da página atual (sem parâmetros de consulta nem fragmento de URL). Consulte as informações de privacidade da Teable antes de enviar. Não inclua informações confidenciais nem dados pessoais sensíveis."
         },
         {
           "heading": "Dados do site",
@@ -380,7 +380,7 @@ export const legalLocales = {
         },
         {
           "heading": "Форма запроса цены на стороннем сервисе",
-          "body": "Форма запроса цены на этом сайте размещена на платформе Teable — стороннем сервисе. В ней указываются имя и адрес электронной почты; также может запрашиваться номер телефона или WhatsApp, а ещё сведения о товаре, количестве, месте назначения и проекте. Если вы отправите форму, данные будут переданы Sourcing Ally для ответа; Teable также обрабатывает их для работы формы. Перед отправкой ознакомьтесь с информацией Teable о конфиденциальности. Не указывайте конфиденциальные сведения или чувствительные персональные данные."
+          "body": "Форма запроса цены на этом сайте размещена на платформе Teable — стороннем сервисе. В ней указываются имя и адрес электронной почты; также может запрашиваться номер телефона или WhatsApp, а ещё сведения о товаре, количестве, месте назначения и проекте. Если вы отправите форму, данные будут переданы Sourcing Ally для ответа; Teable также обрабатывает их для работы формы. Форма также получает выбранный язык, имя хоста сайта и адрес текущей страницы (без параметров запроса и фрагмента URL). Перед отправкой ознакомьтесь с информацией Teable о конфиденциальности. Не указывайте конфиденциальные сведения или чувствительные персональные данные."
         },
         {
           "heading": "Данные сайта",
@@ -502,7 +502,7 @@ export const legalLocales = {
         },
         {
           "heading": "Harici hizmette barındırılan teklif talep formu",
-          "body": "Bu sitedeki teklif talep formu, üçüncü taraf bir hizmet olan Teable üzerinde barındırılır. Form adınızı ve e-posta adresinizi ister; telefon veya WhatsApp numaranızı da isteyebilir. Ayrıca ürün, miktar, varış yeri ve proje hakkında bilgi istenir. Formu gönderirseniz bilgiler yanıt verebilmemiz için Sourcing Ally’ye iletilir; Teable de form hizmetini sunmak için bu bilgileri işler. Göndermeden önce Teable’ın gizlilik bilgilerini inceleyin. Gizli veya hassas kişisel bilgiler eklemeyin."
+          "body": "Bu sitedeki teklif talep formu, üçüncü taraf bir hizmet olan Teable üzerinde barındırılır. Form adınızı ve e-posta adresinizi ister; telefon veya WhatsApp numaranızı da isteyebilir. Ayrıca ürün, miktar, varış yeri ve proje hakkında bilgi istenir. Formu gönderirseniz bilgiler yanıt verebilmemiz için Sourcing Ally’ye iletilir; Teable de form hizmetini sunmak için bu bilgileri işler. Form ayrıca seçilen dili, sitenin alan adını ve mevcut sayfa adresini (sorgu parametreleri ve URL parçası olmadan) alır. Göndermeden önce Teable’ın gizlilik bilgilerini inceleyin. Gizli veya hassas kişisel bilgiler eklemeyin."
         },
         {
           "heading": "Web sitesi verileri",
@@ -624,7 +624,7 @@ export const legalLocales = {
         },
         {
           "heading": "Formulaire de demande de devis hébergé par un tiers",
-          "body": "Le formulaire de demande de devis de ce site est hébergé par Teable, un service tiers. Il demande votre nom et votre adresse e-mail et peut demander votre numéro de téléphone ou WhatsApp, ainsi que des informations sur le produit, la quantité, la destination et le projet. Si vous envoyez le formulaire, ces informations sont transmises à Sourcing Ally afin que nous puissions vous répondre ; Teable les traite également pour fournir le service de formulaire. Consultez les informations de confidentialité de Teable avant l’envoi. N’incluez pas d’informations confidentielles ni de données personnelles sensibles."
+          "body": "Le formulaire de demande de devis de ce site est hébergé par Teable, un service tiers. Il demande votre nom et votre adresse e-mail et peut demander votre numéro de téléphone ou WhatsApp, ainsi que des informations sur le produit, la quantité, la destination et le projet. Si vous envoyez le formulaire, ces informations sont transmises à Sourcing Ally afin que nous puissions vous répondre ; Teable les traite également pour fournir le service de formulaire. Le formulaire reçoit également la langue sélectionnée, le nom d’hôte du site et l’adresse de la page actuelle (sans paramètres de requête ni fragment d’URL). Consultez les informations de confidentialité de Teable avant l’envoi. N’incluez pas d’informations confidentielles ni de données personnelles sensibles."
         },
         {
           "heading": "Données du site web",
