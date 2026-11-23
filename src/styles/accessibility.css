@@ -1,0 +1,64 @@
+/* WCAG contrast: keep small labels readable on light surfaces while retaining light text on dark cards. */
+.eyebrow { color: #94301f; }
+.foundation-heading-light .eyebrow,
+.decision-heading-light .eyebrow,
+.match-result .eyebrow,
+.aside-card.dark .eyebrow { color: var(--gold); }
+.foundation-process-grid .foundation-stage > span,
+.foundation-scope-grid > article > span,
+.matcher-form .match-step > span { color: #94301f; }
+.matcher-form .match-options b { color: var(--ink); }
+.matcher-form .match-options small { color: #405672; }
+
+body .language-picker > summary { min-height: 44px; display: flex; align-items: center; }
+body .button-small { min-height: 44px; }
+.language-picker__panel a,
+.mobile-nav-panel a { min-height: 44px; display: flex; align-items: center; }
+.language-picker__panel a[aria-current="true"] { background: #eef6f2; color: #0a5c56; }
+
+/* Preserve an obvious keyboard focus indicator on custom controls. */
+.nav-trigger:focus-visible,
+.nav-direct:focus-visible,
+.mobile-nav summary:focus-visible,
+.language-picker summary:focus-visible,
+.language-picker__panel a:focus-visible,
+.sa-request-fab:focus-visible,
+.button:focus-visible,
+.form-block input:focus-visible,
+.form-block textarea:focus-visible,
+.form-block select:focus-visible,
+.matcher-form button:focus-visible,
+.match-options label:focus-within {
+  outline: 3px solid #0d2b50;
+  outline-offset: 3px;
+}
+.sa-request-overlay button:focus-visible { outline-color: #fff; }
+
+.skip-link {
+  position: absolute;
+  z-index: 200;
+  top: 8px;
+  inset-inline-start: 8px;
+  transform: translateY(-160%);
+  padding: 12px 16px;
+  border: 2px solid #0d2b50;
+  border-radius: 8px;
+  background: #fff;
+  color: #0d2b50;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(13, 43, 80, .18);
+}
+.skip-link:focus { transform: translateY(0); }
+
+@media (max-width: 640px) {
+  /* The fixed quote shortcut obscured text on short mobile viewports; keep it in document flow. */
+  body .sa-request-fab {
+    position: static;
+    inset: auto;
+    display: flex;
+    width: max-content;
+    max-width: calc(100vw - 26px);
+    margin: 18px auto;
+    white-space: normal;
+  }
+}

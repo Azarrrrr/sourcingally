@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import FoundationRouteFallback from '../../components/FoundationRouteFallback.astro';
 import { foundationPages, type FoundationLanguage } from '../../data/foundation-pages';
 import { foundationRouteFallbacks, type PartialFoundationLanguage } from '../../data/foundation-route-fallbacks';
+import { foundationSectionLabels } from '../../data/foundation-section-labels';
 
 export function getStaticPaths() {
   const pageLanguages = ['en', 'es', 'pt', 'ru', 'tr', 'fr', 'ja', 'de', 'ar', 'id', 'it'];
@@ -16,6 +17,7 @@ const fallbackCopy = isPartialLocale ? foundationRouteFallbacks[lang as PartialF
 const title = copy?.metaTitle ?? fallbackCopy!.metaTitle;
 const description = copy?.metaDescription ?? fallbackCopy!.metaDescription;
 const localized = (href: string) => `/${lang}${href}`;
+const sectionLabels = foundationSectionLabels[lang as keyof typeof foundationSectionLabels];
 ---
 <Layout title={title} description={description} lang={lang} noindex={isPartialLocale}>
   {isPartialLocale ? <FoundationRouteFallback lang={lang as PartialFoundationLanguage} page="feesAndScope" /> : <>
@@ -27,7 +29,7 @@ const localized = (href: string) => `/${lang}${href}`;
           <p class="foundation-lede">{copy!.lede}</p>
         </div>
         <aside class="foundation-hero-note">
-          <span>5% / $150</span>
+          <span dir="ltr">5% / $150</span>
           <b>{copy!.modelsTitle}</b>
           <p>{copy!.intro}</p>
         </aside>
@@ -36,16 +38,16 @@ const localized = (href: string) => `/${lang}${href}`;
 
     <section class="foundation-section foundation-section-soft">
       <div class="container">
-        <div class="foundation-heading"><p class="eyebrow">01 / PRICING</p><h2>{copy!.modelsTitle}</h2><p>{copy!.intro}</p></div>
+        <div class="foundation-heading"><p class="eyebrow">{sectionLabels.pricing}</p><h2>{copy!.modelsTitle}</h2><p>{copy!.intro}</p></div>
         <div class="foundation-model-grid">
-          {copy!.models.map((model, index) => <article class:list={['foundation-model-card', index === 1 && 'foundation-model-card-alt']}><p>{model.title}</p><strong>{model.price}</strong><span>{model.text}</span></article>)}
+          {copy!.models.map((model, index) => <article class:list={['foundation-model-card', index === 1 && 'foundation-model-card-alt']}><p>{model.title}</p><strong><bdi dir={lang === 'ar' ? 'ltr' : 'auto'}>{model.price}</bdi></strong><span>{model.text}</span></article>)}
         </div>
       </div>
     </section>
 
     <section class="foundation-section">
       <div class="container">
-        <div class="foundation-heading"><p class="eyebrow">02 / SUPPORT</p><h2>{copy!.scopeTitle}</h2><p>{copy!.scopeIntro}</p></div>
+        <div class="foundation-heading"><p class="eyebrow">{sectionLabels.support}</p><h2>{copy!.scopeTitle}</h2><p>{copy!.scopeIntro}</p></div>
         <div class="foundation-scope-grid">
           {copy!.scopeItems.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
         </div>
@@ -54,7 +56,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
     <section class="foundation-section foundation-section-dark">
       <div class="container">
-        <div class="foundation-heading foundation-heading-light"><p class="eyebrow">03 / AGREEMENT</p><h2>{copy!.limitsTitle}</h2></div>
+        <div class="foundation-heading foundation-heading-light"><p class="eyebrow">{sectionLabels.agreement}</p><h2>{copy!.limitsTitle}</h2></div>
         <div class="foundation-boundary-grid">
           {copy!.limits.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
         </div>
@@ -63,7 +65,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
     <section class="foundation-section">
       <div class="container">
-        <div class="foundation-heading"><p class="eyebrow">04 / EXPLORE</p><h2>{copy!.relatedTitle}</h2></div>
+        <div class="foundation-heading"><p class="eyebrow">{sectionLabels.explore}</p><h2>{copy!.relatedTitle}</h2></div>
         <div class="foundation-route-grid">
           {copy!.related.map((item) => <a class="foundation-route-card" href={localized(item.href)}><span>↗</span><h3>{item.title}</h3><p>{item.text}</p><b>{item.label}</b></a>)}
         </div>
