@@ -55,7 +55,7 @@ for (const file of htmlFiles) {
   const anchors = [...html.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>/g)];
   for (const anchor of anchors) {
     const href = normalizeHref(anchor[1]);
-    const isLanguageOption = /\brole="option"/.test(anchor[0]);
+    const isLanguageOption = /\brole="option"/.test(anchor[0]) || /\bclass="[^"]*\blanguage-link\b/.test(anchor[0]);
     const isDeclaredEnglishArticle = /\bhreflang="en"/.test(anchor[0]);
     if (href && !targetExists(href)) brokenLinks.push({ route, href });
     if (match && match[1] !== 'en' && !isFallbackJournalPage && !isExplicitLocaleFallback && !isLanguageOption && !isDeclaredEnglishArticle && href?.startsWith('/en/')) englishLinksFromOtherLocales.push({ route, href });

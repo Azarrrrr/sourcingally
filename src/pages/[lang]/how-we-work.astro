@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import FoundationRouteFallback from '../../components/FoundationRouteFallback.astro';
 import { foundationPages, type FoundationLanguage } from '../../data/foundation-pages';
 import { foundationRouteFallbacks, type PartialFoundationLanguage } from '../../data/foundation-route-fallbacks';
+import { foundationSectionLabels } from '../../data/foundation-section-labels';
 
 export function getStaticPaths() {
   const pageLanguages = ['en', 'es', 'pt', 'ru', 'tr', 'fr', 'ja', 'de', 'ar', 'id', 'it'];
@@ -16,6 +17,7 @@ const fallbackCopy = isPartialLocale ? foundationRouteFallbacks[lang as PartialF
 const title = copy?.metaTitle ?? fallbackCopy!.metaTitle;
 const description = copy?.metaDescription ?? fallbackCopy!.metaDescription;
 const localized = (href: string) => `/${lang}${href}`;
+const sectionLabels = foundationSectionLabels[lang as keyof typeof foundationSectionLabels];
 ---
 <Layout title={title} description={description} lang={lang} noindex={isPartialLocale}>
   {isPartialLocale ? <FoundationRouteFallback lang={lang as PartialFoundationLanguage} page="howWeWork" /> : <>
@@ -27,7 +29,7 @@ const localized = (href: string) => `/${lang}${href}`;
           <p class="foundation-lede">{copy!.lede}</p>
         </div>
         <aside class="foundation-hero-note">
-          <span>01—05</span>
+          <span dir="ltr">01—05</span>
           <b>{copy!.processTitle}</b>
           <p>{copy!.intro}</p>
         </aside>
@@ -36,7 +38,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
     <section class="foundation-section">
       <div class="container">
-        <div class="foundation-heading"><p class="eyebrow">01 / PROCESS</p><h2>{copy!.processTitle}</h2><p>{copy!.processIntro}</p></div>
+        <div class="foundation-heading"><p class="eyebrow">{sectionLabels.process}</p><h2>{copy!.processTitle}</h2><p>{copy!.processIntro}</p></div>
         <div class="foundation-process-grid">
           {copy!.stages.map((stage) => <article class="foundation-stage"><span>{stage.number}</span><h3>{stage.title}</h3><p>{stage.text}</p></article>)}
         </div>
@@ -45,7 +47,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
     <section class="foundation-section foundation-section-dark">
       <div class="container">
-        <div class="foundation-heading foundation-heading-light"><p class="eyebrow">02 / SCOPE</p><h2>{copy!.boundariesTitle}</h2><p>{copy!.boundariesIntro}</p></div>
+        <div class="foundation-heading foundation-heading-light"><p class="eyebrow">{sectionLabels.scope}</p><h2>{copy!.boundariesTitle}</h2><p>{copy!.boundariesIntro}</p></div>
         <div class="foundation-boundary-grid">
           {copy!.boundaries.map((item, index) => <article><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
         </div>
@@ -54,7 +56,7 @@ const localized = (href: string) => `/${lang}${href}`;
 
     <section class="foundation-section foundation-section-soft">
       <div class="container">
-        <div class="foundation-heading"><p class="eyebrow">03 / NEXT STEP</p><h2>{copy!.routeTitle}</h2></div>
+        <div class="foundation-heading"><p class="eyebrow">{sectionLabels.nextStep}</p><h2>{copy!.routeTitle}</h2></div>
         <div class="foundation-route-grid">
           {copy!.routes.map((route) => <a class="foundation-route-card" href={localized(route.href)}><span>↗</span><h3>{route.title}</h3><p>{route.text}</p><b>{route.label}</b></a>)}
         </div>

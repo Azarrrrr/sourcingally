@@ -1,4 +1,6 @@
-export const foundationPages = {
+import { foundationPagesAdditional } from './foundation-pages-additional';
+
+const foundationPagesBase = {
   "en": {
     "howWeWork": {
       "metaTitle": "How Sourcing Ally Works | China sourcing process",
@@ -977,6 +979,11 @@ export const foundationPages = {
       "ctaLabel": "Rédiger un brief de projet"
     }
   }
+} as const;
+
+export const foundationPages = {
+  ...foundationPagesBase,
+  ...foundationPagesAdditional,
 } as const;
 
 export type FoundationLanguage = keyof typeof foundationPages;
